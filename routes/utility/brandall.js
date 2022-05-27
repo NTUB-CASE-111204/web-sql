@@ -35,5 +35,58 @@ var leapingbunny = async function(){
     return result;
 }
 
+var ccf = async function(){
+    var result={};
+    
+    await sql('SELECT * FROM public.brand WHERE ccf = TRUE ORDER BY b_name')
+        .then((data) => {            
+            result = data.rows;  
+        }, (error) => {
+            result = null;
+        });
+		
+    return result;
+}
+
+var peta = async function(){
+    var result={};
+    
+    await sql('SELECT * FROM public.brand WHERE peta = TRUE ORDER BY b_name')
+        .then((data) => {            
+            result = data.rows;  
+        }, (error) => {
+            result = null;
+        });
+		
+    return result;
+}
+
+var nmcb = async function(){
+    var result={};
+    
+    await sql('SELECT * FROM public.brand WHERE nmcb = TRUE ORDER BY b_name')
+        .then((data) => {            
+            result = data.rows;  
+        }, (error) => {
+            result = null;
+        });
+		
+    return result;
+}
+
+var updatetime = async function(){
+    var result={};
+	
+    await sql('SELECT * FROM public.brand ORDER BY updatetime desc LIMIT 1 ')
+        .then((data) => {            
+            result = data.rows;  
+        }, (error) => {
+            result = null;
+        });
+		
+    return result;
+}
+
+
 //匯出
-module.exports = {list, leapingbunny};
+module.exports = {list, leapingbunny, ccf, peta, nmcb, updatetime};

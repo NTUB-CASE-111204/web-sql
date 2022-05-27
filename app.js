@@ -18,6 +18,9 @@ var recognitionRouter = require('./routes/recognition');
 
 var brand_list = require('./routes/brand_list');
 var leapingbunny = require('./routes/leapingbunny');
+var ccf = require('./routes/ccf');
+var peta = require('./routes/peta');
+var nmcb = require('./routes/nmcb');
 var checkAuth = require('./routes/checkAuth');
 //------------------------------------------------------------
 // 增加引用模組
@@ -53,6 +56,9 @@ app.use('/recognition', recognitionRouter);
 
 app.use('/brand/list', brand_list);
 app.use('/leapingbunny', leapingbunny);
+app.use('/ccf', ccf);
+app.use('/peta', peta);
+app.use('/nmcb', nmcb);
 //app.use('/backuser/login/form', backuser_login_form);
 //app.use('/backuser/login', backuser_login);
 //app.use('/backuser/logout', backuser_logout);
