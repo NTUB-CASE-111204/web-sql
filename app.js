@@ -15,6 +15,7 @@ var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
 var donateRouter = require('./routes/donate');
 var recognitionRouter = require('./routes/recognition');
+var newsRouter = require('./routes/news');
 
 var brand_list = require('./routes/brand_list');
 var leapingbunny = require('./routes/leapingbunny');
@@ -43,6 +44,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/news', newsRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
 app.use('/memberpage', memberRouter);
