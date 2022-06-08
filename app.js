@@ -44,7 +44,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/news', newsRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
 app.use('/memberpage', memberRouter);
@@ -55,6 +54,7 @@ app.use('/brand', brandRouter);
 app.use('/product', productRouter);
 app.use('/donate', donateRouter);
 app.use('/recognition', recognitionRouter);
+app.use('/news', newsRouter);
 
 app.use('/brand/list', brand_list);
 app.use('/leapingbunny', leapingbunny);
