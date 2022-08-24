@@ -2,7 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>註冊系統</title>
     <link href="register.css" rel="stylesheet" type="text/css" />
-    <script src="register.js"> </script>
+    <script src="/routes/newregister.js"> </script>
 </head>
 
 <div class="hero">
@@ -22,16 +22,21 @@
         <input type="text" class="input-field" placeholder="密碼" required/> -->
         <div class="col-lg-6 text-center">
             <!----<h1>邦妮幫你Bunny</h1>---->
-             <p>註冊系統</p>
+             <p>Bunny幫你註冊系統</p>
         <form action="../member/memberprofile" method="post" name="form">
-  *姓名: <input type="text" name="name"><p>
+          <form action="/somewhere/to/upload" enctype="multipart/form-data">
+            <input name="profile" type="file" accept="image/gif, image/jpeg, image/png">
+            </form>
+          *信箱: <input type="text" name="email"><p></p>
+          *密碼: <input type="text" name="Password"><p>
+            *姓名: <input type="text" name="name"><p></p>
+            *生日: <input type="date" name="name"><p>
   *行動電話: <input type="text" name="phone"><p>
   *性別:<select name="gender">
     <option value="male">男生</option>
     <option value="female">女生</option>
    </select><p>
-  *年齡: <input type="text" name="age"><p>
-  *居住地區: <input type="text" name="livingarea"><p>
+  
 
     *是否願意登記成為實驗動物領養人?<select name="will">   <option value="yes">願意</option>
         <option value="no">不願意</option>
@@ -41,7 +46,7 @@
  </form>
        <!-- <input type="checkbox" class="check-box"/><span>Remmber Password</span> -->
     <!--  <button type="submit" class="submmit-btn">註冊</button> -->
-      </form> 
+      <!-- </form> 
       <form id="register" class="form-group">
         <input type="text" class="input-field" placeholder="User ID" required/>
         <input type="email" class="input-field" placeholder="Email" required/>
@@ -49,7 +54,7 @@
         <input type="checkbox" class="check-box"/><span>I agree to the termes &amp; conditions</span>
         <button type="submit" class="submmit-btn">Register</button>
       </form>
-    </div>
+    </div>-->
   
   </div> 
   
