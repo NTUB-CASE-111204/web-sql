@@ -78,20 +78,22 @@ shrink-to-fit=no"
  <!----<h1>邦妮幫你Bunny</h1>---->
  <p></p>
  <h1> <span class="badge bg-secondary">註冊系統</span></h1>
+ <form>
  <form action="../member/memberprofile" method="post" name="form">
   <form action="/somewhere/to/upload" enctype="multipart/form-data">
     <input name="profile" type="file" accept="image/gif, image/jpeg, image/png">
     </form>
- *信箱: <input type="text" name="email"><p></p>
- *密碼: <input type="text" name="password"><p></p>
-*姓名: <input type="text" name="name"><p>
-    *電話: <input type="text" name="phone"><p>
-      *生日: <input type="date" name="address"><p></p>
-      *性別:<select name="gender">
-        <option value="male">男生</option>
-        <option value="female">女生</option>
+    <p>選擇會員照片</p>
+    *暱稱: <input type="text" name="name" required> <p><br>
+ *信箱: <input type="text" name="email" required><p></p>
+ *密碼: <input type="text" name="password" required><p></p>
+    電話: <input type="text" name="phone"><p>
+      生日: <input type="date" name="address"><p></p>
+      性別:<select name="gender">
+        <option value="male">男</option>
+        <option value="female">女</option>
        </select><p>
-        *是否願意登記成為實驗動物領養人?<select name="will">   <option value="yes">願意</option>
+        是否願意登記成為實驗動物領養人?<select name="will">   <option value="yes">願意</option>
             <option value="no">不願意</option>
             <option value="notyet">尚未決定</option></select>
             <p></p>
