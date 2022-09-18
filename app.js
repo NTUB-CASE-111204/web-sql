@@ -5,6 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var checkAuth = require('./routes/checkAuth');
+
+//------------------------------------------------------------
+// 增加引用模組
+//------------------------------------------------------------
 var aboutRouter = require('./routes/about');
 var loginRouter = require('./routes/login');
 var memberRouter = require('./routes/memberpage');
@@ -18,13 +23,12 @@ var productRouter = require('./routes/product');
 var donateRouter = require('./routes/donate');
 var recognitionRouter = require('./routes/recognition');
 var newsRouter = require('./routes/news');
-
 var brand_list = require('./routes/brand_list');
 var leapingbunny = require('./routes/leapingbunny');
 var ccf = require('./routes/ccf');
 var peta = require('./routes/peta');
 var nmcb = require('./routes/nmcb');
-var checkAuth = require('./routes/checkAuth');
+//------------------------------------------------------------
 
 var app = express();
 
@@ -35,8 +39,21 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//----------------------------------------
+// 可由外部直接取用資料夾
+//----------------------------------------
+app.use(express.static('public/pic'));
+//-----------------------------------------
+
+//--------------------------------------------------------------------
+// 增加引用express-session
+//--------------------------------------------------------------------
+var session = require('express-session');
+app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
+//--------------------------------------------------------------------
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
@@ -58,20 +75,6 @@ app.use('/leapingbunny', leapingbunny);
 app.use('/ccf', ccf);
 app.use('/peta', peta);
 app.use('/nmcb', nmcb);
-
-
-//----------------------------------------
-// 可由外部直接取用資料夾
-//----------------------------------------
-app.use(express.static('public/pic'));
-//-----------------------------------------
-
-//--------------------------------------------------------------------
-// 增加引用express-session
-//--------------------------------------------------------------------
-var session = require('express-session');
-app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
-//--------------------------------------------------------------------
 
 
 // catch 404 and forward to error handler

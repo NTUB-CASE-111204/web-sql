@@ -28,7 +28,7 @@ var login = async function(m_email, m_password){
 //------------------------------------------
 //執行資料庫動作的函式-取出單一會員資料
 //------------------------------------------
-var one = async function(m_email){
+var query = async function(m_email){
     var result={};
     
     await sql('SELECT * FROM public.member WHERE m_email = $1', [m_email])
@@ -46,4 +46,4 @@ var one = async function(m_email){
 }
 
 //匯出
-module.exports = {login, one};
+module.exports = {login, query};
