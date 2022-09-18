@@ -72,31 +72,34 @@ shrink-to-fit=no"
  <!----<h1>Bunny幫你</h1>---->
  <p></p>
  <h1> <span class="badge bg-secondary">實驗動物領養人登記申請</span></h1>
- <form>
+ <form action = "/detailadd" method="post">
 
   <p>真實姓名:</p>
-  <p><input type="text" name="name" required></p>
+  <p><input type="text" name="a_realname" required></p>
 
   <p>信箱:</p>
-  <p><input name="species" type="text" name="email" required></p>
+  <p><input type="text" name="m_email" required></p>
 
   <p>職業:</p>
-  <p><input name="species" type="text" name="job" required></p>
+  <p><input type="text" name="a_job" required></p>
+
+  <p>電話:</p>
+  <p><input type="int" name="a_phone" required></p>
 
   <p>地址:</p>
-  <p><input name="species" type="text" name="address" required></p>
+  <p><input type="text" name="a_address" required></p>
 
   <p>備註事項: </p>
-  <p><textarea name="comments" rows="5" cols="20"></textarea></p>
+  <p><textarea rows="5" cols="20" type="text" name="a_remark"></textarea></p>
 
 </select><p>
-  有無動物飼養經驗?  <select name="will">   <option value="yes">有</option>
-      <option value="no">無</option>
+  有無動物飼養經驗?  <select name="a_experience">   <option value="true">有</option>
+      <option value="false" selected>無</option>
       </select>
       <p></p>
 
     </select><p>
-      可面訪時間?  <select name="visit">   <option value="Option1">平日</option>
+      可面訪時間?  <select name="a_time">   <option value="Option1">平日</option>
           <option value="Option2">假日</option>
           <option value="Option3">平日與假日皆可</option></select>
           <p></p>

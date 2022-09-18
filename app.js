@@ -8,8 +8,10 @@ var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var loginRouter = require('./routes/login');
 var memberRouter = require('./routes/memberpage');
+var memberlogin = require('./routes/memberlogin');
 var registerRouter = require('./routes/register');
 var detailRouter = require('./routes/detail');
+var detailadd = require('./routes/detailadd');
 var billboardRouter = require('./routes/billboard');
 var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
@@ -23,12 +25,6 @@ var ccf = require('./routes/ccf');
 var peta = require('./routes/peta');
 var nmcb = require('./routes/nmcb');
 var checkAuth = require('./routes/checkAuth');
-//------------------------------------------------------------
-// 增加引用模組
-//------------------------------------------------------------
-//var backuser_login_form = require('./routes/backuser_login_form');
-//var backuser_login = require('./routes/backuser_login');
-//var backuser_logout = require('./routes/backuser_logout');
 
 var app = express();
 
@@ -46,8 +42,10 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/login', loginRouter);
 app.use('/memberpage', memberRouter);
+app.use('/memberlogin', memberlogin);
 app.use('/register', registerRouter);
 app.use('/detail', detailRouter);
+app.use('/detailadd', detailadd);
 app.use('/billboard', billboardRouter);
 app.use('/brand', brandRouter);
 app.use('/product', productRouter);
@@ -60,9 +58,6 @@ app.use('/leapingbunny', leapingbunny);
 app.use('/ccf', ccf);
 app.use('/peta', peta);
 app.use('/nmcb', nmcb);
-//app.use('/backuser/login/form', backuser_login_form);
-//app.use('/backuser/login', backuser_login);
-//app.use('/backuser/logout', backuser_logout);
 
 
 //----------------------------------------
