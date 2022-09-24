@@ -8,17 +8,24 @@ const {Client} = require('pg');
 //-----------------------
 // 自己的資料庫連結位址
 //-----------------------
-var pgConn = 'postgres://ikojmqzefffjen:079aad0bfbbc125c2f41389d7d65a83fe63f775aa42799b01120e8edb480ab2f@ec2-54-209-221-231.compute-1.amazonaws.com:5432/d28e9f04ls9tcu';
+//var pgConn = 'postgres://ikojmqzefffjen:079aad0bfbbc125c2f41389d7d65a83fe63f775aa42799b01120e8edb480ab2f@ec2-54-209-221-231.compute-1.amazonaws.com:5432/d28e9f04ls9tcu';
 
+const config = {
+    host: 'containers-us-west-18.railway.app',
+    // Do not hard code your username and password.
+    // Consider using Node environment variables.
+    user: 'postgres',     
+    password: 'Z5qKUvsmoF8mvF1Zzvdi',
+    database: 'railway',
+    port: 7839,
+    ssl: true
+};
 
 //產生可同步執行sql的函式
 function query(sql, value=null) {
     return new Promise((resolve, reject) => {
         //產生資料庫連線物件
-        var client = new Client({
-            connectionString: pgConn,
-            ssl: true
-        })     
+        var client = new Client(config);     
 
         //連結資料庫
         client.connect();
