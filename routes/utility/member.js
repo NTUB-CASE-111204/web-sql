@@ -51,13 +51,13 @@ var query = async function(m_email){
 var add = async function(newData){
     var result;
 
-    await sql('INSERT INTO public.member(m_email, m_password, m_nickname, m_sex, m_pic, m_birth, m_phone, m_adopt) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [newData.m_email, newData.m_password, newData.m_nickname,newData.m_sex, newData.m_pic, newData.m_birth, newData.m_phone, newData.m_adopt])
+    await sql('INSERT INTO public.member (m_email, m_password, m_nickname, m_sex, m_pic, m_birth, m_phone) VALUES ($1, $2, $3, $4, $5, $6, $7)', [newData.m_email, newData.m_password, newData.m_nickname, newData.m_sex, newData.m_pic, newData.m_birth, newData.m_phone])
         .then((data) => {
-            result = 0;  
+            result = 0;
         }, (error) => {
             result = -1;
         });
-		
+		console.log(newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
     return result;
 }
 

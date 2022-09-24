@@ -15,9 +15,10 @@ router.post('/', function(req, res, next) {
             req.session.m_password = null;           
             res.render('loginFail');  //傳至登入失敗
         }else{
+            console.log(m_email); 
             req.session.m_email = d.m_email;
             req.session.m_password = d.m_password;
-            res.render('memberpage', {m_email:d.m_email});   //導向使用者
+            res.render('memberpage', {m_email:d.m_email});     //導向使用者
         }  
     })
 });

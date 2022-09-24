@@ -11,19 +11,24 @@ var checkAuth = require('./routes/checkAuth');
 // 增加引用模組
 //------------------------------------------------------------
 var aboutRouter = require('./routes/about');
+
 var loginRouter = require('./routes/login');
 var memberRouter = require('./routes/memberpage');
 var memberlogin = require('./routes/memberlogin');
+
 var register = require('./routes/register');
 var newregister = require('./routes/newregister');
+
 var detail = require('./routes/detail');
 var detailadd = require('./routes/detailadd');
+
 var billboardRouter = require('./routes/billboard');
 var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
 var donateRouter = require('./routes/donate');
 var recognitionRouter = require('./routes/recognition');
 var newsRouter = require('./routes/news');
+
 var brand_list = require('./routes/brand_list');
 var leapingbunny = require('./routes/leapingbunny');
 var ccf = require('./routes/ccf');
@@ -58,13 +63,17 @@ app.use(session({secret: '請更改成一個隨機字串用來加密產生的sig
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
+
 app.use('/login', loginRouter);
 app.use('/memberpage', memberRouter);
 app.use('/memberlogin', memberlogin);
+
 app.use('/register', register);
 app.use('/newregister', newregister);
+
 app.use('/detail', checkAuth, detail);
 app.use('/detailadd', checkAuth, detailadd);
+
 app.use('/billboard', billboardRouter);
 app.use('/brand', brandRouter);
 app.use('/product', productRouter);
