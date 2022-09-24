@@ -1,22 +1,38 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('newregister', { title: 'Express' });
+//增加引用函式
+const member = require('./utility/member');
+
+//接收POST請求
+router.post('/', function (req, res, next) {
+  var m_email = req.body.m_email;
+  var m_password = req.body.m_password;
+  var m_nickname = req.body.m_nickname;
+  var m_sex = req.body.m_sex;
+  var m_pic = req.body.m_pic;
+  var m_birth = req.body.m_birth;
+  var m_phone = req.body.m_phone;
+  var m_adopt = req.body.m_adopt;
+
+  // 建立一個新資料物件
+  var newData = {
+    m_email:m_email,
+    m_password:m_password,
+    m_nickname:m_nickname,
+    m_sex:m_sex,
+    m_pic:m_pic,
+    m_birth:m_birth,
+    m_phone:m_phone,
+    m_adopt:m_adopt
+  }
+
+  member.add(newData).then(d => {
+    if (d == 0) {
+      res.render('addSuccess');  //傳至成功頁面
+    } else {
+      res.render('addFail');     //導向錯誤頁面
+    }
+  })
 });
-
 module.exports = router;
-
-// var server = require("./server"); 
-// var router = require("./router"); 
-// var requestHandlers = require("./requestHandlers"); 
- 
-// var handle = {} 
-// //區分大小寫的 
-// handle["/"] = requestHandlers.start; 
-// handle["/start"] = requestHandlers.start; 
-// handle["/upload"] = requestHandlers.upload; 
-// handle["/show"] = requestHandlers.show; 
- 
-// server.start(router.route, handle); 

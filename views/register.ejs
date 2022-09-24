@@ -1,127 +1,125 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>註冊系統</title>
-    <link href="register.css" rel="stylesheet" type="text/css" />
-    <script src="/routes/newregister.js"> </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>註冊系統</title>
+  <link href="register.css" rel="stylesheet" type="text/css" />
+  <script src="/routes/newregister.js"> </script>
 </head>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1,
 shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/detail.css" />
-    <title>Bunny幫你會員註冊系統</title>
-  </head>
+  />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/detail.css" />
+  <title>Bunny幫你會員註冊系統</title>
+</head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="/">Bunny幫你</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">首頁</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about">關於我們</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product">介紹</a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Bunny幫你</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">關於我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product">介紹</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <div id="banner"></div>
-    <div class="container my-3">
-      <div class="row g-0">
-        <h3 class="title my-3">| Bunny幫你<small></small></h3>
       </div>
-      <div class="row">
-        <div class="col-lg mb-3">
-          <img src="images/Joinus.jpg" class="img-thumbnail" />
-        </div>
-         <div class="col-lg mb-3">
-          <h3></h3>
-       <!--   <p>
-            
+    </nav>
+  </header>
+  <div id="banner"></div>
+  <div class="container my-3">
+    <div class="row g-0">
+      <h3 class="title my-3">| Bunny幫你<small></small></h3>
+    </div>
+    <div class="row">
+      <div class="col-lg mb-3">
+        <img src="images/Joinus.jpg" class="img-thumbnail" />
+      </div>
+       <div class="col-lg mb-3">
+        <h3></h3>
+     <!--   <p>
+          
+        </p>
+        <p>
+          
           </p>
-          <p>
-            
-            </p>
-          <p>
-            資訊：<span class="badge bg-danger me-2">母</span
-            ><span class="badge bg-warning me-2">紐西蘭大白兔</span>
-          </p> -->
+        <p>
+          資訊：<span class="badge bg-danger me-2">母</span
+          ><span class="badge bg-warning me-2">紐西蘭大白兔</span>
+        </p> -->
 
- <!----<h1>邦妮幫你Bunny</h1>---->
- <p></p>
- <h1> <span class="badge bg-secondary">註冊系統</span></h1>
- <form>
- <form action="../member/memberprofile" method="post" name="form">
-  <form action="/somewhere/to/upload" enctype="multipart/form-data">
-    <input name="profile" type="file" accept="image/gif, image/jpeg, image/png">
-    </form>
+<!----<h1>邦妮幫你Bunny</h1>---->
+<p></p>
+<h1> <span class="badge bg-secondary">註冊系統</span></h1>
+  <form action="/newregister" method="post" name="form">
     <p>選擇會員照片</p>
-    *暱稱: <input type="text" name="name" required> <p><br>
- *信箱: <input type="text" name="email" required><p></p>
- *密碼: <input type="text" name="password" required><p></p>
-    電話: <input type="text" name="phone"><p>
-      生日: <input type="date" name="address"><p></p>
-      性別:<select name="gender">
-        <option value="male">男</option>
-        <option value="female">女</option>
-       </select><p>
-        是否願意登記成為實驗動物領養人?<select name="will">   <option value="yes">願意</option>
-            <option value="no">不願意</option>
-            <option value="notyet">尚未決定</option></select>
-            <p></p>
+      <input name="m_pic" type="file" accept="image/gif, image/jpeg, image/png">
+    <p></p>
+    *暱稱: <input type="text" name="m_nickname" required>
+    <p></p>
+      *信箱: <input type="text" name="m_email" required>
+    <p></p>
+    *密碼: <input type="text" name="m_password" required>
+    <p></p>
+    電話: <input type="text" name="m_phone">
+    <p></p>
+    生日: <input type="date" name="m_birth">
+    <p></p>
+    性別:<select name="m_sex">
+      <option value="male">男</option>
+      <option value="female">女</option>
+    </select>
+    <p></p>
+    <input type="submit" value="確認登記">
+  </form>
 
 
-<input type="button" value="確認登記" onclick="check()"> 
-</form>
-
-
-      <!--   <form class="row align-items-end">
-            <div class="col-9">
-              <label for="inlineFormInputNum">聯絡資訊(手機與姓名)：</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="inlineFormInputNum">
-              </div>
+    <!--   <form class="row align-items-end">
+          <div class="col-9">
+            <label for="inlineFormInputNum">聯絡資訊(手機與姓名)：</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputNum">
             </div>
-            <div class="col-3">
-              <button type="submit" class="btn btn-primary">送出</button>
-            </div>--> 
-          </form>
-        </div>
+          </div>
+          <div class="col-3">
+            <button type="submit" class="btn btn-primary">送出</button>
+          </div>--> 
+       
       </div>
     </div>
-    <footer class="text-center bg-dark text-white py-2">
-      Copyrights © 2022 All Rights Reserved by Bunny幫你
-    </footer> 
-    <!-- Optional JavaScript -->
-    <script src="js/bootstrap.js"></script>
-  </body>
+  </div>
+  <footer class="text-center bg-dark text-white py-2">
+    Copyrights © 2022 All Rights Reserved by Bunny幫你
+  </footer> 
+  <!-- Optional JavaScript -->
+  <script src="js/bootstrap.js"></script>
+</body>
 </html>
 <!-- row-cols-lg-auto -->
