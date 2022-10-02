@@ -11,13 +11,13 @@ const {Client} = require('pg');
 //var pgConn = 'postgres://ikojmqzefffjen:079aad0bfbbc125c2f41389d7d65a83fe63f775aa42799b01120e8edb480ab2f@ec2-54-209-221-231.compute-1.amazonaws.com:5432/d28e9f04ls9tcu';
 
 const config = {
-    host: 'containers-us-west-18.railway.app',
+    host: 'db.zvkaicfdjrsrevzuzzxh.supabase.co',
     // Do not hard code your username and password.
     // Consider using Node environment variables.
     user: 'postgres',     
-    password: 'Z5qKUvsmoF8mvF1Zzvdi',
-    database: 'railway',
-    port: 7839,
+    password: 'TiBmTydtbNZ6YfiZ',
+    database: 'postgres',
+    port: 5432,
     ssl: true
 };
 
