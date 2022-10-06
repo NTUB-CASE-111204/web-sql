@@ -15,7 +15,7 @@ router.post('/', function (req, res, next) {
   var a_experience = req.body.a_experience;
   var a_time = req.body.a_time;
   var a_remark = req.body.a_remark;
-
+  console.log("1/" + a_realname);
   // 建立一個新資料物件
   var newData = {
     a_filltime: a_filltime,
@@ -28,8 +28,9 @@ router.post('/', function (req, res, next) {
     a_time: a_time,
     a_remark: a_remark
   }
-
+  console.log("2/" + m_email);
   adoptdetail.add(newData).then(d => {
+    console.log("3/" + d);
     if (d == 0) {
       res.render('addSuccess');  //傳至成功頁面
     } else {

@@ -6,7 +6,7 @@ const sql = require('./asyncDB');
 //------------------------------------------
 //執行資料庫動作的函式-取出全部領養人資料
 //------------------------------------------
-/*var list = async function(){
+var list = async function(){
     var result={};
     
     await sql('SELECT * FROM public.adopter ORDER BY a_filltime')
@@ -18,11 +18,11 @@ const sql = require('./asyncDB');
 		
     return result;
 }
-*/
+
 //------------------------------------------
 //執行資料庫動作的函式-取出領養人帳號
 //------------------------------------------
-/*var member = async function(){
+var member = async function(){
     var result={};
     
     await sql('SELECT m_email, m_phone FROM public.member')
@@ -34,7 +34,7 @@ const sql = require('./asyncDB');
 		
     return result;
 }
-*/
+
 //------------------------------------------
 //執行資料庫動作的函式-新增領養人資料
 //------------------------------------------
@@ -47,9 +47,10 @@ var add = async function(newData){
         }, (error) => {
             result = -1;
         });
+        console.log(newData.a_filltime + "//" +newData.m_email + "//" + newData.a_realname + "//" + newData.a_job + "//" + newData.a_address + "//" + newData.a_time + "//" + newData.a_remark);
 		
     return result;
 }
 
 //匯出
-module.exports = {add};
+module.exports = {list,member,add};
