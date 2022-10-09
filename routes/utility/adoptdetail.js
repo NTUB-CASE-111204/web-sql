@@ -40,8 +40,8 @@ var member = async function(){
 //------------------------------------------
 var add = async function(newData){
     var result;
-    //var now = new Date().toLocaleString();
-    await sql('INSERT INTO public.adopter (a_filltime, m_email, a_realname, a_job, a_phone, a_address, a_experience, a_time, a_remark) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [newData.a_filltime, newData.m_email, newData.a_realname, newData.a_job, newData.a_phone, newData.a_address, newData.a_experience, newData.a_time, newData.a_remark])
+    var now = new Date().toLocaleString();
+    await sql('INSERT INTO public.adopter (a_filltime, m_email, a_realname, a_job, a_phone, a_address, a_experience, a_time, a_remark) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [now, newData.m_email, newData.a_realname, newData.a_job, newData.a_phone, newData.a_address, newData.a_experience, newData.a_time, newData.a_remark])
         .then((data) => {
             result = 0; 
         }, (error) => {
