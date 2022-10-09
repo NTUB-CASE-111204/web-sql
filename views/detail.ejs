@@ -74,6 +74,9 @@ shrink-to-fit=no"
  <h1> <span class="badge bg-secondary">實驗動物領養人登記申請</span></h1>
  <form action = "/detailadd" method="post">
 
+  <p>time:</p>
+  <p><input type="date" name="a_filltime" required></p>
+
   <p>真實姓名:</p>
   <p><input type="text" name="a_realname" required></p>
 
@@ -84,7 +87,7 @@ shrink-to-fit=no"
   <p><input type="text" name="a_job" required></p>
 
   <p>電話:</p>
-  <p><input type="int" name="a_phone" required></p>
+  <p><input type="int4" name="a_phone" required></p>
 
   <p>地址:</p>
   <p><input type="text" name="a_address" required></p>
@@ -99,9 +102,9 @@ shrink-to-fit=no"
       <p></p>
 
     </select><p>
-      可面訪時間?  <select name="a_time">   <option value="Option1">平日</option>
-          <option value="Option2">假日</option>
-          <option value="Option3">平日與假日皆可</option></select>
+      可面訪時間?  <select name="a_time">   <option value="平日">平日</option>
+          <option value="假日">假日</option>
+          <option value="平日與假日皆可">平日與假日皆可</option></select>
           <p></p>
 
   <p><input type="submit" value="送出登記資料"></p>
