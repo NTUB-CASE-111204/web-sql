@@ -57,7 +57,7 @@ var add = async function(newData){
         }, (error) => {
             result = -1;
         });
-		console.log(newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+		//console.log(newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
     return result;
 }
 

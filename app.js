@@ -12,8 +12,8 @@ var checkAuth = require('./routes/checkAuth');
 //------------------------------------------------------------
 var aboutRouter = require('./routes/about');
 
-var loginRouter = require('./routes/login');
-var memberRouter = require('./routes/memberpage');
+var login = require('./routes/login');
+var memberpage = require('./routes/memberpage');
 var memberlogin = require('./routes/memberlogin');
 
 var register = require('./routes/register');
@@ -64,8 +64,8 @@ app.use(session({secret: '請更改成一個隨機字串用來加密產生的sig
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 
-app.use('/login', loginRouter);
-app.use('/memberpage', memberRouter);
+app.use('/login', login);
+app.use('/memberpage', memberpage);
 app.use('/memberlogin', memberlogin);
 
 app.use('/register', register);
