@@ -20,7 +20,7 @@ router.post('/', function (req, res, next) {
   // 建立一個新資料物件
   var newData = {
     a_filltime: a_filltime,
-    //m_email: m_email,
+    m_email: m_email,
     a_realname: a_realname,
     a_job: a_job,
     a_phone: a_phone,
