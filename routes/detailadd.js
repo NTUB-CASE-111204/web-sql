@@ -16,10 +16,11 @@ router.post('/', function (req, res, next) {
   var a_time = req.body.a_time;
   var a_remark = req.body.a_remark;
   console.log("1/" + a_realname);
+
   // 建立一個新資料物件
   var newData = {
     a_filltime: a_filltime,
-    m_email: m_email,
+    //m_email: m_email,
     a_realname: a_realname,
     a_job: a_job,
     a_phone: a_phone,
