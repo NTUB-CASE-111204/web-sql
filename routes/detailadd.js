@@ -4,9 +4,14 @@ var router = express.Router();
 //增加引用函式
 const adoptdetail = require('./utility/adoptdetail');
 
+const formatDate = (current_datetime)=>{
+  let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds() + "." + current_datetime.getMilliseconds();
+  return formatted_date;
+}
+
 //接收POST請求
 router.post('/', function (req, res, next) {
-  var a_filltime = new Date().toLocaleString();
+  var a_filltime = formatDate(new Date());
   var m_email = req.body.m_email;
   var a_realname = req.body.a_realname;
   var a_job = req.body.a_job;
