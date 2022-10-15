@@ -6,7 +6,7 @@ const adoptdetail = require('./utility/adoptdetail');
 
 //接收POST請求
 router.post('/', function (req, res, next) {
-  var a_filltime = req.body.a_filltime;
+  var a_filltime = new Date().toLocaleString();
   var m_email = req.body.m_email;
   var a_realname = req.body.a_realname;
   var a_job = req.body.a_job;
