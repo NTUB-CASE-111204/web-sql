@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var LoginfailedRouter = require('./routes/Loginfailed');
 var indexRouter = require('./routes/index');
 var checkAuth = require('./routes/checkAuth');
 
@@ -62,6 +63,7 @@ app.use(session({secret: '請更改成一個隨機字串用來加密產生的sig
 //--------------------------------------------------------------------
 
 app.use('/', indexRouter);
+app.use('/', LoginfailedRouter);
 app.use('/about', aboutRouter);
 
 app.use('/login', login);
