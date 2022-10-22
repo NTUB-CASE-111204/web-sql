@@ -14,6 +14,7 @@ var checkAuth = require('./routes/checkAuth');
 var aboutRouter = require('./routes/about');
 
 var login = require('./routes/login');
+var logout = require('./routes/logout');
 var memberpage = require('./routes/memberpage');
 var memberlogin = require('./routes/memberlogin');
 
@@ -67,6 +68,7 @@ app.use('/', LoginfailedRouter);
 app.use('/about', aboutRouter);
 
 app.use('/login', login);
+app.use('/logout', logout);
 app.use('/memberpage', memberpage);
 app.use('/memberlogin', memberlogin);
 
