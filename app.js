@@ -36,6 +36,8 @@ var leapingbunny = require('./routes/leapingbunny');
 var ccf = require('./routes/ccf');
 var peta = require('./routes/peta');
 var nmcb = require('./routes/nmcb');
+var allbrand = require('./routes/allbrand');
+
 //------------------------------------------------------------
 
 var app = express();
@@ -90,6 +92,8 @@ app.use('/leapingbunny', leapingbunny);
 app.use('/ccf', ccf);
 app.use('/peta', peta);
 app.use('/nmcb', nmcb);
+app.use('/allbrand', allbrand);
+
 
 
 // catch 404 and forward to error handler
