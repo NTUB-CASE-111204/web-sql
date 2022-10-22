@@ -88,13 +88,13 @@ shrink-to-fit=no"
     <p></p>
     *密碼: <input type="text" name="m_password" required>
     <p></p>
-    電話: <input type="text" name="m_phone">
+    電話: <input type="text" name="m_phone" oninput = "value=value.replace(/[^\d]/g,'')">
     <p></p>
     生日: <input type="date" name="m_birth">
     <p></p>
     性別:<select name="m_sex">
-      <option value="male">男</option>
-      <option value="female">女</option>
+      <option value="男">男</option>
+      <option value="女">女</option>
     </select>
     <p></p>
     <input type="submit" value="確認登記">

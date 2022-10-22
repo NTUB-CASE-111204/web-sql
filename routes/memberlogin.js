@@ -4,6 +4,11 @@ var router = express.Router();
 //增加引用函式
 const member = require('./utility/member');
 
+const formatDate = (current_datetime)=>{
+    let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate();
+    return formatted_date;
+  }
+
 //接收POST請求
 router.post('/', function(req, res, next) {
     var m_email = req.body.m_email;                 //取得帳號
@@ -17,6 +22,14 @@ router.post('/', function(req, res, next) {
         }else{
             req.session.m_email = d.m_email;
             req.session.m_password = d.m_password;
+            if(d.m_birth == null || d.m_birth == ''){
+                d.m_birth = "尚未填寫"
+            }else{
+                d.m_birth = formatDate(d.m_birth)
+            }
+            if(d.m_phone == null || d.m_phone == ''){
+                d.m_phone = "尚未填寫"
+            }
             res.render('memberpage', {item:d});     //導向使用者
         }  
     })
