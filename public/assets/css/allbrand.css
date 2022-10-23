@@ -1,0 +1,145 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.mainTab{
+    background-color: #eeee;
+    height: auto;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tabPanel{
+    margin: auto;
+    display: flex;
+}
+.tabPanel .tab{
+    flex-grow: 1; 
+    /* border: 1px solid gray; */
+    border-bottom: none;
+    padding: 5px 15px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabPanel label{
+    width:240px
+}
+
+.mainTab .contentGroup{
+    width: 1000px;
+    padding: 20px;
+    /*border: 1px solid #FFAFB8;*/
+    margin: auto;
+    position: relative;
+    
+}
+
+.contentGroup .content1 .detail{
+    display: inline-block;
+    width: 50%;
+}
+.subTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+.content2 .subTitle{
+    text-align: center;
+}
+.contentGroup .txt{
+    line-height: 20px;
+} 
+
+.contentGroup .content{
+    display: none;
+}
+
+#tab1:checked ~ .contentGroup .content1,
+#tab2:checked ~ .contentGroup .content2,
+#tab3:checked ~ .contentGroup .content3,
+#tab4:checked ~ .contentGroup .content4,
+#tab5:checked ~ .contentGroup .content5{
+    display: block;
+}
+#tab1:checked ~ .tabPanel .tab1,
+#tab2:checked ~ .tabPanel .tab2,
+#tab3:checked ~ .tabPanel .tab3,
+#tab4:checked ~ .tabPanel .tab4,
+#tab5:checked ~ .tabPanel .tab5
+{
+    border-bottom: 4px solid #FFAFB8;
+}
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5{
+    display: none;
+}
+
+
+
+/* 頁籤2
+.planList{
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.planList .planItem{
+    background-color: #eae0d0;
+    border: 1px solid #88785f;
+    box-shadow: 0 0 10px #887e6d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+.planList .planItem:nth-child(even){
+    background-color: #807700;
+    padding: 50px 40px;
+    position: relative;
+    z-index: 2;
+}
+.planList .planItem:nth-child(1){
+    position: relative;
+    left: 10px
+}
+.planList .planItem:nth-child(3){
+    position: relative;
+    right: 10px
+}
+.subTitle{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 80px;
+}
+.subTitle span{
+    display: block;
+    font-size: 45px;
+    color: #773509;
+}
+.planItem span::after{
+    content: "$";
+    color: #773509;
+    font-size: 20px;
+    position: relative;
+    top: -20px;
+}
+.planItem .txt{
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.submit{
+    background-color: #664e2e;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+ */
+
