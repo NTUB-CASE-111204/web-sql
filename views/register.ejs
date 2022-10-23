@@ -78,9 +78,9 @@ shrink-to-fit=no"
 <!----<h1>邦妮幫你Bunny</h1>---->
 <p></p>
 <h1> <span class="badge bg-secondary">註冊系統</span></h1>
-  <form action="/newregister" method="post" name="form">
+  <form action="/newregister" enctype="multipart/form-data" method="post" name="form">
     <p>選擇會員照片</p>
-      <input name="m_pic" type="file" accept="image/gif, image/jpeg, image/png">
+    <input type="file" name="m_pic" accept="image/gif, image/jpeg, image/png">
     <p></p>
     *暱稱: <input type="text" name="m_nickname" required>
     <p></p>
@@ -99,7 +99,6 @@ shrink-to-fit=no"
     <p></p>
     <input type="submit" value="確認登記">
   </form>
-
 
     <!--   <form class="row align-items-end">
           <div class="col-9">
