@@ -1,0 +1,31 @@
+body {
+    font-family: Microsoft JhengHei;
+}
+
+#about {
+    position: fixed;
+    background-image: url(../images/ba.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#photo {
+    height: 20vh;
+}
+
+#people {
+    height: 60vh;
+}
+
+@media (max-width: 991.5px) {
+    #about {
+        position: static;
+        height: 30vh;
+    }
+
+    #people {
+        height: 30vh;
+    }
+}
