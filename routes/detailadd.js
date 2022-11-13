@@ -20,6 +20,7 @@ router.post('/', function (req, res, next) {
   var a_experience = req.body.a_experience;
   var a_time = req.body.a_time;
   var a_remark = req.body.a_remark;
+  var a_updatetime = formatDate(new Date());
   console.log("1/" + a_realname);
 
   // 建立一個新資料物件
@@ -32,15 +33,16 @@ router.post('/', function (req, res, next) {
     a_address: a_address,
     a_experience: a_experience,
     a_time: a_time,
-    a_remark: a_remark
+    a_remark: a_remark,
+    a_updatetime: a_updatetime
   }
   console.log("2/" + m_email);
   adoptdetail.add(newData).then(d => {
     console.log("3/" + d);
-    if (d == 0) {
-      res.render('addSuccess');  //傳至成功頁面
+    if (d != -1) {
+      res.render('detailaddSuccess');  //傳至成功頁面
     } else {
-      res.render('addFail');     //導向錯誤頁面
+      res.render('detailaddFail');     //導向錯誤頁面
     }
   })
 });

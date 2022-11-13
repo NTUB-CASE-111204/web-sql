@@ -78,31 +78,31 @@ shrink-to-fit=no"
   <p><input type="date" name="a_filltime" required></p>---->
 
   <p>真實姓名:</p>
-  <p><input type="text" name="a_realname" required></p>
+  <p><input type="text" name="a_realname" value= <%= item.a_realname %> required></p>
 
   <p>信箱:</p>
   <p><input type="text" name="m_email" value= <%= item.m_email %> readonly></p>
 
   <p>職業:</p>
-  <p><input type="text" name="a_job" required></p>
+  <p><input type="text" name="a_job" value= <%= item.a_job %> required></p>
 
   <p>電話:</p>
-  <p><input type="int4" name="a_phone" required></p>
+  <p><input type="text" name="a_phone" value= <%= item.a_phone %> required></p>
 
   <p>地址:</p>
-  <p><input type="text" name="a_address" required></p>
+  <p><input type="text" name="a_address" value= <%= item.a_address %> required></p>
 
   <p>備註事項: </p>
-  <p><textarea rows="5" cols="20" type="text" name="a_remark"></textarea></p>
+  <p><textarea rows="5" cols="20" type="text" name="a_remark" value= <%= item.a_remark %> ></textarea></p>
 
 </select><p>
-  有無動物飼養經驗?  <select name="a_experience">   <option value="true">有</option>
-      <option value="false" selected>無</option>
+  有無動物飼養經驗?  <select name="a_experience" value= <%= item.a_experience %>>   <option value="false">無</option>
+    <option value="true">有</option>
       </select>
       <p></p>
 
     </select><p>
-      可面訪時間?  <select name="a_time">   <option value="平日">平日</option>
+      可面訪時間?  <select name="a_time" value= <%= item.a_time %>>   <option value="平日">平日</option>
           <option value="假日">假日</option>
           <option value="平日與假日皆可">平日與假日皆可</option></select>
           <p></p>
