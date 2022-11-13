@@ -301,7 +301,11 @@ hr {
   margin-bottom: 20px;
 }
 .profile-image img {
-  width: 100%;
+  position: relative;
+  width: 150%;
+  background-position: center center;
+  background-size: cover;
+  
 }
 
 h3.profile-title {
