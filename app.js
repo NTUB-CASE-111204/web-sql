@@ -18,6 +18,7 @@ var logout = require('./routes/logout');
 var memberpage = require('./routes/memberpage');
 var memberlogin = require('./routes/memberlogin');
 var membereditor = require('./routes/membereditor');
+var memberupdate = require('./routes/memberupdate');
 
 var register = require('./routes/register');
 var newregister = require('./routes/newregister');
@@ -74,7 +75,8 @@ app.use('/login', login);
 app.use('/logout', logout);
 app.use('/memberpage', memberpage);
 app.use('/memberlogin', memberlogin);
-app.use('/membereditor', membereditor);
+app.use('/membereditor', checkAuth, membereditor);
+app.use('/memberupdate', checkAuth, memberupdate);
 
 app.use('/register', register);
 app.use('/newregister', newregister);

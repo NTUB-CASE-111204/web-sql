@@ -25,44 +25,60 @@
             </div>
             <div class="col-lg-8 bg-light offset-lg-4">
                  <div class="col-lg-10 mx-auto py-5">
-                    <h4>會員資料頁面</h4>
-                    <p>請點擊修改按鈕修改會員個人資料</p>
-
-                    <table>
+                    <h4>會員資料修改頁面</h4>
+                    <form action = "/memberupdate" method="post">
+                        <table>
                         </select> </td>
-                        <td><input type="text" placeholder="暱稱">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <img src=<%= item.m_pic %> >
+                        </td>
                         </table>
 
                         <table>
                         </select> </td>
-                        <td><input type="text" placeholder="信箱">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <p>暱稱:<br/><input type="text" name="m_nickname" required value=<%= item.m_nickname %> ></p>
+                        </td>
                         </table>
 
                         <table>
                         </select> </td>
-                        <td><input type="text" placeholder="電話">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <p>信箱:<br/><input type="text" name="m_email" required value=<%= item.m_email %> ></p>
+                        </td>
                         </table>
 
                         <table>
                         </select> </td>
-                        <td><input type="text" placeholder="性別">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <p>密碼:<br/><input type="text" name="m_password" required value=<%= item.m_password %> ></p>
+                        </td>
                         </table>
 
                         <table>
                         </select> </td>
-                        <td><input type="text" placeholder="生日">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <p>電話:<br/><input type="text" name="m_phone" oninput = "value=value.replace(/[^\d]/g,'')" value=<%= item.m_phone %> ></p>
+                        </td>
                         </table>
 
                         <table>
                         </select> </td>
-                        <td><input type="text" placeholder="已登記為實驗動物領養人">
-                        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
+                        <td>
+                            <p>性別:<br/><input type="text" name="m_sex" value=<%= item.m_sex %> ></p>
+                        </td>
                         </table>
+
+                        <table>
+                        </select> </td>
+                        <td>
+                            <p>生日:<br/><input type="text" name="m_birth" value=<%= item.m_birth %> ></p>
+                        </td>
+                        </table>
+                        <p><input type="submit" value="送出登記資料"></p>
+                    </form>
+
+                        
 
 
               <!--  <div class="col-xl-10">

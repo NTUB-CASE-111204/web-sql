@@ -5,7 +5,7 @@ const adoptdetail = require('./utility/adoptdetail');
 
 //接收GET請求
 router.get('/', function(req, res, next) {
-    var m_email = req.session.m_email;; 
+    var m_email = req.session.m_email;
 
     adoptdetail.query(m_email).then(data => {
         if (data != null && data != -1) {

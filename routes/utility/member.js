@@ -30,7 +30,7 @@ var login = async function(m_email, m_password){
 //------------------------------------------
 var query = async function(m_email){
     var result={};
-    
+
     await sql('SELECT * FROM public.member WHERE m_email = $1', [m_email])
         .then((data) => {
             if(data.rows.length > 0){
@@ -89,6 +89,21 @@ var add = async function(newData){
     }
 }
 
+//----------------------------------
+// 執行資料庫動作的函式-更新會員資料
+//----------------------------------
+var update = async function (newData) {
+    var result;
+
+    await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_phone=$5, m_pic=$6 WHERE m_email = $7', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_phone, newData.m_pic, newData.m_email])
+        .then((data) => {
+            result = data.rowCount;
+        }, (error) => {
+            result = -1;
+        });
+        console.log(newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+    return result;
+}
 
 //匯出
-module.exports = {login, query, add};
+module.exports = {login, query, add, update};

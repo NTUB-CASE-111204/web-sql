@@ -87,7 +87,7 @@ shrink-to-fit=no"
   <p><input type="text" name="a_job" required value=<%= item.a_job %> ></p>
 
   <p>電話:</p>
-  <p><input type="text" name="a_phone" required value=<%= item.a_phone %> ></p>
+  <p><input type="text" name="a_phone" oninput = "value=value.replace(/[^\d]/g,'')" required value=<%= item.a_phone %> ></p>
 
   <p>地址:</p>
   <p><input type="text" name="a_address" required value=<%= item.a_address %> ></p>
