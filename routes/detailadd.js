@@ -39,7 +39,7 @@ router.post('/', function (req, res, next) {
   console.log("2/" + m_email);
   adoptdetail.add(newData).then(d => {
     console.log("3/" + d);
-    if (d != -1) {
+    if (d != -1 || d != error) {
       res.render('detailaddSuccess');  //傳至成功頁面
     } else {
       res.render('detailaddFail');     //導向錯誤頁面

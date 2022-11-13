@@ -30,24 +30,26 @@ var query = async function (m_email) {
             if (data.rows.length > 0) {
                 result = data.rows[0];
             } else {
-                sql('SELECT * FROM public.member WHERE m_email = $1', [m_email])
-                    .then((data) => {
-                        if (data.rows.length > 0) {
-                            result = data.rows[0];
-                        } else {
-                            result = -1;
-                        }
-                    }, (error) => {
-                        result = null;
-                    });
+                result = 1;
             }
         }, (error) => {
             result = null;
         });
-
+        
+    if(result == 1){
+        await sql('SELECT * FROM public.member WHERE m_email = $1', [m_email])
+            .then((data) => {
+                if (data.rows.length > 0) {
+                    result = data.rows[0];
+                } else {
+                    result = -1;
+                }
+            }, (error) => {
+                result = null;
+            });
+    }
+    console.log(result);
     return result;
-
-
 }
 
 //------------------------------------------

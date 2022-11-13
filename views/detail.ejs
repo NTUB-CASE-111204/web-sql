@@ -78,25 +78,25 @@ shrink-to-fit=no"
   <p><input type="date" name="a_filltime" required></p>---->
 
   <p>真實姓名:</p>
-  <p><input type="text" name="a_realname" value= <%= item.a_realname %> required></p>
+  <p><input type="text" name="a_realname" required value=<%= item.a_realname %> ></p>
 
   <p>信箱:</p>
-  <p><input type="text" name="m_email" value= <%= item.m_email %> readonly></p>
+  <p><input type="text" name="m_email" readonly value=<%= item.m_email %> ></p>
 
   <p>職業:</p>
-  <p><input type="text" name="a_job" value= <%= item.a_job %> required></p>
+  <p><input type="text" name="a_job" required value=<%= item.a_job %> ></p>
 
   <p>電話:</p>
-  <p><input type="text" name="a_phone" value= <%= item.a_phone %> required></p>
+  <p><input type="text" name="a_phone" required value=<%= item.a_phone %> ></p>
 
   <p>地址:</p>
-  <p><input type="text" name="a_address" value= <%= item.a_address %> required></p>
+  <p><input type="text" name="a_address" required value=<%= item.a_address %> ></p>
 
   <p>備註事項: </p>
-  <p><textarea rows="5" cols="20" type="text" name="a_remark" value= <%= item.a_remark %> ></textarea></p>
+  <p><textarea rows="5" cols="20" type="text" name="a_remark" ><%= item.a_remark %></textarea></p>
 
 </select><p>
-  有無動物飼養經驗?  <select name="a_experience" value= <%= item.a_experience %>>   <option value="false">無</option>
+  有無動物飼養經驗?  <select name="a_experience" value=<%= item.a_experience %>>   <option value="false">無</option>
     <option value="true">有</option>
       </select>
       <p></p>
