@@ -18,70 +18,73 @@
                 <div class="row justify-content-center align-items-center" id="people">
                     <div class="text-center">
                         <img src="images/profile.jpg" class="rounded-circle my-3" id="photo">
-                        <p class="text-light">使用者暱稱</p>
+                        <p class="text-light">點擊按鈕更換頭貼</p>
                         <td><input type="text" placeholder="暱稱">
                     </div>
                 </div>
             </div>
             <div class="col-lg-8 bg-light offset-lg-4">
-                 <div class="col-lg-10 mx-auto py-5">
+                <div class="col-lg-10 mx-auto py-5">
                     <h4>會員資料修改頁面</h4>
-                    <form action = "/memberupdate" method="post">
+                    <form action="/memberupdate" method="post">
                         <table>
-                        </select> </td>
-                        <td>
-                            <img src=<%= item.m_pic %> >
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>*暱稱:<br /><input type="text" name="m_nickname" required value=<%=item.m_nickname %> >
+                                </p>
+                            </td>
                         </table>
 
                         <table>
-                        </select> </td>
-                        <td>
-                            <p>暱稱:<br/><input type="text" name="m_nickname" required value=<%= item.m_nickname %> ></p>
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>*信箱:<br /><input type="text" name="m_email" required value=<%=item.m_email %> ></p>
+                            </td>
                         </table>
 
                         <table>
-                        </select> </td>
-                        <td>
-                            <p>信箱:<br/><input type="text" name="m_email" required value=<%= item.m_email %> ></p>
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>*密碼:<br /><input type="text" name="m_password" required value=<%=item.m_password %> >
+                                </p>
+                            </td>
                         </table>
 
                         <table>
-                        </select> </td>
-                        <td>
-                            <p>密碼:<br/><input type="text" name="m_password" required value=<%= item.m_password %> ></p>
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>電話:<br /><input type="text" name="m_phone" oninput="value=value.replace(/[^\d]/g,'')"
+                                        value=<%=item.m_phone %> ></p>
+                            </td>
                         </table>
 
                         <table>
-                        </select> </td>
-                        <td>
-                            <p>電話:<br/><input type="text" name="m_phone" oninput = "value=value.replace(/[^\d]/g,'')" value=<%= item.m_phone %> ></p>
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>生日:<br /><input type="date" name="m_birth" value=<%=item.m_birth %> ></p>
+                            </td>
                         </table>
 
                         <table>
-                        </select> </td>
-                        <td>
-                            <p>性別:<br/><input type="text" name="m_sex" value=<%= item.m_sex %> ></p>
-                        </td>
+                            </select> </td>
+                            <td>
+                                <p>性別:<br />
+                                    <select name="m_sex">
+                                        <option value="男">男</option>
+                                        <option value="女">女</option>
+                                    </select>
+                                </p>
+                            </td>
+
                         </table>
 
-                        <table>
-                        </select> </td>
-                        <td>
-                            <p>生日:<br/><input type="text" name="m_birth" value=<%= item.m_birth %> ></p>
-                        </td>
-                        </table>
                         <p><input type="submit" value="送出登記資料"></p>
                     </form>
 
-                        
 
 
-              <!--  <div class="col-xl-10">
+
+                    <!--  <div class="col-xl-10">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="暱稱"> <input id="btn1" type="button" value="修改" onclick="btnnumkeypad(this)" style="position:relative; left:600px; top: 0px; " /> 
                     </div>
@@ -102,30 +105,30 @@
                     </div>-->
 
                     <!--<div class="row">-->
-                        <div class="col-sm my-2">
-                            <img src="images/01-banner.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-sm my-2">
-                            <img src="" class="img-fluid">
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-sm my-2">
-                            <img src="" class="img-fluid">
-                        </div>
-                        <div class="col-sm my-2">
-                            <img src="" class="img-fluid">
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-sm my-2">
-                            <img src="" class="img-fluid">
-                        </div>
-                        <div class="col-sm my-2">
-                            <img src="" class="img-fluid">
-                        </div>
+                    <div class="col-sm my-2">
+                        <img src="images/01-banner.jpg" class="img-fluid">
                     </div>
-                </div> 
+                    <div class="col-sm my-2">
+                        <img src="" class="img-fluid">
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-sm my-2">
+                        <img src="" class="img-fluid">
+                    </div>
+                    <div class="col-sm my-2">
+                        <img src="" class="img-fluid">
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-sm my-2">
+                        <img src="" class="img-fluid">
+                    </div>
+                    <div class="col-sm my-2">
+                        <img src="" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Optional JavaScript -->
     <script src="js/bootstrap.js"></script>
