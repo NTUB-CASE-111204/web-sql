@@ -6,7 +6,7 @@ const adoptdetail = require('./utility/adoptdetail');
 //接收GET請求
 router.get('/', function(req, res, next) {
     var m_email = req.session.m_email;
-
+    
     adoptdetail.query(m_email).then(data => {
         if (data != null && data != -1) {
             var data = {
@@ -19,6 +19,7 @@ router.get('/', function(req, res, next) {
                 a_time: data.a_time,
                 a_remark: data.a_remark,
                 a_updatetime: data.a_updatetime
+               
             }
 
             res.render('detail', {item:data});  //將資料傳給更新頁面

@@ -82,6 +82,5 @@ var add = async function (newData) {
     return result;
 }
 
-
 //匯出
-module.exports = { list, query, add };
+module.exports = { list, query, add};

@@ -26,7 +26,7 @@
     
         <div class="responsive-header visible-xs visible-sm">
             <div class="container">
-                <div class="row">
+                <!----<div class="row">
                     <div class="col-md-12">
                         <div class="top-section">
                             <div class="profile-image">
@@ -35,19 +35,27 @@
                             <div class="profile-content">
                                 <h3 class="profile-title"><%= item.m_nickname %></h3>
                                 <p class="profile-description">已登記成為實驗動物領養等待名單</p>
+                                <a href="membereditor">
+                                    <button>編輯會員</button>
+                                </a> 
+                                <a href="detail">
+                                    <button>登記成為實驗動物領養人</button>
+                                </a> 
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--->
                 <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
                 <div class="main-navigation responsive-menu">
                     <ul class="navigation">
                        <!-- <li><a href="#top"><i class="fa fa-home"></i>會員資料</a></li>-->
                         <li><a href="#about"><i class="fa fa-user"></i>會員資料</a></li>
-                        <li><a href="membereditor" role="button"><i class="fa fa-pencil"></i>編輯會員</a></li>
+
                         <li><a href="#projects"><i class="fa fa-newspaper-o"></i>我的收藏</a></li>
                         <li><a href="#contact"><i class="fa fa-envelope"></i>回報問題</a></li>
-                        <li><a href="index"><i class="fa fa-home"></i>回主頁</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/"><i class="fa fa-home"></i>回主頁</a></li>
                         <li><a href="logout"><i class="fa fa-sign-out"></i>登出</a></li>
                     </ul>
                 </div>
@@ -66,13 +74,15 @@
             <div class="main-navigation">
                 <ul class="navigation">
                     <li><a href="#about"><i class="fa fa-user"></i>會員資料</a></li>
-                    <li><a href="membereditor"><i class="fa fa-pencil"></i>編輯會員</a></li>
                     <li><a href="#projects"><i class="fa fa-bookmark"></i>我的收藏</a></li>
                     <li><a href="#contact"><i class="fa fa-wrench"></i>問題回報</a></li>
-                    <li><a href="index"><i class="fa fa-home"></i>回主頁</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/"><i class="fa fa-home"></i>回首頁</a></li>
                     <li><a href="logout"><i class="fa fa-sign-out"></i>登出</a></li>
                 </ul>
-            </div> <!-- .main-navigation -->
+            </div> 
+            <!-- .main-navigation -->
           <!--  <div class="social-icons">
                 <ul>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -112,7 +122,6 @@
                                 <h4 class="widget-title">會員資料</h4>
                                 <div class="about-image">
                                     <img src="img/" alt="">
-
                                 </div>
                                 <div class="col-xl-4">
                                     <div class="form-group">
@@ -130,10 +139,12 @@
                                     <div class="form-group">
                                         <h3>生日： <%= item.m_birth %></h3>
                                     </div>
-                                  
+                                    <a href="membereditor">
+                                        <button>編輯會員</button>
+                                    </a> 
                                     <a href="detail">
                                         <button>登記成為實驗動物領養人</button>
-                                        </a> 
+                                    </a> 
 
                               <!--  </div>
                                 <p> <span class="blue">template</span><span class="green">mo</span>. You can use this template for any purpose. Please tell your friends about it. Thank you. Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_parent">Unsplash</a> for images used in this design. You can <strong>change menu icons</strong> by checking <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/" target="_parent">Font Awesome</a> (version 4). Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong></p>
