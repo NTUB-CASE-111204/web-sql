@@ -14,16 +14,16 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4" id="about">
-                <div class="row justify-content-center align-items-center" id="people">
-                    <div class="text-center">
-                        <img src="images/profile.jpg" class="rounded-circle my-3" id="photo">
-                        <p class="text-light">點擊按鈕更換頭貼</p>
-                        <td><input type="text" placeholder="暱稱">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 bg-light offset-lg-4">
+            <div class="sidebar-menu hidden-xs hidden-sm">
+                <div class="top-section">
+                    <div class="profile-image"> 
+                        <img src=<%= item.m_pic %> alt="會員頭貼">
+                    </div>      
+                    <p>選擇會員照片</p>
+                    <input type="file" name="m_pic" accept="image/gif, image/jpeg, image/png">
+                </div> <!-- top-section -->        
+            </div> <!-- .sidebar-menu -->
+            <div class="main">
                 <div class="col-lg-10 mx-auto py-5">
                     <h4>會員資料修改頁面</h4>
                     <form action="/memberupdate" method="post">
