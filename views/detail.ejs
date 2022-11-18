@@ -1,117 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/detail.css" />
-    <title>領養人登記</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="/">Bunny幫你</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">首頁</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about">關於我們</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="product">介紹</a>
-              </li>
-            </ul>
-          </div>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+shrink-to-fit=no" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/detail.css" />
+  <title>領養人登記</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Bunny幫你</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">關於我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product">介紹</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <div id="banner"></div>
-    <div class="container my-3">
-      <div class="row g-0">
-        <h3 class="title my-3">| 實驗動物 |<small></small></h3>
       </div>
-      <div class="row">
-        <div class="col-lg mb-3">
-          <img src="images/rabbit-adoption.jpg" class="img-thumbnail" />
-        </div>
-        <div class="col-lg mb-3">
-          <h3>以認養代替購買</h3>
-          <p>
-            動物會知道你對牠的好，只要你願意做出對牠更好的選擇。
-          </p>
-          <p>實驗動物可以認養嗎？
-            依據動保法第 16 條規定：
-            
-            進行動物科學應用之機構，應設置實驗動物照護及使用委員會或小組，以督導該機構進行實驗動物之科學應用。</p>
-          <p>
-            資訊：<span class="badge bg-danger me-2">實驗動物認養</span
-            ><span class="badge bg-warning me-2"></span>
-          </p>
+    </nav>
+  </header>
+  <div id="banner"></div>
+  <div class="container my-3">
+    <div class="row g-0">
+      <h3 class="title my-3">| 實驗動物 |<small></small></h3>
+    </div>
+    <div class="row">
+      <div class="col-lg mb-3">
+        <img src="images/rabbit-adoption.jpg" class="img-thumbnail" />
+      </div>
+      <div class="col-lg mb-3">
+        <h3>以認養代替購買</h3>
+        <p>
+          動物會知道你對牠的好，只要你願意做出對牠更好的選擇。
+        </p>
+        <p>實驗動物可以認養嗎？
+          依據動保法第 16 條規定：
 
- <!----<h1>Bunny幫你</h1>---->
- <p></p>
- <h1> <span class="badge bg-secondary">實驗動物領養人登記申請</span></h1>
- <form action = "/detailadd" method="post">
+          進行動物科學應用之機構，應設置實驗動物照護及使用委員會或小組，以督導該機構進行實驗動物之科學應用。</p>
+        <p>
+          資訊：<span class="badge bg-danger me-2">實驗動物認養</span><span class="badge bg-warning me-2"></span>
+        </p>
 
-  <!---<p>time:</p>
+        <!----<h1>Bunny幫你</h1>---->
+        <p></p>
+        <h1> <span class="badge bg-secondary">實驗動物領養人登記申請</span></h1>
+        <form action="/detailadd" method="post">
+
+          <!---<p>time:</p>
   <p><input type="date" name="a_filltime" required></p>---->
 
-  <p>真實姓名:</p>
-  <p><input type="text" name="a_realname" required value=<%= item.a_realname %> ></p>
+          <p>真實姓名:</p>
+          <p><input type="text" name="a_realname" required value=<%=item.a_realname %> ></p>
 
-  <p>信箱:</p>
-  <p><input type="text" name="m_email" readonly value=<%= item.m_email %> ></p>
+          <p>信箱:</p>
+          <p><input type="text" name="m_email" readonly value=<%=item.m_email %> ></p>
 
-  <p>職業:</p>
-  <p><input type="text" name="a_job" required value=<%= item.a_job %> ></p>
+          <p>職業:</p>
+          <p><input type="text" name="a_job" required value=<%=item.a_job %> ></p>
 
-  <p>電話:</p>
-  <p><input type="text" name="a_phone" oninput = "value=value.replace(/[^\d]/g,'')" required value=<%= item.a_phone %> ></p>
+          <p>電話:</p>
+          <p><input type="text" name="a_phone" oninput="value=value.replace(/[^\d]/g,'')" required value=<%=item.a_phone
+              %> ></p>
 
-  <p>地址:</p>
-  <p><input type="text" name="a_address" required value=<%= item.a_address %> ></p>
+          <p>地址:</p>
+          <p><input type="text" name="a_address" required value=<%=item.a_address %> ></p>
 
-  <p>備註事項: </p>
-  <p><textarea rows="5" cols="20" type="text" name="a_remark" ><%= item.a_remark %></textarea></p>
+          <p>備註事項: </p>
+          <p><textarea rows="5" cols="20" type="text" name="a_remark"><%= item.a_remark %></textarea></p>
 
-</select><p>
-  有無動物飼養經驗?  <select name="a_experience" value=<%= item.a_experience %>>   <option value="false">無</option>
-    <option value="true">有</option>
-      </select>
-      <p></p>
+          <!---  </select>
+          <p>
+            有無動物飼養經驗? <select name="a_experience" value=<%=item.a_experience %>> <option value="false">無</option>
+              <option value="true">有</option>
+            </select>
+          <p></p>
 
-    </select><p>
+       
+          </select><p>
       可面訪時間?  <select name="a_time" value= <%= item.a_time %>>   <option value="平日">平日</option>
           <option value="假日">假日</option>
           <option value="平日與假日皆可">平日與假日皆可</option></select>
-          <p></p>
+          <p></p>---->
+          <p>有無動物飼養經驗?</p>
+          <select class="pets" name="a_experience" value=<%=item.a_experience %>></select>
+          <script>
+            var choose = [{
+              name: "無"
+            },
+            {
+              name: "有"
+            }
+            ];
+            var str = '';
+            var i;
+            for (i = 0; i < choose.length; i++) {
+              var option = document.createElement('option');
+              option.textContent = choose[i].name;
+              document.querySelector('.pets').appendChild(option);
+            }
+            option.appendChild(str)
+          </script>
 
-  <p><input type="submit" value="送出登記資料"></p>
+          <p>可面訪時間?</p>
+          <select class="times" name="a_time" value=<%=item.a_time %>></select>
+          <script>
+            var days = [{
+              name: "平日"
+            },
+            {
+              name: "假日"
+            },
+            {
+              name: "平日與假日皆可"
+            }
+            ];
+            var freetime = '';
+            var i;
+            var select = document.querySelector('.times');
+            for (i = 0; i < days.length; i++) {
+              freetime += "<option>" + days[i].name + "</option>";
+            }
+            select.innerHTML = freetime;
+          </script>
 
-</form>
+          <p><input type="submit" value="送出登記資料"></p>
 
-      <!--   <form class="row align-items-end">
+        </form>
+
+        <!--   <form class="row align-items-end">
             <div class="col-9">
               <label for="inlineFormInputNum">聯絡資訊(手機與姓名)：</label>
               <div class="input-group">
@@ -120,17 +154,17 @@ shrink-to-fit=no"
             </div>
             <div class="col-3">
               <button type="submit" class="btn btn-primary">送出</button>
-            </div>--> 
-          </form>
-        </div>
+            </div>-->
+        </form>
       </div>
     </div>
-    <footer class="text-center bg-dark text-white py-2">
-      Copyrights © 2022 All Rights Reserved by Bunny幫你
-    </footer> 
-    <!-- Optional JavaScript -->
-    <script src="js/bootstrap.js"></script>
-  </body>
+  </div>
+  <footer class="text-center bg-dark text-white py-2">
+    Copyrights © 2022 All Rights Reserved by Bunny幫你
+  </footer>
+  <!-- Optional JavaScript -->
+  <script src="js/bootstrap.js"></script>
+</body>
+
 </html>
 <!-- row-cols-lg-auto -->
-
