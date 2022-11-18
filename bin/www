@@ -6,7 +6,8 @@
 
 var app = require('../app');
 var debug = require('debug')('web:server');
-var http = require('http');
+var fs = require("fs");
+var https = require("https");  // 改為 https
 
 /**
  * Get port from environment and store in Express.
@@ -18,10 +19,18 @@ app.set('port', port);
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 /**
+ * set HTTPS certification  -> 新增此設定
+ */
+ const options = {
+  key: fs.readFileSync("./private.key"),
+  cert: fs.readFileSync("./certificate.crt"),
+};
+
+/**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
