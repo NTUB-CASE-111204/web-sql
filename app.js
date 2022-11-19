@@ -43,6 +43,13 @@ var peta = require('./routes/peta');
 var nmcb = require('./routes/nmcb');
 var allbrand = require('./routes/allbrand');
 
+var empindex = require('./routes/empindex');
+var addanimal = require('./routes/addanimal');
+var allevent = require('./routes/allevent');
+var animallist = require('./routes/animallist');
+var memberadmin = require('./routes/memberadmin');
+var newevent = require('./routes/newevent');
+
 //------------------------------------------------------------
 
 var app = express();
@@ -105,7 +112,12 @@ app.use('/peta', peta);
 app.use('/nmcb', nmcb);
 app.use('/allbrand', allbrand);
 
-
+app.use('/empindex', empindex);
+app.use('/addanimal', addanimal);
+app.use('/allevent', allevent);
+app.use('/animallist', animallist);
+app.use('/memberadmin', memberadmin);
+app.use('/newevent', newevent);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

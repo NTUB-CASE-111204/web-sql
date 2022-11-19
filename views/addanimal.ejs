@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>活動頁面管理</title>
+    <title>Tabib Apps web | Admin Dashboard Template</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
     <!-- Base Styling  -->
@@ -20,8 +20,8 @@
         <!-- start logo components -->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html"> <img class="logo-tabib" src="assets/images/icon-07.png" alt=""></a>
-                <a href="index.html"><img class="brand-title" src="assets/images/BunnyLOGO.jpg" alt=""></a>
+                <a href="empindex"> <img class="logo-tabib" src="assets/images/icon-07.png" alt=""></a>
+                <a href="empindex"><img class="brand-title" src="assets/images/BunnyLOGO.jpg" alt=""></a>
             </div>
         </div>
         <!-- End logo components -->
@@ -32,38 +32,38 @@
             <nav class="navigation">
                 <ul class="list-unstyled main-menu">
                     <li class="has-submenu">
-                        <a href="index.html">
+                        <a href="empindex">
                             <i class="fas fa-th-large"></i>
                             <span class="nav-label">Dashboard</span>
                         </a>
                     </li>
-                    <li class="has-submenu">
+                    <li class="has-submenu active">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-user-md"></i>
                             <span class="nav-label">管理動物資料</span>
                         </a>
                         <ul class="list-unstyled mm-collapse">
-                            <li><a href="add-animal.html">新增動物</a></li>
-                            <li><a href="animal-list.html">全部動物</a></li>
-                       <!--     <li> <a href="doctor-profile.html">動物資訊</a> </li>-->
+                            <li><a href="addanimal">新增動物</a></li>
+                            <li><a href="animallist">全部動物</a></li>
+                      <!--  <li> <a href="doctor-profile.html">動物資料</a> </li> -->
                         </ul>
                     </li>
-                    <li class="has-submenu active">
+                    <li class="has-submenu">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-users"></i>
                             <span class="nav-label">活動</span>
                         </a>
                         <ul class="list-unstyled mm-collapse">
-                            <li><a href="newevent.html">新增活動</a></li>
-                            <li><a href="allevent.html">全部活動</a></li>
+                            <li><a href="newevent">新增活動</a></li>
+                            <li><a href="allevent">全部活動</a></li>
                         </ul>
                     </li>
                     <li class="has-submenu">
-                        <a href="member.html">
+                        <a href="memberadmin">
                             <i class="fas fa-calendar-plus"></i>
                             <span class="nav-label">會員管理</span>
                         </a>
-        <!--            </li>
+          <!--          </li>
                     <li class="has-submenu">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-book-medical"></i>
@@ -261,7 +261,7 @@
                                                         <img alt="image" src="https://via.placeholder.com/150/f8f8f8/2b2b2b">
                                                     </div>
                                                     <div class="media-body">
-                                                        <h6 class="mb-1">訊息通知</h6>
+                                                        <h6 class="mb-1">訊息通知/h6>
                                                         <small class="d-block">日期</small>
                                                     </div>
                                                 </div>
@@ -287,7 +287,7 @@
                                 </a>
                                 <div class="account-dropdown-form dropdown-container">
                                     <div class="form-content">
-                            <!--           <a href="doctor-settings.html">
+                        <!--               <a href="doctor-settings.html">
                                             <i class="far fa-user"></i>
                                             <span class="ml-2">Profile</span>
                                         </a>
@@ -317,13 +317,13 @@
                     <div class="row page-titles mx-0">
                         <div class="col-sm-6 p-md-0">
                             <div class="welcome-text">
-                                <h4 class="text-primary">新增活動</h4>
+                                <h4 class="text-primary">新增動物</h4>
                             </div>
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-                                <li class="breadcrumb-item active"><a href="/new-patient.html">新增活動</a></li>
+                                <li class="breadcrumb-item"><a href="empindex">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="addanimal">新增動物</a></li>
                             </ol>
                         </div>
                     </div>
@@ -331,7 +331,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">活動資訊</h4>
+                                    <h4 class="card-title">動物資訊</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
@@ -351,85 +351,103 @@
                                                             </div>
                                                         </div>
                                                     </div>
-        <!--                                        </div>
+                                                </div>
                                                 <div class="col-xl-4">
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="First Name">
+                                                        <input type="text" class="form-control" placeholder="動物名字">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Last name">
+                                                        <input type="text" class="form-control" placeholder="動物品種">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="email" class="form-control" placeholder="Email">
+                                                        <input type="email" class="form-control" placeholder="生日">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-control" placeholder="Mobile No.">
+                                                        <input type="text" class="form-control" placeholder="尺寸">
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-4">
                                                     <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="Birthday">
-                                                        </div>
+                                                        <select class="form-control form-select">
+                                                            <option>性別</option>
+                                                            <option>母</option>
+                                                            <option>公</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="發布日期">
                                                     </div>
                                                     <div class="form-group">
                                                         <select class="form-control form-select">
-                                                            <option> Marital status </option>
-                                                            <option>Married</option>
-                                                            <option>Unmarried</option>
+                                                            <option>隸屬機構</option>
+                                                            <option>機構A</option>
+                                                            <option>機構B</option>
+                                                            <option>機構C</option>
+                                                            <option>機構D</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
                                                         <select class="form-control form-select">
-                                                            <option>Sex</option>
-                                                            <option>Male</option>
-                                                            <option>Female</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <select class="form-control form-select">
-                                                            <option>Blood Group</option>
-                                                            <option>A+</option>
-                                                            <option>A-</option>
-                                                            <option>B+</option>
-                                                            <option>B-</option>
-                                                            <option>O+</option>
-                                                            <option>O-</option>
-                                                            <option>AB+</option>
-                                                            <option>AB-</option>
+                                                            <option>動物狀態</option>
+                                                            <option>狀態1</option>
+                                                            <option>狀態2</option>
+                                                            <option>狀態3</option>
+                                                            <option>狀態4</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xl-4"></div>
+                                                <div class="col-xl-4">
+                                                </div>
                                                 <div class="col-xl-4">
                                                     <div class="form-group row">
                                                         <div class="col-lg-12">
-                                                            <input type="text" class="form-control" placeholder="Patient Weight">
+                                                            <select class="form-control form-select">
+                                                                <option>City</option>
+                                                                <option>Rabat</option>
+                                                                <option>Kenitra</option>
+                                                                <option>Casablanca</option>
+                                                                <option>Marakesh</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-4">
                                                     <div class="form-group row">
                                                         <div class="col-lg-12">
-                                                            <input type="text" class="form-control" placeholder="Patient Height">
+                                                            <input type="text" class="form-control" placeholder="動物編號">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-xl-4">
+                                             <!--   </div>
+                                                <div class="col-xl-8">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" placeholder="Address" rows="4"></textarea>
+                                                        <select class="form-control ">
+                                                            <option>User role</option>
+                                                            <option>Surgery</option>
+                                                            <option>Gastroenterologist</option>
+                                                            <option>Endocrinologist</option>
+                                                        </select>
                                                     </div>-->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" placeholder="備註" rows="4"></textarea>
+                                                    </div>
                                                 </div>
                                                 <div class="col-xl-8">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" placeholder="請輸入活動資訊" rows="4"></textarea>
+                                                        <textarea class="form-control" placeholder="故事內容:" rows="4"></textarea>
                                                     </div>
                                                     <div class="form-group text-right">
-                                                        <button type="submit" class="btn btn-primary float-end">儲存</button>
+                                                       
+                                                        <button type="submit" class="btn btn-primary float-end">新增動物</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -438,8 +456,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-               <!--     <div class="row">
+             <!--       </div>
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
@@ -451,7 +469,7 @@
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label class="form-label">known diseases</label>
+                                                        <label class="form-label">Main specialization</label>
                                                         <select class="form-control form-select">
                                                             <option>Type 1 Diabetes</option>
                                                             <option>Multiple Sclerosis</option>
@@ -464,32 +482,32 @@
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label class="form-label">Period</label>
-                                                        <input class="form-control" type="text" placeholder="Period">
+                                                        <label class="form-label">Secondary specialization</label>
+                                                        <select class="form-control form-select">
+                                                            <option>Secondary specialization</option>
+                                                            <option>Celiac Disease</option>
+                                                            <option>cancer</option>
+                                                            <option>Catarrh</option>
+                                                            <option>Conjunctivitis</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label class="form-label"> Family History </label>
+                                                        <label class="form-label"> Medical Education </label>
                                                         <select class="form-control form-select">
-                                                            <option>Mother</option>
-                                                            <option>Father</option>
-                                                            <option>Brother</option>
-                                                            <option>Sister</option>
+                                                            <option>Medical University</option>
+                                                            <option>Medical College</option>
+                                                            <option>Nurse School</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
-                                                        <label class="form-label">Diseases</label>
-                                                        <select class="form-control form-select">
-                                                            <option>Type 1 Diabetes</option>
-                                                            <option>Multiple Sclerosis</option>
-                                                            <option>Rheumatoid Arthritis</option>
-                                                            <option>Allergies & Asthma</option>
-                                                        </select>
+                                                        <label class="form-label">Period</label>
+                                                        <input type="text" class="form-control" placeholder="Period">
                                                     </div>
                                                 </div>
                                             </div>
@@ -497,21 +515,21 @@
                                                 <button type="submit" class="btn btn-primary float-end ">Save</button>
                                             </div>
                                         </form>
-                                    </div>-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- End section content -->
 
 
         <!-- start section footer -->
         <div class="footer">
             <div class="copyright">
-                <p class="mb-0"><a href="" target="_blank"></a> 
+
                 </p>
             </div>
         </div>
@@ -542,7 +560,7 @@
 
     <!-- Main Custom JQuery -->
     <script src="assets/js/toggleFullScreen.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main2.js"></script>
 
 </body>
 
