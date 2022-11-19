@@ -16,22 +16,6 @@
         <div class="row">
             <div class="sidebar-menu hidden-xs hidden-sm">
                 <div class="top-section">
-                    <div class="profile-image">
-                        <img id="changepic" src=<%=item.m_pic %> alt="會員頭貼">
-                    </div>
-                    <script>
-                        function readURL(input) {
-                            if (input.files && input.files[0]) {
-                                var imageTagID = input.getAttribute("targetID");
-                                var reader = new FileReader();
-                                reader.onload = function (e) {
-                                    var img = document.getElementById(imageTagID);
-                                    img.setAttribute("src", e.target.result)
-                                }
-                                reader.readAsDataURL(input.files[0]);
-                            }
-                        }
-                    </script>
                 </div> <!-- top-section -->
             </div> <!-- .sidebar-menu -->
             <div class="main">
@@ -41,8 +25,13 @@
                         <table>
                             </select> </td>
                             <td>
+                                <div class="profile-image">
+                                    <img id="changepic" src=<%=item.m_pic %> alt="會員頭貼">
+                                </div>
+                            </td>
+                            <td>
                                 <p>選擇會員照片</p>
-                                <input type="file" name="m_pic" accept="image/gif, image/jpeg, image/png">
+                                <input type="file" name="m_pic" onchange="readURL(this)" targetID="changepic" accept="image/gif, image/jpeg, image/png">
                             </td>
                         </table>
                         <table>
@@ -98,7 +87,19 @@
 
                         <p><input type="submit" value="送出登記資料"></p>
                     </form>
-
+                    <script>
+                        function readURL(input) {
+                            if (input.files && input.files[0]) {
+                                var imageTagID = input.getAttribute("targetID");
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    var img = document.getElementById(imageTagID);
+                                    img.setAttribute("src", e.target.result)
+                                }
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                        }
+                    </script>
 
 
 
