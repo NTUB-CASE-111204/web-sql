@@ -1,444 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>News</title>
-  <link rel='stylesheet' href='css/style1.css' />
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <title>訊息公告</title>
   </head>
+
   <body>
-    <!--Top nav bar -->
-    <div id="header">
-        <div class="content clearfix row">
-          <div class="clearfix" style="height:100px;display:flex;
-                                       align-items: center;">
-            <div style="width:100%">          
-              <!-- <img src="img/LOGO(去背景)_工作區域 1 複本 2.png" style="width:120px; vertical-align: middle;"> -->
-         <!--      <a href="/" class="text-white button round-medium bold red
-                        darkred-hover" 
-                 style="float:right; line-height:25px; ">
-                回首頁
-              </a>
+    <header>
+      <h3 class="title mt-3">活動資訊<small></small></h3>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Bunny幫你</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="首頁">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">訊息公告</a>
+              </li>
+              <li class="nav-item">
+<!--                <a class="nav-link" href="product.html">實驗動物認養</a>-->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="banner"></div>
+    <div class="container mb-3">
+        <div class="row g-0">
+            <div class="col-lg align-self-center text-center">
+                <h3 class="title mt-3">活動資訊<small></small></h3>
+                <p> 好好愛牠2022線上動保教育講座報名中額滿為止</p>
+                <p> <br /> <br /> <br /></p>
             </div>
-          </div> -->
-          <ul class="clearfix nav-bar">
-            <li>
-              <a href="#" id="active" style="padding-left: 0px;">
-                <div class="padding-16">公佈欄</div>
-              </a>   
-            </li>
-            <li>              
-              <a href="#">
-                <div class="padding-16"></div>              
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>
-              </a>        
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>               
-              </a>     
-            </li>
-            <li>          
-              <a href="#">
-                <div class="padding-16"></div>        
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>              
-              </a>   
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>              
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="padding-16"></div>               
-              </a> 
-            </li>
-            <li style="float:right">
-              <a href="javascript:void(0)" onclick="open_dropdown()">   
-                <div class="padding-16" id="down">
-                  更多
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </div>
-                <div id="up" class="padding-16" style="display: none;">
-                  
-                  <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </div>
-              </a>
-              <ul class="medium" id="dropdown">
-                <li>
-                  <a href="/">回首頁</a>
-                </li>
-
-              </ul>
-            </li>                
-          </ul>
+            <div class="col-lg">
+                <img src="images/newstest.png" class="img-fluid">
+            </div>
         </div>
-      </div> 
-    <!--Body -->
-    <div id="body" class="content padding-32">
-      <!--Top Stories-->
-      <div>
-        <h1 class="padding-16">最新消息</h1>
-        <!--Top post-->
-        <div class="row gallery clearfix">
-          <div class="col two-third">
-            <img src="img/newstest.png">
-          </div>
-          <div class="col third padding-48 padding-large">
-            
-            <span class="red bold text-white padding-small small">最新活動</span> 
-            <span class="yellow bold padding-small small">限量名額</span>
-            <span style="padding-left: 10px" class="opacity">
-              <a href="#">TW</a></span>
-            <br/>
-            <p class="xlarge">
-             好好愛牠2022線上動保教育講座報名中額滿為止 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Footer -->
-    <div id="footer" class="white text-grey">
-      <!--Follow -->
-      <div id="follow" class="content padding-32 clearfix  medium line">
-        <ul class="clearfix">
-          <li>
-                    <!--Top post-->
-        <div class="row gallery clearfix">
-          <div class="col two-third">
-            <img src="images/event2.jpg">
-          </div>
-          <div class="col third padding-48 padding-large">
-            
-            <span class="red bold text-white padding-small small">最新活動</span> 
-            <span class="yellow bold padding-small small">募款活動</span>
-            <span style="padding-left: 10px" class="opacity">
-              <a href="#">TW</a></span>
-            <br/>
-            <p class="xlarge">
-              用行動支持，幫助牠好好生活，為感謝大家支持，捐款滿額送友善動物馬克杯活動開跑！
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Footer -->
-        <!--Footer -->
-        <div id="footer" class="white text-grey">
-          <!--Follow -->
-          <div id="follow" class="content padding-32 clearfix  medium line">
-            <ul class="clearfix">
-              <li>
-                        <!--Top post-->
-            <div class="row gallery clearfix">
-              <div class="col two-third">
-                <img src="images/event3.png">
-              </div>
-              <div class="col third padding-48 padding-large">
-                
-                <span class="red bold text-white padding-small small">訊息公告</span> 
-                <span class="yellow bold padding-small small">動物實驗</span>
-                <span style="padding-left: 10px" class="opacity">
-                  <a href="#">TW</a></span>
-                <br/>
-                <p class="xlarge">
-                  動物實驗，一個大家並不陌生的詞彙，但你知道每年有多少隻動物被當實驗品嗎？
+        <div class="row g-0">
+            <div class="col-lg align-self-center text-center">
+                <h3 class="title mt-3">活動資訊<small></small></h3>
+                <p>用行動支持，幫助牠好好生活，為感謝大家支持，捐款滿額送友善動物馬克杯活動開跑！<br /><br />
                 </p>
-              </div>
             </div>
-          </div>
-        </div>
-        <!--Footer -->
-            <!--Footer -->
-        <!--Footer -->
-        <div id="footer" class="white text-grey">
-          <!--Follow -->
-          <div id="follow" class="content padding-32 clearfix  medium line">
-            <ul class="clearfix">
-              <li>
-                        <!--Top post-->
-            <div class="row gallery clearfix">
-              <div class="col two-third">
-                <img src="images/event4.jpg">
-              </div>
-              <div class="col third padding-48 padding-large">
-                
-                <span class="red bold text-white padding-small small">訊息公告</span> 
-                <span class="yellow bold padding-small small">動物資訊傳播</span>
-                <span style="padding-left: 10px" class="opacity">
-                  <a href="#">TW</a></span>
-                <br/>
-                <p class="xlarge">
-                  法國將禁售貓狗、禁止鯨豚表演，台灣呢？
-                  法國自2026年起全面禁止海豚和虎鯨表演
-                </p>
-              </div>
+            <div class="col-lg order-lg-first">
+                <img src="images/event2.jpg" class="img-fluid">
             </div>
-          </div>
         </div>
-        <!--Footer -->
-                <!--Footer -->
-                <div id="footer" class="white text-grey">
-                  <!--Follow -->
-                  <div id="follow" class="content padding-32 clearfix  medium line">
-                    <ul class="clearfix">
-                      <li>
-                                <!--Top post-->
-                    <div class="row gallery clearfix">
-                      <div class="col two-third">
-                        <img src="images/event5.png">
-                      </div>
-                      <div class="col third padding-48 padding-large">
-                        
-                        <span class="red bold text-white padding-small small">動物資訊傳播</span> 
-                        <span class="yellow bold padding-small small">政策</span>
-                        <span style="padding-left: 10px" class="opacity">
-                          <a href="#">TW</a></span>
-                        <br/>
-                        <p class="xlarge">
-                          --可愛不該是牠的原罪--
-                          
-                          美國加州自2019年起加州禁止寵物店販售來自繁殖場的動物，包括狗、貓及兔子等。加州境內的寵物店只能販賣來自公共動物控管中心、動物收容所、動物防虐庇護所、救援組織等非營利機構的動物，這才是真正的落實動物福利！
 
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--Footer -->
-                        <!--Footer -->
-                <!--Footer -->
-                <div id="footer" class="white text-grey">
-                  <!--Follow -->
-                  <div id="follow" class="content padding-32 clearfix  medium line">
-                    <ul class="clearfix">
-                      <li>
-                                <!--Top post-->
-                    <div class="row gallery clearfix">
-                      <div class="col two-third">
-                        <img src="images/event1.png">
-                      </div>
-                      <div class="col third padding-48 padding-large">
-                        
-                        <span class="red bold text-white padding-small small">訊息公告</span> 
-                        <span class="yellow bold padding-small small">動物友善教育</span>
-                        <span style="padding-left: 10px" class="opacity">
-                          <a href="#">TW</a></span>
-                        <br/>
-                        <p class="xlarge">
-                          『疫』同生活的一件好事愛動物」好好愛牠2022動保教育講座
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--Footer -->
-    <div id="footer" class="white text-grey">
-      <!--Follow -->
-      <div id="follow" class="content padding-32 clearfix  medium line">
-        <ul class="clearfix">
-          <li>
-          <!--  <a id="facebook" href="#">
-              <i class="fa fa-facebook icon" 
-                 aria-hidden="true"></i>Facebook
-            </a>
-          </li>
-          <li>
-            <a id="twitter" href="#">
-              <i class="fa fa-twitter icon" 
-                 aria-hidden="true"></i>Twitter
-            </a>
-          </li>
-          <li>
-            <a id="youtube" href="#">
-              <i class="fa fa-youtube-play icon" 
-                 aria-hidden="true"></i>Youtube
-            </a>
-          </li>
-          <li>
-            <a id="instagram" href="#">
-              <i class="fa fa-instagram icon" 
-                 aria-hidden="true"></i>Instagram
-            </a> -->
-          </li>
-        </ul>
+
+    </footer>
+
+    <div class="container mb-3">
+      <div class="row g-0">
+          <div class="col-lg align-self-center text-center">
+              <h3 class="title mt-3">訊息公告<small></small></h3>
+              <p>動物實驗，一個大家並不陌生的詞彙，但你知道每年有多少隻動物被當實驗品嗎？</p>
+              <p> <br /> <br /> <br /></p>
+          </div>
+          <div class="col-lg">
+              <img src="images/event3.png" class="img-fluid">
+          </div>
       </div>
-      <!--About
-      <div id="about" class="content clearfix text-grey white line padding-32">
-        <div class="col fourth">
-          <h2>About Sky News</h2>
-          <ul class="medium">
-            <li class="">
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Sky Data</a>
-            </li>
-            <li>
-              <a href="#">Sky News International</a>
-            </li>
-            <li>
-              <a href="#">Sky News Library Sales</a>
-            </li>
-            <li>
-              <a href="#">Site Map</a>
-            </li>
-            <li>
-              <a href="#">Editorial Guidelines</a>
-            </li>
-            <li>
-              <a href="#">Supreme Court Live</a>
-            </li>
-            <li>
-              <a href="#">Sky News Board</a>
-            </li>
-            
-    
-    
-    
-    
-  
-    
-    
-          </ul>
-        </div>
-        <div class="col fourth">
-          <h2>Sky News Services</h2>
-          <ul class="medium">
-            <li class="">
-              <a href="#"> Sky News RSS</a>
-            </li>
-            <li>
-              <a href="#">Sky News For Your Phone</a>
-            </li>
-            <li>
-              <a href="#">Sky News Radio</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col fourth">
-          <h2>Sky Channels</h2>
-          <ul class="medium">
-            <li class="">
-              <a href="#">Sky 1</a>
-            </li>
-            <li>
-              <a href="#">Sky Data</a>
-            </li>
-            <li>
-              <a href="#">Sky Witness</a>
-            </li>
-            <li>
-              <a href="#">Sky Atlantic</a>
-            </li>
-            <li>
-              <a href="#">Sky Arts</a>
-            </li>
-            <li>
-              <a href="#">Sky Cinema</a>
-            </li>
-            <li>
-              <a href="#">Sky Sports</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col fourth">
-          <h2>More Sky Sites</h2>
-          <ul class="medium">
-            <li class="">
-              <a href="#">NOW TV</a>
-            </li>
-            <li>
-              <a href="#">Sky Ocean Rescue</a>
-            </li>
-            <li>
-              <a href="#">Sky Academy Studios</a>
-            </li>
-            <li>
-              <a href="#">Bigger Picture</a>
-            </li>
-            <li>
-              <a href="#">Sky Corporate</a>
-            </li>
-            <li>
-              <a href="#">Sky Bet</a>
-            </li>
-            <li>
-              <a href="#">Sky.com</a>
-            </li>
-            <li>
-              <a href="#">Sky News Arabia</a>
-            </li>
-            <li>
-              <a href="#">Advertise With Us</a>
-            </li>
-          </ul>
-        </div>
+      <div class="row g-0">
+          <div class="col-lg align-self-center text-center">
+              <h3 class="title mt-3">訊息公告<small></small></h3>
+              <p>法國將禁售貓狗、禁止鯨豚表演，台灣呢？ 法國自2026年起全面禁止海豚和虎鯨表演
+              </p>
+          </div>
+          <div class="col-lg order-lg-first">
+              <img src="images/event4.jpg" class="img-fluid">
+          </div>
       </div>
-      -->
-      <!--Legal and Contact
-      <div id="contact" class="content padding-32">
-        <ul>
-          <li>
-            <a href="#">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="#">Privacy & Cookies</a>
-          </li>
-          <li>
-            <a href="#">Privacy Options</a>
-          </li>
-          <li>
-            <a href="#">Accessibility</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-        <div class="padding-16">
-          <a href="#">
-            <img src="" style="width:70px; vertical-align:-15px;">
-          </a>
-          <span class="medium">© Bunny幫你</span>
-        </div>
-        
-            
+
+
+<div class="container mb-3">
+  <div class="row g-0">
+      <div class="col-lg align-self-center text-center">
+          <h3 class="title mt-3">訊息公告<small></small></h3>
+          <p>--可愛不該是牠的原罪-- 美國加州自2019年起加州禁止寵物店販售來自繁殖場的動物，包括狗、貓及兔子等。加州境內的寵物店只能販賣來自公共動物控管中心、動物收容所、動物防虐庇護所、救援組織等非營利機構的動物，這才是真正的落實動物福利！</p>
+          <p> <br /> <br /> <br /></p>
       </div>
-    </div>
--->
+      <div class="col-lg">
+          <img src="images/event5.png" class="img-fluid">
+      </div>
+  </div>
+
+</div>
+
+  <footer class="text-center bg-dark text-white py-2">
+      © 2021 All Rights Reserved.
+  </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="js/bootstrap.js"></script>
   </body>
-  <script>
-    function open_dropdown(){
-      document.getElementById('dropdown').style.display="block";
-      document.getElementById('up').style.display="block";
-      document.getElementById('down').style.display="none";
-    }
-  </script>
-</html>
-<!-- partial -->
-  -->
-</body>
 </html>
