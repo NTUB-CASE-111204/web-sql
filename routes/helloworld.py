@@ -20,7 +20,8 @@ def foo(var):
         time.sleep(1)
         print('300#'+'{"sign":"1", "msg":"匹配成功"}')
     else:
-        print('run the orderError')
+        a = "true"
+        print(var+'#'+'{"sign":"'+a+'"}')
 
 
 # 引數為從命令列傳過來的引數 sys.argv ['py_test.py', arg1, arg2...]

@@ -8,6 +8,7 @@ const member = require('./utility/member');
 // 引用multer外掛
 //---------------------------
 const multer  = require('multer');
+const { json } = require('express/lib/response');
 
 // 宣告上傳存放空間及檔名更改
 var storage = multer.diskStorage({
@@ -63,7 +64,7 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
        console.log(o)
     });*/
     var exec = require('child_process').exec;
-    var cmds = ['100', '200', '300'];
+    var cmds = ['100', '200', '300', pic_file];
     var no = 0;
 
     //先發第一個環節碼100，等待返回正確資料再進行傳送下一個碼
@@ -82,12 +83,15 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
             //將返回的json資料解析,判斷是都執行下一步
             var json = JSON.parse(stdout.split("#")[1]);
             console.log(json.msg);
-            if(json.sign == "1" && no < 3){
+            if(json.sign == "1" && no < 4){
                 execCmd();
+            }
+            if(json.sign == 'true'){
+              res.render('index');
             }
         });
     }
-    res.render('index');
+    
     return
   }
 
