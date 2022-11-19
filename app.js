@@ -26,6 +26,8 @@ var newregister = require('./routes/newregister');
 var detail = require('./routes/detail');
 var detailadd = require('./routes/detailadd');
 
+var feedbackadd = require('./routes/feedbackadd');
+
 var billboardRouter = require('./routes/billboard');
 var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
@@ -85,6 +87,8 @@ app.use('/newregister', newregister);
 
 app.use('/detail', checkAuth, detail);
 app.use('/detailadd', checkAuth, detailadd);
+
+app.use('/feedbackadd', checkAuth, feedbackadd);
 
 app.use('/billboard', billboardRouter);
 app.use('/brand', brandRouter);

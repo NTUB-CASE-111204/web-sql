@@ -252,21 +252,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form action="#" method="post" class="contact-form">
-                            <fieldset class="col-md-4 col-sm-6">
-                                <input type="text" id="your-name" placeholder="姓名">
-                            </fieldset>
-                            <fieldset class="col-md-4 col-sm-6">
-                                <input type="email" id="email" placeholder="信箱">
-                            </fieldset>
+                        <form action="/feedbackadd" method="post" class="contact-form">
                             <fieldset class="col-md-4 col-sm-12">
-                                <input type="text" id="your-subject" placeholder="標題">
+                                <input type="text" id="your-subject" name="f_description" placeholder="標題">
                             </fieldset>
                             <fieldset class="col-md-12 col-sm-12">
-                                <textarea name="message" id="message" cols="30" rows="6" placeholder="訊息"></textarea>
+                                <textarea id="message" cols="30" rows="6" name="f_content" placeholder="訊息"></textarea>
                             </fieldset>
                             <fieldset class="col-md-12 col-sm-12">
-                                <input type="submit" class="button big default" value="發送訊息">
+                                <input type="submit" class="button big default" value="回報問題">
                             </fieldset>
                         </form>
                     </div> <!-- .contact-form -->
