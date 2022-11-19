@@ -51,7 +51,57 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
     pic_file:pic_file
   }
 
-  console.log("2/" + pic_file);
+  while(true){
+    //res.render('index');
+    /*$.ajax({
+      type: "POST",
+      url: "/helloWorld.py",
+      data: {
+        param: "hello world",
+      }
+    }).done((o) => {
+       console.log(o)
+    });*/
+    var exec = require('child_process').exec;
+    var cmds = ['100', '200', '300'];
+    var no = 0;
+
+    //先發第一個環節碼100，等待返回正確資料再進行傳送下一個碼
+    execCmd();
+
+    //該方法用於命令列執行python命令 類似於:  python py_test.py arg1
+    //這樣在python中就可以接受傳遞過去的引數
+    function execCmd() {
+        exec('python routes/helloworld.py '+ cmds[no++], function (error, stdout, stderr) {
+            if(error){
+                console.error('error: ' + error);
+                return;
+            }
+            console.log('receive: ' + stdout.split("#")[0] + ": " + stdout.split("#")[1]);
+
+            //將返回的json資料解析,判斷是都執行下一步
+            var json = JSON.parse(stdout.split("#")[1]);
+            console.log(json.msg);
+            if(json.sign == "1" && no < 3){
+                execCmd();
+            }
+        });
+    }
+    res.render('index');
+    return
+  }
+
+  /*$.ajax({
+    type: "POST",
+    url: "/helloWorld.py",
+    data: {
+      param: "hello world",
+    }
+  }).done((o) => {
+     console.log(o)
+  });*/
+  
+  //console.log("2/" + pic_file);
   /*member.add(newData).then(d => {
     console.log("3/" + d);
     if (d == 0) {
