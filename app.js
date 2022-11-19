@@ -64,7 +64,7 @@ app.use(express.static('public/pic'));
 // 增加引用express-session
 //--------------------------------------------------------------------
 var session = require('express-session');
-app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
+app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 18000000 }})); //時間30分鐘
 //--------------------------------------------------------------------
 
 app.use('/', indexRouter);

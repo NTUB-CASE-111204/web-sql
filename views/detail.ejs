@@ -86,27 +86,39 @@ shrink-to-fit=no" />
           <p>備註事項: </p>
           <p><textarea rows="5" cols="20" type="text" name="a_remark"><%= item.a_remark %></textarea></p>
 
-          <!---  </select>
+          </select>
           <p>
-            有無動物飼養經驗? <select name="a_experience" value=<%=item.a_experience %>> <option value="false">無</option>
+            有無動物飼養經驗? <select id="pets" onchange="selectpet()" name="a_experience" value=<%=item.a_experience %>> 
+              <option value="false">無</option>
               <option value="true">有</option>
             </select>
           <p></p>
-
-       
+          <script>
+            function selectpets(){
+              const petvalue = document.getElementById('.pets').value;
+              document.querySelector('#pets [value="' + petvalue + '"]').selected = true;
+            }
+        </script>
+          <!---
           </select><p>
       可面訪時間?  <select name="a_time" value= <%= item.a_time %>>   <option value="平日">平日</option>
           <option value="假日">假日</option>
           <option value="平日與假日皆可">平日與假日皆可</option></select>
           <p></p>---->
+
           <p>有無動物飼養經驗?</p>
-          <select class="pets" name="a_experience" value=<%=item.a_experience %>></select>
+          <select class="pets" name="a_experience"></select>
           <script>
             var choose = [{
-              name: "無"
+              name: "無",
+              value: "false"
             },
             {
-              name: "有"
+              name: "有",
+              value: "true"
+            }, {
+              name: "test",
+              value: "test"
             }
             ];
             var str = '';
@@ -114,6 +126,8 @@ shrink-to-fit=no" />
             for (i = 0; i < choose.length; i++) {
               var option = document.createElement('option');
               option.textContent = choose[i].name;
+              option.value = choose[i].value;
+              option.selected = 'selected';
               document.querySelector('.pets').appendChild(option);
             }
             option.appendChild(str)

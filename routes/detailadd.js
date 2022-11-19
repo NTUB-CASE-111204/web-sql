@@ -21,7 +21,7 @@ router.post('/', function (req, res, next) {
   var a_time = req.body.a_time;
   var a_remark = req.body.a_remark;
   var a_updatetime = formatDate(new Date());
-  console.log("1/" + a_realname);
+  console.log("1/" + a_experience);
 
   // 建立一個新資料物件
   var newData = {
