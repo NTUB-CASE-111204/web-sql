@@ -10,7 +10,7 @@ const formatDate = (current_datetime)=>{
 
 //接收GET請求
 router.get('/', function(req, res, next) {
-  var m_email = req.session.m_email;; 
+  var m_email = req.session.m_email;
 
   if(m_email==null || m_email==undefined){
     res.render('login');
