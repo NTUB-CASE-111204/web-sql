@@ -248,16 +248,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="widget-title">問題回報</h4>
-                            <p>歡迎回報您使用APP遇到問題與反饋</p>
+                            <p>歡迎回報您遇到的問題與反饋</p>
                         </div>
                     </div>
                     <div class="row">
                         <form action="/feedbackadd" method="post" class="contact-form">
                             <fieldset class="col-md-4 col-sm-12">
-                                <input type="text" id="your-subject" name="f_description" placeholder="標題">
+                                <input type="text" id="your-subject" name="f_description" placeholder="標題" required>
                             </fieldset>
                             <fieldset class="col-md-12 col-sm-12">
-                                <textarea id="message" cols="30" rows="6" name="f_content" placeholder="訊息"></textarea>
+                                <textarea id="message" cols="30" rows="6" name="f_content" placeholder="訊息" required></textarea>
                             </fieldset>
                             <fieldset class="col-md-12 col-sm-12">
                                 <input type="submit" class="button big default" value="回報問題">
