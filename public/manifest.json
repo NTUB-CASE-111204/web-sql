@@ -1,0 +1,35 @@
+{
+    "short_name": "Bunny幫你",
+    "name": "Bunny幫你",
+    "icons": [
+        {
+            "src": "images/abou-us.jpg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/jpg"
+        },
+        {
+            "src": "images/abou-us.jpg",
+            "type": "image/jpg",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/abou-us.jpg",
+            "sizes": "256x256",
+            "type": "image/jpg"
+        },
+        {
+            "src": "images/abou-us.jpg",
+            "sizes": "384x384",
+            "type": "image/jpg"
+        },
+        {
+            "src": "images/abou-us.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000"
+}
