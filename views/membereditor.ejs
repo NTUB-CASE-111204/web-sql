@@ -1,161 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>會員資料編輯頁面</title>
-  </head>
-
-  <body>
-
-    
-
-    <header class="container">
-      <img
-        src="images/profile.jpg"
-        class="mt-5 rounded-circle mx-auto d-block"
-        id="photo"
-      />
-      <h5 class="text-center mt-3"><td><input type="text" placeholder="暱稱"></h5>
-    </header>
-    <div class="container mt-5">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-  <!--     <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/01.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">香煎鮭魚排</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/02.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">水果總匯優格</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/03.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">青醬時蔬蝴蝶麵</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/04.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">鮮橙黑胡椒牛排</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/05.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">岩鹽牛排</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-center">
-            <img src="images/thumbs/06.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">莓果鬆餅</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>--> 
-
-    <table>
-    </select> </td>
-    <td><input type="text" placeholder="暱稱">
-    <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </table>
-
-    <table>
-    </select> </td>
-    <td><input type="text" placeholder="信箱">
-    <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </table>
-
-    <table>
-    </select> </td>
-    <td><input type="text" placeholder="密碼">
-    <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </table>
-
-    <table>
-    </select> </td>
-    <td>
-        <p>性別:<br />
-            <select name="m_sex">
-                <option value="男">男</option>
-                <option value="女">女</option>
-            </select>
-        </p>
-        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </td>
-
-</table>
-
-
-    <table>
-    </select> </td>
-    <td>
-        <p>生日:<br /><input type="date" name="m_birth" value=<%=item.m_birth %> ></p>
-        <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </td>
-</table>
-
-    <table>
-    </select> </td>
-    <td><input type="text" placeholder="已登記為實驗動物領養人">
-    <input type="submit" name="button3" id="button3" value="修改資料" /></td>
-    </table>
-    
-    <footer class="text-center text-white py-2">
-    
-    </footer>
-    <!-- Optional JavaScript -->
-    <script src="js/bootstrap.js"></script>
-  </>
-</html>
-
-
-
-<!--分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線-->
-
-<!-- <!doctype html>
-<html lang="en">-->
-
-<!--<head>-->
-    <!-- Required meta tags
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!-- Bootstrap CSS 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/membereditor.css">
     <link rel="manifest" href="manifest.json">
     <title>會員資料修改頁面</title>
-</head>-->
+</head>
 
-<!--<body>
+<body>
     <div class="container-fluid">
         <div class="row">
             <div class="sidebar-menu hidden-xs hidden-sm">
-                <div class="top-section">-->
+                <div class="top-section">
                 </div> <!-- top-section -->
             </div> <!-- .sidebar-menu -->
-        <!--    <div class="main">
+            <div class="main">
                 <div class="col-lg-10 mx-auto py-5">
                     <h4>會員資料修改頁面</h4>
                     <form action="/memberupdate" enctype="multipart/form-data" method="post" name="form" onchange="readURL(this)" targetID="changepic">
@@ -239,7 +103,7 @@
                     </script>
 
 
--->
+
                     <!--  <div class="col-xl-10">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="暱稱"> <input id="btn1" type="button" value="修改" onclick="btnnumkeypad(this)" style="position:relative; left:600px; top: 0px; " /> 
@@ -260,10 +124,10 @@
                         <input type="email" class="form-control" placeholder="實驗動物領養人">
                     </div>-->
 
-                    <!--<div class="row">
+                    <!--<div class="row">-->
                     <div class="col-sm my-2">
-                        <img src="images/" class="img-fluid">
-                    </div>-->
+                        <img src="images/01-banner.jpg" class="img-fluid">
+                    </div>
                     <div class="col-sm my-2">
                         <img src="" class="img-fluid">
                     </div>
