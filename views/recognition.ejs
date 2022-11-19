@@ -71,9 +71,11 @@
     <!--主按鈕-->
     <div class="row g-0 text-light justify-content-center align-items-center">
       <div class="col-lg-6 text-center">
-        <form>
+        <form action="/recognitionSelect" enctype="multipart/form-data" method="post" name="form">
           <input type="file" name="pic_file" accept="image/jpeg, image/png" required="required">
+          <input type="submit" value="確定">
         </form>
+        <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
     <!--<ul class="drop-down-menu">
       <li><a href="#">開始上傳</a> 
           <ul>

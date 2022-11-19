@@ -31,6 +31,7 @@ var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
 var donateRouter = require('./routes/donate');
 var recognitionRouter = require('./routes/recognition');
+var recognitionSelectRouter = require('./routes/recognitionSelect');
 var newsRouter = require('./routes/news');
 
 var brand_list = require('./routes/brand_list');
@@ -58,6 +59,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 可由外部直接取用資料夾
 //----------------------------------------
 app.use(express.static('public/pic'));
+app.use(express.static('public/selectPic'));
 //-----------------------------------------
 
 //--------------------------------------------------------------------
@@ -89,6 +91,7 @@ app.use('/brand', brandRouter);
 app.use('/product', productRouter);
 app.use('/donate', donateRouter);
 app.use('/recognition', recognitionRouter);
+app.use('/recognitionSelect', recognitionSelectRouter);
 app.use('/news', newsRouter);
 
 app.use('/brand/list', brand_list);

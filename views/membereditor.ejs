@@ -16,12 +16,27 @@
         <div class="row">
             <div class="sidebar-menu hidden-xs hidden-sm">
                 <div class="top-section">
-                    <div class="profile-image"> 
-                        <img src=<%= item.m_pic %> alt="會員頭貼">
-                    </div>      
+                    <div class="profile-image">
+                        <img id="changepic" src=<%=item.m_pic %> alt="會員頭貼">
+                    </div>
                     <p>選擇會員照片</p>
-                    <input type="file" name="m_pic" accept="image/gif, image/jpeg, image/png">
-                </div> <!-- top-section -->        
+                    <form action="/memberupdate" enctype="multipart/form-data" method="post" name="form">
+                        <input type="file" name="m_pic" onchange="readURL(this)" targetID="changepic" accept="image/gif, image/jpeg, image/png">
+                    </form>
+                    <script>
+                        function readURL(input){
+                          if(input.files && input.files[0]){
+                            var imageTagID = input.getAttribute("targetID");
+                            var reader = new FileReader();
+                            reader.onload = function (e) {                        
+                               var img = document.getElementById(imageTagID);                        
+                               img.setAttribute("src", e.target.result)
+                            }
+                            reader.readAsDataURL(input.files[0]);
+                          }
+                        }
+                        </script>
+                </div> <!-- top-section -->
             </div> <!-- .sidebar-menu -->
             <div class="main">
                 <div class="col-lg-10 mx-auto py-5">

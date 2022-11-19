@@ -12,7 +12,7 @@ const multer  = require('multer');
 // 宣告上傳存放空間及檔名更改
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'public/pic');
+        cb(null, 'public/selectPic');
     },
 
     filename: function (req, file, cb) {
@@ -29,40 +29,36 @@ var upload = multer({
 //---------------------------
 
 //接收POST請求
-router.post('/', upload.single('m_pic'), function (req, res, next) {
-  var m_email = req.body.m_email;   //取得會員帳號
+router.post('/', upload.single('pic_file'), function (req, res, next) {
   // 如果有選擇圖片
   if (typeof req.file != 'undefined'){
-  // 傳入檔案不可超過maxSize
-  if(req.file.size > maxSize){
-      res.render('fileSizeError');  //圖片過大
-      return;
+    // 傳入檔案不可超過maxSize
+    if(req.file.size > maxSize){
+        res.render('fileSizeError');  //圖片過大
+        return;
     }                      
   } 
 
+  var pic_file;
+
   // 如果有選擇圖片
   if (typeof(req.file) != 'undefined'){
-      m_pic=req.file.filename;   //取得上傳照片名稱
+    pic_file=req.file.filename;   //取得上傳照片名稱
   }
 
+  // 建立一個新資料物件
   var newData = {
-    m_email: m_email,  
-    m_password: req.body.m_password,  
-    m_nickname: req.body.m_nickname, 
-    m_sex: req.body.m_sex,
-    m_birth: req.body.m_birth,
-    m_phone: req.body.m_phone,
-    m_pic: req.body.m_pic
+    pic_file:pic_file
   }
-  
-  member.update(newData).then(d => {
-    if (d >= 0) {
-      res.render('updateSuccess', { result: d });  //傳至成功頁面
-    } else {
-      res.render('updateFail');     //導向錯誤頁面
-    }
-  })
-});
 
-//匯出
+  console.log("2/" + pic_file);
+  /*member.add(newData).then(d => {
+    console.log("3/" + d);
+    if (d == 0) {
+      res.render('addSuccess');  //傳至成功頁面
+    } else {
+      res.render('addFail');     //導向錯誤頁面
+    }
+  })*/
+});
 module.exports = router;
