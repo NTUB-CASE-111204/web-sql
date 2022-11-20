@@ -3,6 +3,7 @@ var router = express.Router();
 
 //增加引用函式
 const member = require('./utility/member');
+const brand = require('./utility/brandall');
 
 //---------------------------
 // 引用multer外掛
@@ -87,10 +88,8 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
                 execCmd();
             }
             if(json.sign == 'true' && json.msg == "DEGUSTER 慢享"){
-              router.post('/', function(req, res, next) {
-                req.session.b_name = json.msg
-              });
-              res.render('recognitionAns');
+              req.session.b_name = json.msg;
+              res.render('recognition');
             }
         });
     }

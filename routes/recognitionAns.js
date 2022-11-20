@@ -6,7 +6,7 @@ const brand = require('./utility/brandall');
 
 //接收GET請求
 router.get('/', function(req, res, next) {
-    var b_name = "DEGUSTER 慢享";
+    var b_name = req.session.b_name;
 
     brand.brandselect(b_name).then(data => {
         if(data==null){
