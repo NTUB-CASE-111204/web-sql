@@ -73,17 +73,22 @@
     <div class="row g-0 text-light justify-content-center align-items-center">
       <div class="col-lg-6 text-center">
         <div class="profile-content">
+            <h2 class="profile-title">辨識結果為：</h2>
             <h3 class="profile-title"><%= item.b_name %></h3>
-            <h3 class="profile-title">認證標章為：</h3>
+            <br>
+            <h2 class="profile-title">認證標章為：</h2>
             <% if (item.peta == true) { %>
+              <h3 class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</h3>
               <a href="peta" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-              <p class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</p>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
             <% }else if (item.leapingbunny == true) { %>
+              <h3 class="profile-description">LEAPING BUNNY CERTIFICATION</h3>
               <a href="leapingbunny" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-              <p class="profile-description">LEAPING BUNNY CERTIFICATION</p>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
             <% } else { %>
+              <h3 class="profile-description">兔兔不哭</h3>
               <a href="nmcb" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-              <p class="profile-description">兔兔不哭</p>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
             <% } %>
         </div>
         <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
