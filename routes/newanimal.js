@@ -66,7 +66,8 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
         an_size: an_size,
         an_depiction: an_depiction,
         an_pic: an_pic,
-        an_postdate: an_postdate
+        an_postdate: an_postdate,
+        an_sex: an_sex
     }
 
     console.log("2/" + an_pic);

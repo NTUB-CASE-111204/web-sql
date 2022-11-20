@@ -28,7 +28,7 @@ var query = async function (m_email) {
 //------------------------------------------
 var add = async function (newData) {
     var result;
-    await sql('INSERT INTO public.animal (an_name, an_variety, an_birth, an_size, an_depiction, an_pic, an_postdate) VALUES ($1, $2, $3, $4, $5, $6, $7)', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_pic, newData.an_postdate])
+    await sql('INSERT INTO public.animal (an_name, an_variety, an_birth, an_size, an_depiction, an_pic, an_postdate, an_sex) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_pic, newData.an_postdate, newData.an_sex])
         .then((data) => {
             result = 0;
         }, (error) => {
@@ -90,7 +90,7 @@ var update = async function (newData) {
 var list = async function () {
     var result = [];
 
-    await sql('SELECT * FROM public.member ORDER BY m_email')
+    await sql('SELECT * FROM public.animal ORDER BY an_id')
         .then((data) => {
             result = data.rows;
         }, (error) => {
