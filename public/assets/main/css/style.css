@@ -487,12 +487,21 @@ table.dataTable.display tbody td {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: inherit;
+    display: flex;
     margin-bottom: 10px;
     height: 90px;
-    width: 90px; }
+    width: 90px;
+    position: relative;
+    overflow: hidden; }
     .list-doctors .timeline .timeline-panel .media img {
-      width: 100%; }
+      position:absolute;
+      top:50%;
+      left:50%;
+      display: block;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%,-50%);
+      }
   .list-doctors .timeline .timeline-panel .media-body a h4 {
     color: #2b2b2b;
     font-size: 15px;
