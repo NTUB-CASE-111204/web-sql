@@ -34,6 +34,9 @@ router.post('/', function(req, res, next) {
         }else{
             req.session.m_email = d.m_email;
             req.session.m_password = d.m_password;
+            if (d.m_pic == null || d.m_pic == ''){
+                d.m_pic = "icon-07.png";
+            }
             if(d.m_birth == null || d.m_birth == ''){
                 d.m_birth = "尚未填寫"
             }else{
