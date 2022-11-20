@@ -27,6 +27,7 @@ var detail = require('./routes/detail');
 var detailadd = require('./routes/detailadd');
 
 var feedbackadd = require('./routes/feedbackadd');
+var feedbackpage = require('./routes/feedbackpage');
 
 var billboardRouter = require('./routes/billboard');
 var brandRouter = require('./routes/brand');
@@ -108,6 +109,7 @@ app.use('/detail', checkAuth, detail);
 app.use('/detailadd', checkAuth, detailadd);
 
 app.use('/feedbackadd', checkAuth, feedbackadd);
+app.use('/feedbackpage', checkAuth, feedbackpage);
 
 app.use('/billboard', billboardRouter);
 app.use('/brand', brandRouter);
