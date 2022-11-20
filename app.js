@@ -49,14 +49,14 @@ var empindex = require('./routes/empindex');
 var addanimal = require('./routes/addanimal');
 var newanimal = require('./routes/newanimal');
 var animaledit = require('./routes/animaledit');
+var animalupdateno = require('./routes/animalupdateno');
+var animalupdate = require('./routes/animalupdate');
 var animalcheck = require('./routes/animalcheck');
 var animalcheckno = require('./routes/animalcheckno');
-var animalupdateno = require('./routes/animalupdateno');
 var animaldelno = require('./routes/animaldelno');
 var adopterdetail = require('./routes/adopterdetail');
 var animallist = require('./routes/animallist');
 var memberadmin = require('./routes/memberadmin');
-var editbackmember = require('./routes/editbackmember');
 var newevent = require('./routes/newevent');
 var allevent = require('./routes/allevent');
 
@@ -79,6 +79,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //----------------------------------------
 app.use(express.static('public/pic'));
 app.use(express.static('public/selectPic'));
+app.use(express.static('public/animalpic'));
 //-----------------------------------------
 
 //--------------------------------------------------------------------
@@ -128,14 +129,14 @@ app.use('/empindex',  empindex);
 app.use('/addanimal',  addanimal);
 app.use('/newanimal',  newanimal);
 app.use('/animaledit',  animaledit);
+app.use('/animalupdateno',  animalupdateno);
+app.use('/animalupdate',  animalupdate);
 app.use('/animalcheck',  animalcheck);
 app.use('/animalcheckno',  animalcheckno);
-app.use('/animalupdateno',  animalupdateno);
 app.use('/animaldelno',  animaldelno);
 app.use('/adopterdetail',  adopterdetail);
 app.use('/animallist',  animallist);
 app.use('/memberadmin',  memberadmin);
-app.use('/editbackmember',  editbackmember);
 app.use('/newevent',  newevent);
 app.use('/allevent',  allevent);
 

@@ -339,7 +339,7 @@
                             </ol>
                         </div>
                     </div>
-                    <form action="/newanimal" enctype="multipart/form-data" method="post">
+                    <form action="/animalupdate" enctype="multipart/form-data" method="post">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
@@ -376,8 +376,7 @@
                                                                 placeholder="動物品種" required value=<%=item.an_variety %>>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="date" name="an_birth"  class="form-control"
-                                                                placeholder="生日" required  value=<%=item.an_birth %> >
+                                                            <input type="date" name="an_birth"  class="form-control" value=<%=item.an_birth %> >
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4">
@@ -392,6 +391,10 @@
                                                                 <option>母</option>
                                                                 <option>公</option>
                                                             </select>
+                                                        </div>
+                                                        <div class="form-group" hidden>
+                                                            <input type="text" name="an_id" class="form-control"
+                                                                placeholder="編號" hidden value=<%=item.an_id %>>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -418,19 +421,11 @@
                                                     <div class="col-xl-8">
                                                         <div class="form-group">
                                                             <textarea class="form-control" name="an_depiction"
-                                                                placeholder="故事內容:" rows="4" required value=<%=item.an_depiction %>></textarea>
+                                                                placeholder="故事內容:" rows="4" required><%=item.an_depiction %></textarea>
                                                         </div>
                                                         <div class="form-group text-right">
-                                                            <button type="submit" onclick="return confirmAdd()"
-                                                                class="btn btn-primary float-end">修改</button>
+                                                            <button type="submit" class="btn btn-primary float-end">修改</button>
                                                         </div>
-                                                        <script>
-                                                            function confirmAdd(){
-                                                                if(an_name!=null){
-                                                                    alert("修改成功");
-                                                                }
-                                                            }
-                                                        </script>
                                                     </div>
                                                 </div>
                                             </form>

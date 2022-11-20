@@ -13,10 +13,10 @@ router.get('/', function (req, res, next) {
       res.render('error');  //導向錯誤頁面           
     } else {
       if (data.an_postdate != null) {
-        data.an_postdate = data.an_postdate.getFullYear() + "/" + (data.an_postdate.getMonth() + 1) + "/" + data.an_postdate.getDate();
+        data.an_postdate = data.an_postdate.getFullYear() + "-" + (data.an_postdate.getMonth() + 1) + "-" + data.an_postdate.getDate();
       }
       if (data.an_birth != null) {
-        data.an_birth = data.an_birth.getFullYear() + "/" + (data.an_birth.getMonth() + 1) + "/" + data.an_birth.getDate();
+        data.an_birth = data.an_birth.getFullYear() + "-" + (data.an_birth.getMonth() + 1) + "-" + data.an_birth.getDate();
       }
       if (data.an_pic != null) {
         data.an_pic = "animalpic/" + data.an_pic;

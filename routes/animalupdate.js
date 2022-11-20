@@ -12,7 +12,7 @@ const multer = require('multer');
 // 宣告上傳存放空間及檔名更改
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/pic');
+    cb(null, 'public/animalpic');
   },
 
   filename: function (req, file, cb) {
@@ -30,8 +30,7 @@ var upload = multer({
 
 //接收POST請求
 router.post('/', upload.single('an_pic'), function (req, res, next) {
-
-  var an_id = req.body.an_id;   //取得會員帳號
+  var an_id = req.body.an_id;
   var an_pic = req.body.an_pic;
   // 如果有選擇圖片
   if (typeof req.file != 'undefined') {
@@ -41,14 +40,13 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
       return;
     }
   }
-  console.log("1///" + m_pic);
   // 如果有選擇圖片
   if (typeof (req.file) != 'undefined') {
     an_pic = req.file.filename;   //取得上傳照片名稱
   }
   console.log("2///" + an_pic);
   var newData = {
-    an_id: req.body.an_id,
+    an_id: an_id,
     an_name: req.body.an_name,
     an_variety: req.body.an_variety,
     an_birth: req.body.an_birth,
@@ -57,10 +55,11 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
     an_pic: an_pic,
     an_sex: req.body.an_sex
   }
-  console.log("3///" + newData.m_pic);
+  console.log("1///" + newData.an_id);
+  console.log("3///" + newData.an_pic);
   animal.update(newData).then(d => {
     if (d >= 0) {
-      res.render('updateSuccess', { result: d });  //傳至成功頁面
+      res.render('animalupdateno', { result: d });  //傳至成功頁面
     } else {
       res.render('updateFail');     //導向錯誤頁面
     }

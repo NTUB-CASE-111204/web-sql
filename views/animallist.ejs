@@ -331,7 +331,7 @@
                             <div class="welcome-text">
                                 <h4 class="text-primary">動物清單</h4>
                             </div>
-                            
+
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
@@ -352,12 +352,12 @@
                                         </div>
                                         <div class="col-lg-3 col-sm-12">
                                             <div class="form-group">
-                                                <input class="btn" href="animalcheckno" value="編輯">
+                                                <a class="btn" href="animalupdateno" value="查詢" role="button"></a>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-sm-12">
                                             <div class="form-group">
-                                                <input class="btn" href="animalcheckno" value="刪除">
+                                                <a class="btn" href="animaldelno" value="查詢" role="button"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -373,7 +373,7 @@
                                         <div class="col-sm-6 col-lg-4">
                                             <div class="timeline-panel card p-4 mb-4">
                                                 <div class="media">
-                                                    <img alt="image" src=<%= items[i].an_pic %>>
+                                                    <img alt="image" src=<%=items[i].an_pic %>>
                                                 </div>
                                                 <div class="media-body">
                                                     <a href="#">
@@ -381,9 +381,13 @@
                                                             <%= items[i].an_name %>
                                                         </h4>
                                                     </a>
-                                                    <p class="mb-2"><%= items[i].an_variety %></p>
+                                                    <p class="mb-2">
+                                                        <%= items[i].an_variety %>
+                                                    </p>
                                                     <div class="star-review">
-                                                        <p class="mb-2"><%= items[i].an_postdate %></p>
+                                                        <p class="mb-2">
+                                                            <%= items[i].an_postdate %>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div class="btn-group-style-1">
@@ -412,48 +416,50 @@
                                         </div>
                                         <% } %>
 
-                                        <div class="col-sm-6 col-lg-4">
-                                            <div class="timeline-panel card p-4 mb-4">
-                                                <div class="media">
-                                                    <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
-                                                </div>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        <h4 class="mb-2">動物I</h4>
-                                                    </a>
-                                                    <p class="mb-2">兔子</p>
-                                                    <div class="star-review">
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-gray"></i>
-                                                        <i class="fa fa-star text-gray"></i>
+                                            <div class="col-sm-6 col-lg-4">
+                                                <div class="timeline-panel card p-4 mb-4">
+                                                    <div class="media">
+                                                        <img alt="image"
+                                                            src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
                                                     </div>
-                                                </div>
-                                                <div class="btn-group-style-1">
-                                                    <div class="btn-content">
-                                                        <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-v"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <div class="form-content">
-                                                                <a href="animalcheck">
-                                                                    <span class="ml-2">查看檔案</span>
-                                                                </a>
-                                                                <a href="animaledit">
-                                                                    <span class="ml-2">修改</span>
-                                                                </a>
-                                                                <a href="#">
-                                                                    <span class="ml-2">刪除</span>
-                                                                </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            <h4 class="mb-2">動物I</h4>
+                                                        </a>
+                                                        <p class="mb-2">兔子</p>
+                                                        <div class="star-review">
+                                                            <i class="fa fa-star text-orange"></i>
+                                                            <i class="fa fa-star text-orange"></i>
+                                                            <i class="fa fa-star text-orange"></i>
+                                                            <i class="fa fa-star text-gray"></i>
+                                                            <i class="fa fa-star text-gray"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-group-style-1">
+                                                        <div class="btn-content">
+                                                            <button type="button"
+                                                                class="btn btn-secondary dropdown-toggle"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <i class="fas fa-ellipsis-v"></i>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="form-content">
+                                                                    <a href="animalcheck">
+                                                                        <span class="ml-2">查看檔案</span>
+                                                                    </a>
+                                                                    <a href="animaledit">
+                                                                        <span class="ml-2">修改</span>
+                                                                    </a>
+                                                                    <a href="#">
+                                                                        <span class="ml-2">刪除</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
                                 </div>
                             </div>
                         </div>
