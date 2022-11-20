@@ -89,7 +89,7 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
             }
             if(json.sign == 'true' && json.msg == "DEGUSTER 慢享"){
               req.session.b_name = json.msg;
-              res.render('recognition');
+              res.render('recognitionCheck');
             }
         });
     }
