@@ -86,8 +86,11 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
             if(json.sign == "1" && no < 4){
                 execCmd();
             }
-            if(json.sign == 'true'){
-              res.render('index');
+            if(json.sign == 'true' && json.msg == "DEGUSTER 慢享"){
+              router.post('/', function(req, res, next) {
+                req.session.brand_name = json.msg
+              });
+              res.render('recognitionAns');
             }
         });
     }

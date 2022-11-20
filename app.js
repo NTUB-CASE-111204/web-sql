@@ -34,6 +34,7 @@ var productRouter = require('./routes/product');
 var donateRouter = require('./routes/donate');
 var recognitionRouter = require('./routes/recognition');
 var recognitionSelectRouter = require('./routes/recognitionSelect');
+var recognitionAnsRouter = require('./routes/recognitionAns');
 var newsRouter = require('./routes/news');
 
 var brand_list = require('./routes/brand_list');
@@ -106,6 +107,7 @@ app.use('/product', productRouter);
 app.use('/donate', donateRouter);
 app.use('/recognition', recognitionRouter);
 app.use('/recognitionSelect', recognitionSelectRouter);
+app.use('/recognitionAns', recognitionAnsRouter);
 app.use('/news', newsRouter);
 
 app.use('/brand/list', brand_list);

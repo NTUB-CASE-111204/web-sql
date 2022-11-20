@@ -21,7 +21,7 @@ def foo(var):
         print('300#'+'{"sign":"1", "msg":"匹配成功"}')
     else:
         a = "true"
-        print(var+'#'+'{"sign":"'+a+'"}')
+        print(var+'#'+'{"sign":"'+a+'", "msg":"DEGUSTER 慢享"}')
 
 
 # 引數為從命令列傳過來的引數 sys.argv ['py_test.py', arg1, arg2...]

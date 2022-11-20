@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/recognition.css" />
+    <link rel="manifest" href="manifest.json">
+    <title>圖像辨識結果</title>
+  </head>
+
+  <header>
+    <nav class="navbar navbar-light bg-light ps-4">
+        <span class="navbar-brand mb-0 h1">邦妮幫你v0.01</span>
+    </nav>
+</header>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Bunny幫你</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">關於我們</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="detail">實驗動物認養</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <body>
+    <header class="container">
+      <img
+        src="images/upload.jpg"
+        class="mt-5 rounded-circle mx-auto d-block"
+        id="photo"
+      />
+      <h4 class="text-center mt-3"></h4>
+
+<!--      <div id="banner">
+        <div class="row g-0 text-light justify-content-center align-items-center">
+            <div class="col-lg-6 text-center">
+                <h1>請上傳圖片</h1>
+                <p></p>
+                <a href="#" class="btn btn-success">備用按鈕</a>
+            </div>
+        </div>
+    </div> -->
+
+    <!--主按鈕-->
+    <div class="row g-0 text-light justify-content-center align-items-center">
+      <div class="col-lg-6 text-center">
+        <div class="profile-content">
+          <h3 class="profile-title"><%= item.b_name %></h3>
+          <h3 class="profile-title">認證標章為：</h3>
+          <% if (item.peta == true) { %>
+            <img src="images/pic04.jpg" alt="" />
+            <p class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</p>
+          <% }else if (item.leapingbunny == true) { %>
+            <img src="images/pic02.jpg" alt="" />
+            <p class="profile-description">LEAPING BUNNY CERTIFICATION</p>
+          <% } else { %>
+            <img src="images/pic05.jpg" alt="" />
+            <p class="profile-description">兔兔不哭</p>
+          <% } %>
+          <a href="membereditor">
+              <button>編輯會員</button>
+          </a> 
+          <a href="detail">
+              <button>登記成為實驗動物領養人</button>
+          </a> 
+        </div>
+        <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+    <!--<ul class="drop-down-menu">
+      <li><a href="#">開始上傳</a> 
+          <ul>
+              <li><a href="#">照片圖庫</a>
+              </li>
+              <li><a href="#">拍照</a>
+              </li>
+              <li><a href="#">選擇檔案</a>
+              </li>
+          </ul>
+      </li> -->
+      <br>
+
+   <!-- </header>
+    <div class="container mt-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/01.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/02.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/03.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/04.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/05.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/thumbs/06.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">測試</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center text-white py-2">
+      Copyrights © 2021 All Rights Reserved
+    </footer>-->
+    <!-- Optional JavaScript -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
