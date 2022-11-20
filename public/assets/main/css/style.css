@@ -906,7 +906,6 @@ Buttons
     width: 270px;
     padding: 20px;
     height: 100%;
-    background-color: rgba(115, 102, 255, 0.06);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -942,8 +941,8 @@ Buttons
     .widget-3 .form-input input {
       display: none; }
     .widget-3 .form-input img {
-      width: 100%;
-      height: auto;
+      width: 256px;
+      height: 256px;
       display: none;
       margin-top: 10px;
       -webkit-border-radius: 5px;
@@ -951,7 +950,7 @@ Buttons
       border-radius: 5px; }
     .widget-3 .form-input .preview {
       display: flex; }
-      @media only screen and (max-width: 575px) {
+      @media only screen and (max-width: 256px) {
         .widget-3 .form-input .preview {
           height: 100%; } }
   .widget-3.custom-text .labeltest {
