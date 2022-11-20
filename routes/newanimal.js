@@ -51,6 +51,7 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
     var an_depiction = req.body.an_depiction;
     var an_pic;
     var an_postdate = formatDate(new Date());
+    var an_sex = req.body.an_sex;
     //var m_phone = Number(req.body.m_phone);
 
     // 如果有選擇圖片
@@ -74,7 +75,7 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
     animal.add(newData).then(d => {
         console.log("3/" + d);
         if (d == 0) {
-            res.render('animallist');  //傳至成功頁面
+            res.render('addanimal');  //傳至成功頁面
         } else {
             res.render('addFail');     //導向錯誤頁面
         }
