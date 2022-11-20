@@ -385,214 +385,24 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>
-                                                        陳筱君
-                                                    </td>
-                                                    <td>testbunny01@gmail.com</td>
-                                                    <td> ********* </td>
-                                                    <td> 已登記為實驗動物領養人</td>
-                                                    <td>1995/05/20</td>
-                                                    <td class="text-start">
-                                                        <span class="badge badge-primary">女</span>
-                                                    </td>
-                                                    <td>
+                                                <% for(var i=0; i<items.length; i++) {%>
+                                                    <tr>
+                                                        <td><%= items[i].m_nickname %></td>
+                                                        <td><%= items[i].m_email %></td>
+                                                        <td><%= items[i].m_password %></td> 
+                                                        <td><%= items[i].m_phone %></td>
+                                                        <td><%= items[i].m_birth %></td>
+                                                        <td class="text-start"> <span class="badge btn-danger"><%= items[i].m_sex %></span></td>  
+                                                        <td>
                                                         <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                                             <span class='fas fa-user' aria-hidden='true'></span>
                                                         </a>
                                                         <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
                                                             <span class='fas fa-pencil-alt'></span>
                                                         </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        許淑芬
-                                                    </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td> *********	</td>
-                                                    <td>已登記為實驗動物領養人</td>
-                                                    <td>1970/07/25</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女</span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        陳春惠
-                                                    </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td>*********	</td>
-                                                    <td>已登記為實驗動物領養人</td>
-                                                    <td>1985/01/26</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女</span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        張凱翔
-                                                    </td>
-                                                    <td>testbunny01@gmail.com</td>
-                                                    <td> *********	
-                                                    </td>
-                                                    <td>尚未登記 </td>
-                                                    <td>1990/08/12	</td>
-                                                    <td class="text-start"> <span class="badge btn-danger">男</span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-toggle="modal" data-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-toggle='modal' data-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                 <td>
-                                                       簡曉君
-                                                    </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td>*********	
-                                                    </td>
-                                                    <td> 	已登記為實驗動物領養人</td>
-                                                    <td>2000/06/15</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        陳孜璇
-                                                    </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td>*********</td>
-                                                    <td>尚未登記</td>
-                                                    <td>1999/08/01</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> 彭靜芸 </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td>*********	 </td>
-                                                    <td>已登記為實驗動物領養人	</td>
-                                                    <td>2001/05/18</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> 周書佑 </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td> *********	 </td>
-                                                    <td>已登記為實驗動物領養人 </td>
-                                                    <td>2000/07/18</td>
-                                                    <td class="text-start"> <span class="badge btn-danger">男</span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> 吳曉娟 </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td> *********	 </td>
-                                                    <td> 尚未登記	</td>
-                                                    <td>1988/05/27</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> 陳芳婷 </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td> *********	</td>
-                                                    <td>	已登記為實驗動物領養人</td>
-                                                    <td>1993/10/15</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td> 孫琦君 </td>
-                                                    <td>testbunny01@gmail.com	</td>
-                                                    <td> *********	 </td>
-                                                    <td>	已登記為實驗動物領養人</td>
-                                                    <td>1990/11/12</td>
-                                                    <td class="text-start"> <span class="badge badge-primary">女
-                                                            </span>
-                                                    </td>
-                                                    <td>
-                                                        <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <span class='fas fa-user' aria-hidden='true'></span>
-                                                        </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
-                                                            <span class='fas fa-pencil-alt'></span>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                    </td> 
+                                                    </tr> 
+                                                <% } %> 
                                                 <tr>
                                                     <td> 張賀程 </td>
                                                     <td>testbunny01@gmail.com	</td>

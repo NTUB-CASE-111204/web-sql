@@ -134,5 +134,21 @@ var update = async function (newData) {
     }
 }
 
+//------------------------------------------
+//執行資料庫動作的函式-傳回所有產品資料
+//------------------------------------------
+var list = async function(){
+    var result=[];
+	
+    await sql('SELECT * FROM public.member ORDER BY m_email')
+        .then((data) => {            
+            result = data.rows;  
+        }, (error) => {
+            result = null;
+        });
+		
+    return result;
+}
+
 //匯出
-module.exports = {login, query, add, update};
+module.exports = {login, query, add, update, list};

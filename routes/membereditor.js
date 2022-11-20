@@ -20,11 +20,11 @@ router.get('/', function(req, res, next) {
                 m_pic: d.m_pic
             }
 
-            if(data.m_birth != '' && data.m_birth != null){
-                data.m_birth = data.m_birth.getFullYear() + "-" + (data.m_birth.getMonth() + 1) + "-" + data.m_birth.getDate();
+            if(d.m_birth != '' && d.m_birth != null){
+                d.m_birth = d.m_birth.getFullYear() + "-" + (d.m_birth.getMonth() + 1) + "-" + d.m_birth.getDate();
             }
 
-            res.render('membereditor', {item:data});  //將資料傳給更新頁面
+            res.render('membereditor', {item:d});  //將資料傳給更新頁面
         }else{
             res.render('notFound');  //導向找不到頁面
         }  
