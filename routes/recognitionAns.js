@@ -10,12 +10,13 @@ router.get('/', function(req, res, next) {
 
     brand.brandselect(b_name).then(data => {
         if(data==null){
-            console.log(data)
+            console.log(data);
             res.render('error');  //導向錯誤頁面
         }else if(data.length > 0){
             res.render('notFound');  //導向找不到頁面
         }else{
-            console.log(data)
+            console.log(data);
+            req.session.b_name = null;
             res.render('recognitionAns', {item:data});  //將資料傳給顯示頁面
         }  
     })
