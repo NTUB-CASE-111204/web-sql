@@ -73,24 +73,18 @@
     <div class="row g-0 text-light justify-content-center align-items-center">
       <div class="col-lg-6 text-center">
         <div class="profile-content">
-          <h3 class="profile-title"><%= item.b_name %></h3>
-          <h3 class="profile-title">認證標章為：</h3>
-          <% if (item.peta == true) { %>
-            <img src="images/pic04.jpg" alt="" />
-            <p class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</p>
-          <% }else if (item.leapingbunny == true) { %>
-            <img src="images/pic02.jpg" alt="" />
-            <p class="profile-description">LEAPING BUNNY CERTIFICATION</p>
-          <% } else { %>
-            <img src="images/pic05.jpg" alt="" />
-            <p class="profile-description">兔兔不哭</p>
-          <% } %>
-          <a href="membereditor">
-              <button>編輯會員</button>
-          </a> 
-          <a href="detail">
-              <button>登記成為實驗動物領養人</button>
-          </a> 
+            <h3 class="profile-title"><%= item.b_name %></h3>
+            <h3 class="profile-title">認證標章為：</h3>
+            <% if (item.peta == true) { %>
+              <a href="peta" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+              <p class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</p>
+            <% }else if (item.leapingbunny == true) { %>
+              <a href="leapingbunny" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+              <p class="profile-description">LEAPING BUNNY CERTIFICATION</p>
+            <% } else { %>
+              <a href="nmcb" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+              <p class="profile-description">兔兔不哭</p>
+            <% } %>
         </div>
         <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
     <!--<ul class="drop-down-menu">

@@ -91,10 +91,10 @@ var updatetime = async function(){
 //------------------------------------------
 //執行資料庫動作的函式-取出找查結果之資料
 //------------------------------------------
-var brandselect = async function(brand_name){
+var brandselect = async function(b_name){
     var result={};
 
-    await sql('SELECT * FROM public.brand WHERE b_name = $1', [brand_name])
+    await sql('SELECT * FROM public.brand WHERE b_name = $1', [b_name])
         .then((data) => {
             if(data.rows.length > 0){
                 result = data.rows[0];   
@@ -109,4 +109,4 @@ var brandselect = async function(brand_name){
 }
 
 //匯出
-module.exports = {list, leapingbunny, ccf, peta, nmcb, updatetime};
+module.exports = {list, leapingbunny, ccf, peta, nmcb, updatetime, brandselect};
