@@ -55,6 +55,7 @@ var animaldelno = require('./routes/animaldelno');
 var adopterdetail = require('./routes/adopterdetail');
 var animallist = require('./routes/animallist');
 var memberadmin = require('./routes/memberadmin');
+var editbackmember = require('./routes/editbackmember');
 var newevent = require('./routes/newevent');
 var allevent = require('./routes/allevent');
 
@@ -132,6 +133,7 @@ app.use('/animaldelno',  animaldelno);
 app.use('/adopterdetail',  adopterdetail);
 app.use('/animallist',  animallist);
 app.use('/memberadmin',  memberadmin);
+app.use('/editbackmember',  editbackmember);
 app.use('/newevent',  newevent);
 app.use('/allevent',  allevent);
 

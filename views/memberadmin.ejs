@@ -403,7 +403,7 @@
                                                         <a class='mr-4 vue' data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                                             <span class='fas fa-user' aria-hidden='true'></span>
                                                         </a>
-                                                        <a class='edit' data-bs-toggle='modal' data-bs-target='#changeTimeAndDate'>
+                                                        <a href="editbackmember" class='edit'>
                                                             <span class='fas fa-pencil-alt'></span>
                                                         </a>
                                                     </td> 
@@ -450,36 +450,7 @@
 
 
         <!-- Modal  -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="modal-title-head-modal" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal-title-head-modal">Michael R Sheets</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span
-                                aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5>Motif Patient</h5>
-                        <p>Caregivers can be spouses, family members, friends, or even a close neighbor. As a caregiver, you are an integral part of the team. Moffitt is based on the core concept of Patient and Family-Centered Care which in short is a partnership
-                            between you, the patient and the medical treatment team. As part of the team, you will help coordinate the patient’s care. That said, you must also make sure you are taking care of yourself.
-                        </p>
-                        <hr>
-                        <form>
-                            <div class="form-group">
-                                <label>Review doctors</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn badge-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="changeTimeAndDate" tabindex="-1" role="dialog" aria-labelledby="modal-title-edit-modal">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="modal-title-edit-modal">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -517,6 +488,72 @@
                 </div>
             </div>
         </div>
+        <!----<div class="modal fade" id="changeTimeAndDate" tabindex="-1" aria-labelledby="modal-title-head-modal" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-title-edit-modal"><img class="rounded-circle" width="35" src="https://via.placeholder.com/35/f8f8f8/2b2b2b" alt=""> 編輯會員
+                        </h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    /<div class="modal-body">
+                        <form class="row align-items-start">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <div class="preview">
+                                        <img id="file-ip-1-preview"  alt="img" src="pic/icon-07.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" name="m_nickname" class="form-control"
+                                        placeholder="暱稱" required value=<%=items.m_nickname %>>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="m_email"  class="form-control"
+                                        placeholder="信箱" required value=<%=items.m_email %>>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="m_password"  class="form-control"
+                                        placeholder="密碼" required  value=<%=items.m_password %> >
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="m_phone"  class="form-control"
+                                        placeholder="電話" required  value=<%=items.m_phone %> >
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="m_birth"  class="form-control"
+                                        placeholder="生日" required  value=<%=items.m_birth %> >
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="m_sex"  class="form-control"
+                                        placeholder="性別" required  value=<%=items.m_sex %> >
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <select class="form-control form-select">
+                                        <option> 活動推播</option>
+                                        <option> 領養訊息</option>
+                                     <option> 08:00 - 08:30</option>
+                                        <option> 08:30 - 09:00</option>
+                                        <option> 09:00 - 09:30</option>
+                                        <option> 09:30 - 10:00</option>
+                                        <option> 10:00 - 10:30</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">關閉</button>
+                        <button type="button" class="btn badge-primary">發送</button>
+                    </div>
+                </div>
+            </div>
+        </div>---->
         <div class="modal fade selectRefresh" id="newAppointment" tabindex="-1" aria-labelledby="exampleModalLabelOne">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
