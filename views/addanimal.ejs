@@ -388,7 +388,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <select name="an_sex" class="form-control form-select" required>
-                                                                <option hidden>性別</option>
+                                                                <option value="性別" hidden></option>
                                                                 <option>母</option>
                                                                 <option>公</option>
                                                             </select>
@@ -426,7 +426,9 @@
                                                         </div>
                                                         <script>
                                                             function confirmAdd(){
-                                                                alert("新增成功");
+                                                                if(an_name!=null){
+                                                                    alert("新增成功");
+                                                                }
                                                             }
                                                         </script>
                                                     </div>
