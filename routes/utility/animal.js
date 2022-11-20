@@ -6,10 +6,10 @@ const sql = require('./asyncDB');
 //------------------------------------------
 //執行資料庫動作的函式-取出單一會員資料
 //------------------------------------------
-var query = async function (m_email) {
+var query = async function (an_id) {
     var result = {};
 
-    await sql('SELECT * FROM public.member WHERE m_email = $1', [m_email])
+    await sql('SELECT * FROM public.animal WHERE an_id = $1', [an_id])
         .then((data) => {
             if (data.rows.length > 0) {
                 result = data.rows[0];

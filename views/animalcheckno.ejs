@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bunny Apps web | Admin Dashboard</title>
+    <title>Tabib Apps web | Admin Dashboard Template</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
     <!-- Base Styling  -->
@@ -69,7 +69,7 @@
                             <i class="fas fa-calendar-plus"></i>
                             <span class="nav-label">會員管理</span>
                         </a>
-                        <!--                </li>
+                        <!--          </li>
                     <li class="has-submenu">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-book-medical"></i>
@@ -273,8 +273,8 @@
                                                             src="https://via.placeholder.com/150/f8f8f8/2b2b2b">
                                                     </div>
                                                     <div class="media-body">
-                                                        <h6 class="mb-1">訊息通知</h6>
-                                                        <small class="d-block">日期</small>
+                                                        <h6 class="mb-1">訊息通知/h6>
+                                                            <small class="d-block">日期</small>
                                                     </div>
                                                 </div>
                                             </li>
@@ -299,7 +299,7 @@
                                 </a>
                                 <div class="account-dropdown-form dropdown-container">
                                     <div class="form-content">
-                                        <!--           <a href="doctor-settings.html">
+                                        <!--               <a href="doctor-settings.html">
                                             <i class="far fa-user"></i>
                                             <span class="ml-2">Profile</span>
                                         </a>
@@ -325,180 +325,162 @@
         <!-- start section content -->
         <div class="content-body">
             <div class="warper container-fluid">
-                <div class="all-patients main_container">
+                <div class="new-patients main_container">
                     <div class="row page-titles mx-0">
                         <div class="col-sm-6 p-md-0">
                             <div class="welcome-text">
-                                <h4 class="text-primary">動物清單</h4>
+                                <h4 class="text-primary">查看動物</h4>
                             </div>
-                            
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="empindex">Home</a></li>
-                                <li class="breadcrumb-item active"><a href="animallist">動物清單</a></li>
+                                <li class="breadcrumb-item active"><a href="addanimal">查看動物</a></li>
                             </ol>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card shadow">
+                        <div class="col-md-12">
+                            <div class="card">
                                 <div class="card-header">
-                                    <div class="row m-rl w-100">
-                                        <div class="col-lg-3 col-sm-12">
-                                            <div class="form-group">
-                                                <a class="btn" href="animalcheckno" value="查詢" role="button"></a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-12">
-                                            <div class="form-group">
-                                                <input class="btn" href="animalcheckno" value="編輯">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-sm-12">
-                                            <div class="form-group">
-                                                <input class="btn" href="animalcheckno" value="刪除">
-                                            </div>
-                                        </div>
+                                    <h4 class="card-title">動物資訊</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                        <form action="/animalcheck" method="get">
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <p>動物ID</p>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" name="an_id" class="form-control"
+                                                            style="cursor:default;" placeholder="請輸入動物ID" required>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <input type="submit" value="查詢">
+                                                </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <script>
+                        function showPreview(event) {
+                            if (event.target.files.length > 0) {
+                                var src = URL.createObjectURL(event.target.files[0]);
+                                var preview = document.getElementById("file-ip-1-preview");
+                                preview.src = src;
+                                preview.style.display = "block";
+                            }
+                        }
+                    </script>
+                    <!--  <div class="row">
                         <div class="col-lg-12">
-                            <div class="widget-media list-doctors best-doctor">
-                                <div class="timeline row">
-                                    <% for(var i=0; i<items.length; i++) {%>
-                                        <div class="col-sm-6 col-lg-4">
-                                            <div class="timeline-panel card p-4 mb-4">
-                                                <div class="media">
-                                                    <img alt="image" src=<%= items[i].an_pic %>>
-                                                </div>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        <h4 class="mb-2">
-                                                            <%= items[i].an_name %>
-                                                        </h4>
-                                                    </a>
-                                                    <p class="mb-2"><%= items[i].an_variety %></p>
-                                                    <div class="star-review">
-                                                        <p class="mb-2"><%= items[i].an_postdate %></p>
-                                                    </div>
-                                                </div>
-                                                <div class="btn-group-style-1">
-                                                    <div class="btn-content">
-                                                        <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-v"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <div class="form-content">
-                                                                <a href="animalcheckno">
-                                                                    <span class="ml-2">查看檔案</span>
-                                                                </a>
-                                                                <a href="animaledit">
-                                                                    <span class="ml-2">修改</span>
-                                                                </a>
-                                                                <a href="#">
-                                                                    <span class="ml-2">刪除</span>
-                                                                </a>
-                                                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Medical Information</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Main specialization</label>
+                                                        <select class="form-control form-select">
+                                                            <option>Type 1 Diabetes</option>
+                                                            <option>Multiple Sclerosis</option>
+                                                            <option>Rheumatoid Arthritis</option>
+                                                            <option>Allergies & Asthma</option>
+                                                        </select>
+                                                        <div class="col-lg-12">
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <% } %>
-
-                                        <div class="col-sm-6 col-lg-4">
-                                            <div class="timeline-panel card p-4 mb-4">
-                                                <div class="media">
-                                                    <img alt="image" src="https://via.placeholder.com/90/f8f8f8/2b2b2b">
-                                                </div>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        <h4 class="mb-2">動物I</h4>
-                                                    </a>
-                                                    <p class="mb-2">兔子</p>
-                                                    <div class="star-review">
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-orange"></i>
-                                                        <i class="fa fa-star text-gray"></i>
-                                                        <i class="fa fa-star text-gray"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="btn-group-style-1">
-                                                    <div class="btn-content">
-                                                        <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-haspopup="true"
-                                                            aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-v"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <div class="form-content">
-                                                                <a href="animalcheck">
-                                                                    <span class="ml-2">查看檔案</span>
-                                                                </a>
-                                                                <a href="animaledit">
-                                                                    <span class="ml-2">修改</span>
-                                                                </a>
-                                                                <a href="#">
-                                                                    <span class="ml-2">刪除</span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Secondary specialization</label>
+                                                        <select class="form-control form-select">
+                                                            <option>Secondary specialization</option>
+                                                            <option>Celiac Disease</option>
+                                                            <option>cancer</option>
+                                                            <option>Catarrh</option>
+                                                            <option>Conjunctivitis</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label"> Medical Education </label>
+                                                        <select class="form-control form-select">
+                                                            <option>Medical University</option>
+                                                            <option>Medical College</option>
+                                                            <option>Nurse School</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Period</label>
+                                                        <input type="text" class="form-control" placeholder="Period">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group text-right">
+                                                <button type="submit" class="btn btn-primary float-end ">Save</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End section content -->
+        </div>-->
+                    <!-- End section content -->
 
 
-        <!-- start section footer -->
-        <div class="footer ">
-            <div class="copyright ">
-                <!--    <p class="mb-0">Copyright ©  &amp; Developed by <a href="" target="_blank"></a> -->
-                </p>
-            </div>
-        </div>
-        <!-- End section footer -->
+                    <!-- start section footer -->
+                    <div class="footer">
+                        <div class="copyright">
+
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End section footer -->
 
 
-    </div>
+                </div>
 
 
-    <!-- JQuery v3.5.1 -->
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
+                <!-- JQuery v3.5.1 -->
+                <script src="assets/plugins/jquery/jquery.min.js"></script>
 
-    <!-- popper js -->
-    <script src="assets/plugins/popper/popper.min.js"></script>
+                <!-- popper js -->
+                <script src="assets/plugins/popper/popper.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+                <!-- Bootstrap -->
+                <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Moment -->
-    <script src="assets/plugins/moment/moment.min.js"></script>
+                <!-- Moment -->
+                <script src="assets/plugins/moment/moment.min.js"></script>
 
-    <!-- Date Range Picker -->
-    <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
+                <!-- Date Range Picker -->
+                <script src="assets/plugins/daterangepicker/daterangepicker.min.js"></script>
 
-    <!-- Datatable -->
-    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="assets/js/init-tdatatable.js"></script>
+                <!-- Datatable -->
+                <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+                <script src="assets/js/init-tdatatable.js"></script>
 
-    <!-- Main Custom JQuery -->
-    <script src="assets/js/toggleFullScreen.js"></script>
-    <script src="assets/js/main2.js"></script>
+                <!-- Main Custom JQuery -->
+                <script src="assets/js/toggleFullScreen.js"></script>
+                <script src="assets/js/main2.js"></script>
 
 </body>
 

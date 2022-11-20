@@ -49,6 +49,9 @@ var addanimal = require('./routes/addanimal');
 var newanimal = require('./routes/newanimal');
 var animaledit = require('./routes/animaledit');
 var animalcheck = require('./routes/animalcheck');
+var animalcheckno = require('./routes/animalcheckno');
+var animalupdateno = require('./routes/animalupdateno');
+var animaldelno = require('./routes/animaldelno');
 var adopterdetail = require('./routes/adopterdetail');
 var animallist = require('./routes/animallist');
 var memberadmin = require('./routes/memberadmin');
@@ -118,16 +121,19 @@ app.use('/peta', peta);
 app.use('/nmcb', nmcb);
 app.use('/allbrand', allbrand);
 
-app.use('/empindex', checkAuth, empindex);
-app.use('/addanimal', checkAuth, addanimal);
-app.use('/newanimal', checkAuth, newanimal);
-app.use('/animaledit', checkAuth, animaledit);
-app.use('/animalcheck', checkAuth, animalcheck);
-app.use('/adopterdetail', checkAuth, adopterdetail);
-app.use('/animallist', checkAuth, animallist);
-app.use('/memberadmin', checkAuth, memberadmin);
-app.use('/newevent', checkAuth, newevent);
-app.use('/allevent', checkAuth, allevent);
+app.use('/empindex',  empindex);
+app.use('/addanimal',  addanimal);
+app.use('/newanimal',  newanimal);
+app.use('/animaledit',  animaledit);
+app.use('/animalcheck',  animalcheck);
+app.use('/animalcheckno',  animalcheckno);
+app.use('/animalupdateno',  animalupdateno);
+app.use('/animaldelno',  animaldelno);
+app.use('/adopterdetail',  adopterdetail);
+app.use('/animallist',  animallist);
+app.use('/memberadmin',  memberadmin);
+app.use('/newevent',  newevent);
+app.use('/allevent',  allevent);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

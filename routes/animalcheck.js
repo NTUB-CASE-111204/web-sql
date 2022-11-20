@@ -3,21 +3,24 @@ var router = express.Router();
 
 const animal = require('./utility/animal');
 
-const formatDate = (current_datetime) => {
-  let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate();
-  return formatted_date;
-}
 
 //接收GET請求
 router.get('/', function (req, res, next) {
-  var an_id = req.session.an_id;
-
-  animal.list(an_id).then(data => {
+  var an_id = req.query.an_id;
+  console.log(an_id);
+  animal.query(an_id).then(data => {
     if (data == null) {
       res.render('error');  //導向錯誤頁面           
     } else {
-      
-      console.log(data.an_pic);
+      if (data.an_postdate != null) {
+        data.an_postdate = data.an_postdate.getFullYear() + "/" + (data.an_postdate.getMonth() + 1) + "/" + data.an_postdate.getDate();
+      }
+      if (data.an_birth != null) {
+        data.an_birth = data.an_birth.getFullYear() + "/" + (data.an_birth.getMonth() + 1) + "/" + data.an_birth.getDate();
+      }
+      if (data.an_pic != null) {
+        data.an_pic = "animalpic/" + data.an_pic;
+      }
       res.render('animalcheck', { item: data });  //將資料傳給顯示頁面
     }
   })

@@ -376,7 +376,7 @@
                                                                 placeholder="動物品種" readonly value=<%=item.an_variety %>>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="date" name="an_birth"  class="form-control" style="cursor:default;"
+                                                            <input type="text" name="an_birth"  class="form-control" style="cursor:default;"
                                                                 placeholder="生日" readonly  value=<%=item.an_birth %> >
                                                         </div>
                                                     </div>
@@ -394,6 +394,10 @@
                                                                 <option>母</option>
                                                                 <option>公</option>
                                                             </select>--->
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" name="an_postdate"  class="form-control" style="cursor:default;"
+                                                                placeholder="發布日期" readonly  value=<%=item.an_postdate %> >
                                                         </div>
                                                     </div>
                                                 </div>
@@ -420,7 +424,7 @@
                                                     <div class="col-xl-8">
                                                         <div class="form-group">
                                                             <textarea class="form-control" name="an_depiction" style="cursor:default;"
-                                                                placeholder="故事內容:" rows="4" readonly value=<%=item.an_depiction %>></textarea>
+                                                                placeholder="故事內容:" rows="4" readonly><%=item.an_depiction %></textarea>
                                                         </div>
                                                         <!---<div class="form-group text-right">
                                                             <button type="submit" onclick="return confirmAdd()"
