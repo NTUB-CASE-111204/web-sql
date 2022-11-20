@@ -46,11 +46,12 @@ var allbrand = require('./routes/allbrand');
 var empindex = require('./routes/empindex');
 var addanimal = require('./routes/addanimal');
 var newanimal = require('./routes/newanimal');
-var adopterdetail = require('./routes/adopterdetail');
+var animaledit = require('./routes/animaledit');
+var animalcheck = require('./routes/animalcheck');
+var allevent = require('./routes/allevent');
 var animallist = require('./routes/animallist');
 var memberadmin = require('./routes/memberadmin');
 var newevent = require('./routes/newevent');
-var allevent = require('./routes/allevent');
 
 //------------------------------------------------------------
 
@@ -117,11 +118,12 @@ app.use('/allbrand', allbrand);
 app.use('/empindex', checkAuth, empindex);
 app.use('/addanimal', checkAuth, addanimal);
 app.use('/newanimal', checkAuth, newanimal);
-app.use('/adopterdetail', checkAuth, adopterdetail);
+app.use('/animaledit', checkAuth, animaledit);
+app.use('/animalcheck', checkAuth, animalcheck);
+app.use('/allevent', checkAuth, allevent);
 app.use('/animallist', checkAuth, animallist);
 app.use('/memberadmin', checkAuth, memberadmin);
 app.use('/newevent', checkAuth, newevent);
-app.use('/allevent', checkAuth, allevent);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
