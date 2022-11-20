@@ -72,5 +72,21 @@ var list = async function () {
     return result;
 }
 
+//----------------------------------
+// 刪除
+//----------------------------------
+var remove = async function (an_id) {
+    var result;
+
+    await sql('DELETE FROM public.animal WHERE an_id = $1', [an_id])
+        .then((data) => {
+            result = data.rowCount;
+        }, (error) => {
+            result = -1;
+        });
+
+    return result;
+}
+
 //匯出
-module.exports = { query, add, update, list };
+module.exports = { query, add, update, list, remove };

@@ -347,20 +347,32 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form action="/animaldel" method="get">
+                                        <form action="/animaldel" method="post">
                                             <div class="row">
                                                 <div class="col-xl-4">
                                                     <div class="form-group">
                                                         <p>動物ID</p>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="an_id" class="form-control"
+                                                        <input type="text" name="an_id" class="form-control" 
                                                             style="cursor:default;" placeholder="請輸入動物ID" required>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <input type="submit" value="查詢">
+                                                    <button type="submit" onclick="return confirmDel()">刪除</button>
                                                 </div>
+                                                <script>
+                                                    function confirmDel() {
+                                                        const result = confirm("確定刪除?");
+                                                        if (result) {
+                                                            alert("為您刪除資料");
+                                                            return true;
+                                                        }else{
+                                                            return false;
+                                                        }
+                                                    }
+                                                </script>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
