@@ -1,4 +1,4 @@
-.profile-image {
+.animal-pic {
   width: 256px;
   height: 256px;
   -webkit-border-radius: 5px;
@@ -8,10 +8,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
-.profile-image img {
+.animal-pic img {
   width: 100%;
   position: relative;
 }

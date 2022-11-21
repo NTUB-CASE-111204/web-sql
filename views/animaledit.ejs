@@ -11,6 +11,7 @@
     <!-- Base Styling  -->
     <link rel="stylesheet" href="assets/main/css/fonts.css">
     <link rel="stylesheet" href="assets/main/css/style.css">
+    <link rel="stylesheet"  href="css/animalcheck.css">
 </head>
 
 <body>
@@ -345,7 +346,7 @@
                             </ol>
                         </div>
                     </div>
-                    <form action="/animalupdate" enctype="multipart/form-data" method="post">
+                    <form action="/animalupdate" enctype="multipart/form-data" method="post" onchange="readURL(this)" targetID="changeanpic">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
@@ -359,18 +360,20 @@
                                                     <div class="col-xl-4">
                                                         <div class="form-group row widget-3">
                                                             <div class="col-lg-10">
-                                                                <div class="form-input">
-                                                                    <label class="labeltest" for="file-ip-1">
+                                                                <div class="animal-pic">
+                                                                        <img id="changeanpic" alt="img" src=<%=item.an_pic %>> 
+                                                                </div>
+                                                                  <!---<div class="form-input" style="cursor:default;">
+                                                                  <label class="labeltest" for="file-ip-1">
                                                                         <span> Drop image here or click to upload.
                                                                         </span>
                                                                     </label>
-                                                                    <input type="file" name="an_pic" id="file-ip-1" accept="image/*" onchange="showPreview(event)" required>
-                                                                    <div class="preview">
-                                                                        <img id="file-ip-1-preview"  alt="img" src=<%=item.an_pic %>>
-                                                                    </div>
-                                                                </div>
+                                                                    <input type="file" name="an_pic" id="file-ip-1" accept="image/*" onchange="showPreview(event)" readonly>
+                                                                </div>--->
                                                             </div>
                                                         </div>
+                                                        <p>選擇動物照片</p>
+                                                        <input type="file" name="an_pic" onchange="readURL(this)" targetID="changeanpic" accept="image/gif, image/jpeg, image/png">
                                                     </div>
                                                     <div class="col-xl-4">
                                                         <div class="form-group">
@@ -449,13 +452,16 @@
                         </div>
                     </form>
                     <script>
-                        function showPreview(event){
-                        if(event.target.files.length > 0){
-                            var src = URL.createObjectURL(event.target.files[0]);
-                            var preview = document.getElementById("file-ip-1-preview");
-                            preview.src = src;
-                            preview.style.display = "block";
-                        }
+                        function readURL(input) {
+                            if (input.files && input.files[0]) {
+                                var imageTagID = input.getAttribute("targetID");
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    var img = document.getElementById(imageTagID);
+                                    img.setAttribute("src", e.target.result)
+                                }
+                                reader.readAsDataURL(input.files[0]);
+                            }
                         }
                     </script>
                     <!--  <div class="row">
