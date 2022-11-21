@@ -30,3 +30,21 @@ body {
     width: 150%;
     position: relative;
   }
+
+  .animal-image{
+    width: 256px;
+    height: 256px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 60px;
+  }
+
+  .animal-image img {
+    width: 100%;
+    position: relative;
+  }
