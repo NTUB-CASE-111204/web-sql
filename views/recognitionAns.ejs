@@ -71,15 +71,16 @@
 
     <!--主按鈕-->
     <div class="row g-0 text-light justify-content-center align-items-center">
-      <div class="col-lg-6 text-center">
-        <div class="profile-content">
+      <div style="text-align:center">
+        <div>
             <% if (item.peta == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
               <br>
-              <h2 class="profile-title">認證標章為（點擊標章可以直接跳至該標章的所有品牌頁面）：</h2>
+              <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</h3>
-              <a href="peta" class="image fit"><img src="images/pic04.jpg" width="20%" height="20%" alt="" /></a>
+              <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
+              <a href="peta"><img src="images/pic04.jpg" width="20%" height="20%" alt="" /></a>
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
@@ -87,9 +88,10 @@
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
               <br>
-              <h2 class="profile-title">認證標章為（點擊標章可以直接跳至該標章的所有品牌頁面）：</h2>
+              <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">LEAPING BUNNY CERTIFICATION</h3>
-              <a href="leapingbunny" class="image fit"><img src="images/pic02.jpg" width="20%" height="20%" alt="" /></a>
+              <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
+              <a href="leapingbunny"><img src="images/pic02.jpg" width="20%" height="20%" alt="" /></a>
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
@@ -97,15 +99,21 @@
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
               <br>
-              <h2 class="profile-title">認證標章為（點擊標章可以直接跳至該標章的所有品牌頁面）：</h2>
+              <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">兔兔不哭</h3>
-              <a href="nmcb" class="image fit"><img src="images/pic05.jpg" width="20%" height="20%" alt="" /></a>
+              <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
+              <a href="nmcb"><img src="images/pic05.jpg" width="20%" height="20%" alt="" /></a>
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
             <% } else { %>
               <h3 class="profile-description">無辨識結果，請提供圖片</h3>
               <a class="btn btn-outline-light" href="/recognition" role="button">去上傳</a>
+              <br><br>
+              <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
+              <a href="peta"><img src="images/pic04.jpg" width="20%" height="20%" alt="" /></a>
+              <a href="leapingbunny"><img src="images/pic02.jpg" width="20%" height="20%" alt="" /></a>
+              <a href="nmcb"><img src="images/pic05.jpg" width="20%" height="20%" alt="" /></a>
             <% } %>
         </div>
     <!--<ul class="drop-down-menu">
