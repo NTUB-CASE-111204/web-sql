@@ -17,7 +17,7 @@ body {
 
 #wrapper {
     width: 350px;
-    height: 250px;
+    height: 300px;
     border-radius: 3px;
     border: 1px solid #CCCCCC;
     position: absolute;
@@ -60,6 +60,20 @@ input.form-control {
     padding: 10px;
     text-decoration: none;
     border-radius: 3px;
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
+    cursor: pointer;
+}
+
+.btn2 {
+    width: 100%;
+    display: block;
+    color: #ed9db2;
+    background-color:white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
 }
