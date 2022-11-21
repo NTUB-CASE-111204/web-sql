@@ -59,8 +59,12 @@ var animaldel = require('./routes/animaldel');
 var adopterdetail = require('./routes/adopterdetail');
 var animallist = require('./routes/animallist');
 var memberadmin = require('./routes/memberadmin');
+var memberno = require('./routes/memberno');
+var editbackmember = require('./routes/editbackmember');
+var backmemberupdate = require('./routes/backmemberupdate');
 var newevent = require('./routes/newevent');
 var allevent = require('./routes/allevent');
+var feedbackpage = require('./routes/feedbackpage');
 
 //------------------------------------------------------------
 
@@ -141,8 +145,12 @@ app.use('/animaldel',  animaldel);
 app.use('/adopterdetail',  adopterdetail);
 app.use('/animallist',  animallist);
 app.use('/memberadmin',  memberadmin);
+app.use('/memberno',  memberno);
+app.use('/editbackmember',  editbackmember);
+app.use('/backmemberupdate',  backmemberupdate);
 app.use('/newevent',  newevent);
 app.use('/allevent',  allevent);
+app.use('/feedbackpage',  feedbackpage);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -18,5 +18,21 @@ var add = async function (newData) {
     return result;
 }
 
+//------------------------------------------
+//執行資料庫動作的函式-傳回所有產品資料
+//------------------------------------------
+var list = async function () {
+    var result = [];
+
+    await sql('SELECT * FROM public.feedback ORDER BY f_time desc')
+        .then((data) => {
+            result = data.rows;
+        }, (error) => {
+            result = null;
+        });
+
+    return result;
+}
+
 //匯出
-module.exports = { add };
+module.exports = { add, list };

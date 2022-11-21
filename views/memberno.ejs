@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>刪除動物</title>
+    <title>查看動物</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
     <!-- Base Styling  -->
@@ -335,13 +335,13 @@
                     <div class="row page-titles mx-0">
                         <div class="col-sm-6 p-md-0">
                             <div class="welcome-text">
-                                <h4 class="text-primary">刪除動物</h4>
+                                <h4 class="text-primary">查看會員資訊</h4>
                             </div>
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="empindex">Home</a></li>
-                                <li class="breadcrumb-item active"><a href="animaldelno">刪除動物</a></li>
+                                <li class="breadcrumb-item active"><a href="memberno">編輯會員資料</a></li>
                             </ol>
                         </div>
                     </div>
@@ -349,36 +349,24 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">動物資訊</h4>
+                                    <h4 class="card-title">會員資訊</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form">
-                                        <form action="/animaldel" method="post">
+                                        <form action="/editbackmember" method="get">
                                             <div class="row">
                                                 <div class="col-xl-4">
                                                     <div class="form-group">
-                                                        <p>動物ID</p>
+                                                        <p>會員帳號（信箱）</p>
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="an_id" class="form-control" 
-                                                            style="cursor:default;" placeholder="請輸入動物ID" required>
+                                                        <input type="text" name="m_email" class="form-control"
+                                                            style="cursor:default;" placeholder="請輸入會員帳號（信箱）" required>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <button type="submit" onclick="return confirmDel()">刪除</button>
+                                                    <input type="submit" value="查詢">
                                                 </div>
-                                                <script>
-                                                    function confirmDel() {
-                                                        const result = confirm("確定刪除?");
-                                                        if (result) {
-                                                            alert("為您刪除資料");
-                                                            return true;
-                                                        }else{
-                                                            return false;
-                                                        }
-                                                    }
-                                                </script>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>

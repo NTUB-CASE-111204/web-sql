@@ -45,7 +45,7 @@ var add = async function (newData) {
 var update = async function (newData) {
     var result;
 
-    await sql('UPDATE public.animal SET an_name=$1, an_variety=$2, an_birth=$3, an_size=$4, an_depiction=$5, an_pic=$6, an_sex=$7 WHERE an_id = $8', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.m_pic, newData.an_sex, newData.an_id])
+    await sql('UPDATE public.animal SET an_name=$1, an_variety=$2, an_birth=$3, an_size=$4, an_depiction=$5, an_pic=$6, an_sex=$7 WHERE an_id = $8', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_pic, newData.an_sex, newData.an_id])
         .then((data) => {
             result = data.rowCount;
         }, (error) => {

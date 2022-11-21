@@ -6,7 +6,7 @@ const member = require('./utility/member');
 
 //接收GET請求
 router.get('/', function(req, res, next) {
-    var m_email = req.session.m_email;
+    var m_email = req.query.m_email;
 
     member.query(m_email).then(d => {
         if (d!=null && d!=-1){
