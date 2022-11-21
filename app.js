@@ -132,25 +132,25 @@ app.use('/peta', peta);
 app.use('/nmcb', nmcb);
 app.use('/allbrand', allbrand);
 
-app.use('/empindex',  empindex);
-app.use('/addanimal',  addanimal);
-app.use('/newanimal',  newanimal);
-app.use('/animaledit',  animaledit);
-app.use('/animalupdateno',  animalupdateno);
-app.use('/animalupdate',  animalupdate);
-app.use('/animalcheck',  animalcheck);
-app.use('/animalcheckno',  animalcheckno);
-app.use('/animaldelno',  animaldelno);
-app.use('/animaldel',  animaldel);
-app.use('/adopterdetail',  adopterdetail);
-app.use('/animallist',  animallist);
-app.use('/memberadmin',  memberadmin);
-app.use('/memberno',  memberno);
-app.use('/editbackmember',  editbackmember);
-app.use('/backmemberupdate',  backmemberupdate);
-app.use('/newevent',  newevent);
-app.use('/allevent',  allevent);
-app.use('/feedbackpage',  feedbackpage);
+app.use('/empindex', checkAuth, empindex);
+app.use('/addanimal', checkAuth, addanimal);
+app.use('/newanimal', checkAuth, newanimal);
+app.use('/animaledit', checkAuth, animaledit);
+app.use('/animalupdateno', checkAuth, animalupdateno);
+app.use('/animalupdate', checkAuth, animalupdate);
+app.use('/animalcheck', checkAuth, animalcheck);
+app.use('/animalcheckno', checkAuth, animalcheckno);
+app.use('/animaldelno', checkAuth, animaldelno);
+app.use('/animaldel', checkAuth, animaldel);
+app.use('/adopterdetail', checkAuth, adopterdetail);
+app.use('/animallist', checkAuth, animallist);
+app.use('/memberadmin', checkAuth, memberadmin);
+app.use('/memberno', checkAuth, memberno);
+app.use('/editbackmember', checkAuth, editbackmember);
+app.use('/backmemberupdate', checkAuth, backmemberupdate);
+app.use('/newevent', checkAuth, newevent);
+app.use('/allevent', checkAuth, allevent);
+app.use('/feedbackpage', checkAuth, feedbackpage);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
