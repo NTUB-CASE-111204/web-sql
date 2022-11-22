@@ -77,13 +77,13 @@ var nmcb = async function(){
 var updatetime = async function(){
     var result={};
 	
-    await sql('SELECT * FROM public.brand ORDER BY updatetime desc LIMIT 1 ')
+    await sql('SELECT * FROM public.brand ORDER BY updatetime desc')
         .then((data) => {            
             result = data.rows;  
         }, (error) => {
             result = null;
         });
-		
+	//console.log(result);	
     return result;
 }
 
