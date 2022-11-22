@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>會員管理</title>
+    <title>領養人資訊</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
     <!-- Base Styling  -->
@@ -68,14 +68,14 @@
                             <i class="fas fa-calendar-plus"></i>
                             <span class="nav-label">會員管理</span>
                         </a>
+                   </li>
+                   <li class="has-submenu">
+                    <a href="feedbackpage">
+                        <i class="fas fa-book-medical"></i>
+                        <span class="nav-label">會員回報訊息</span>
+                    </a>
                     </li>
-                    <li class="has-submenu">
-                        <a href="feedbackpage">
-                            <i class="fas fa-book-medical"></i>
-                            <span class="nav-label">會員回報訊息</span>
-                        </a>
-                    </li>
-                    <!-- <li class="has-submenu">
+                    <!--<li class="has-submenu">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-book-medical"></i>
                             <span class="nav-label">Prescriptions</span>
@@ -170,44 +170,44 @@
         <!-- End section sidebar -->
 
 
-        <!-- start section header -->
-        <div class="header">
-            <header class="top-head container-fluid">
-                <div class="nav-control">
-                    <div class="hamburger">
-                        <span class="line"></span><span class="line"></span><span class="line"></span>
-                    </div>
-                    <div class="left-header content-header__menu">
-                        <ul class="list-unstyled">
-                            <li class="nav-link btn">
-                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
-                            </li>
-                            <li class="nav-link btn">
-                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="my-account-wrapper">
-                        <div class="account-wrapper">
-                            <div class="account-control">
-                                <a class="login header-profile" href="#" title="Sign in">
-                                    <div class="form-content">
-                                        <a href="logout">
-                                            <i class="fas fa-sign-in-alt"></i>
-                                            <span class="ml-2">登出 </span>
-                                        </a>
+                        <!-- start section header -->
+                        <div class="header">
+                            <header class="top-head container-fluid">
+                                <div class="nav-control">
+                                    <div class="hamburger">
+                                        <span class="line"></span><span class="line"></span><span class="line"></span>
                                     </div>
-                                    
-                                </a>
-                            </div>
+                                    <div class="left-header content-header__menu">
+                                        <ul class="list-unstyled">
+                                            <li class="nav-link btn">
+                                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
+                                            </li>
+                                            <li class="nav-link btn">
+                                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="header-right">
+                                    <div class="my-account-wrapper">
+                                        <div class="account-wrapper">
+                                            <div class="account-control">
+                                                <a class="login header-profile" href="#" title="Sign in">
+                                                    <div class="form-content">
+                                                        <a href="logout">
+                                                            <i class="fas fa-sign-in-alt"></i>
+                                                            <span class="ml-2">登出 </span>
+                                                        </a>
+                                                    </div>
+                                                    
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
                         </div>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <!-- End section header -->
+                        <!-- End section header -->
 
 
         <!-- start section content -->
@@ -236,17 +236,38 @@
                                     <div class="row m-rl w-100">
                                         <div class="col-lg-3 col-sm-12">
                                             <div class="form-group">
-                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search by 登記資料" aria-label="Search">
+                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search" aria-label="Search">
                                             </div>
                                         </div>
+                                        <div class="col-lg-3 col-sm-12">
+                                            <div class="form-group" style="margin-top: 30px;">
+                                                <a href="memberno">
+                                                <span>編輯會員</span>
+                                                <span class='fas fa-pencil-alt'></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                                <!-- <select class="form-control table-filter-select form-select">
+                                                    <option>Search by 領養經驗</option>
+                                                    <option>已登記為實驗動物領養人</option>
+                                                    <option>尚未登記</option>
+                                                   <option>Fes</option>
+                                                    <option>Oujda</option>
+                                                    <option>Marakesh</option>
+                                                    <option>Berrechid</option>
+                                                    <option>Lexington</option>
+                                                </select>-->
+                                            
                                         
-                                    </div>
-                                    <div class="col-lg-3 col-sm-12">
-                                        <div class="form-group" style="margin-top: 30px; text-align: right;">
-                                            <a href="memberno">
-                                            <span>編輯會員</span>
-                                            <span class='fas fa-pencil-alt'></span>
-                                            </a>
+                          <!--                   <div class="col-lg-3 col-sm-12">
+                                            <div class="form-group">
+                                                <input id="daterange" class="form-control input-daterange-datepicker">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-12">
+                                            <div class="form-group">
+                                          <button type="button" class="btn btn-primary w-100 h-56" data-bs-toggle="modal" data-bs-target="#newAppointment">會員管理</button>--> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -264,10 +285,9 @@
                                                     <th>暱稱</th>
                                                     <th>信箱</th>
                                                     <th>密碼</th>
-                                                    <th>登記狀態</th>
+                                                    <th>連絡電話</th>
                                                     <th>生日</th>
                                                     <th>性別</th>
-                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -301,7 +321,11 @@
                 </p>
             </div>
         </div>
-        End section footer -->
+       End section footer -->
+
+
+        
+
     </div>
 
 

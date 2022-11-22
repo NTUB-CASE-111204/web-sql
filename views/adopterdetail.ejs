@@ -224,7 +224,7 @@
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="empindex">首頁</a></li>
-                                <li class="breadcrumb-item active"><a href="memberadmin">會員管理</a>
+                                <li class="breadcrumb-item active"><a href="adopterdetail">領養人資訊</a>
                                 </li>
                             </ol>
                         </div>
@@ -236,7 +236,7 @@
                                     <div class="row m-rl w-100">
                                         <div class="col-lg-3 col-sm-12">
                                             <div class="form-group">
-                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search by 登記資料" aria-label="Search">
+                                                <input id="myInputTextField" class="form-control" type="search" placeholder="Search" aria-label="Search">
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-sm-12">
@@ -316,136 +316,17 @@
         <!-- End section content -->
 
 
-        <!-- start section footer -->
+        <!-- start section footer 
         <div class="footer">
             <div class="copyright">
                 <p class="mb-0"><a href="" target="_blank"></a> 
                 </p>
             </div>
         </div>
-        <!-- End section footer -->
+         End section footer -->
 
 
-        <!-- Modal  -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="modal-title-head-modal" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal-title-head-modal">Michael R Sheets</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <span
-                                aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5>Motif Patient</h5>
-                        <p>Caregivers can be spouses, family members, friends, or even a close neighbor. As a caregiver, you are an integral part of the team. Moffitt is based on the core concept of Patient and Family-Centered Care which in short is a partnership
-                            between you, the patient and the medical treatment team. As part of the team, you will help coordinate the patient’s care. That said, you must also make sure you are taking care of yourself.
-                        </p>
-                        <hr>
-                        <form>
-                            <div class="form-group">
-                                <label>Review doctors</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn badge-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="changeTimeAndDate" tabindex="-1" role="dialog" aria-labelledby="modal-title-edit-modal">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal-title-edit-modal"><img class="rounded-circle" width="35" src="https://via.placeholder.com/35/f8f8f8/2b2b2b" alt=""> 發送訊息
-                        </h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row align-items-start">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" value="訊息內容">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <select class="form-control form-select">
-                                        <option> 活動推播</option>
-                                        <option> 領養訊息</option>
-                           <!--           <option> 08:00 - 08:30</option>
-                                        <option> 08:30 - 09:00</option>
-                                        <option> 09:00 - 09:30</option>
-                                        <option> 09:30 - 10:00</option>
-                                        <option> 10:00 - 10:30</option>-->  
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">關閉</button>
-                        <button type="button" class="btn badge-primary">發送</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade selectRefresh" id="newAppointment" tabindex="-1" aria-labelledby="exampleModalLabelOne">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabelOne"> 會員管理 </h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row align-items-start">
-                            <div class="col form-group">
-                                <input class="form-control" type="text" value="06/17/2021">
-                            </div>
-                            <div class="col form-group">
-                                <select class="form-control form-select">
-                                    <option> 07:00 - 07:30</option>
-                                    <option> 07:30 - 08:00</option>
-                                    <option> 08:00 - 08:30</option>
-                                    <option> 08:30 - 09:00</option>
-                                    <option> 09:00 - 09:30</option>
-                                    <option> 09:30 - 10:00</option>
-                                    <option> 10:00 - 10:30</option>
-                                </select>
-                            </div>
-                            <div class="col form-group">
-                                <select class="form-control form-select">
-                                    <option>Select Patient...</option>
-                                    <option>Airi Satou</option>
-                                    <option>Angelica Ramos</option>
-                                    <option>Ashton Cox</option>
-                                    <option>Bradley Greer</option>
-                                    <option>Brenden</option>
-                                    <option>Ashton Cox</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Motif Patient</label>
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn badge-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Modal  -->
+        
 
     </div>
 
