@@ -4504,7 +4504,7 @@ input, select, textarea {
 		z-index: 10001;
 	}
 
-		#navPanelToggle:before {
+	/*	#navPanelToggle:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			display: inline-block;
@@ -4538,7 +4538,7 @@ input, select, textarea {
 				display: block;
 			}
 
-		}
+		}*/
 
 		@media screen and (max-width: 736px) {
 
@@ -4600,7 +4600,7 @@ input, select, textarea {
 					border-top: 0;
 				}
 
-		#navPanel .close {
+	/* 	#navPanel .close {
 			text-decoration: none;
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
@@ -4620,7 +4620,7 @@ input, select, textarea {
 			top: 0;
 			vertical-align: middle;
 			width: 7rem;
-		}
+		}*/
 
 			#navPanel .close:before {
 				-moz-osx-font-smoothing: grayscale;
