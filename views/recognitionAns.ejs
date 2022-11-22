@@ -80,9 +80,12 @@
               <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM</h3>
               <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
-              <a href="peta"><img src="images/pic04.jpg" width="20%" height="20%" alt="" /></a>
-              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <div class="searchbrand">
+              <a href="peta"><img src="images/pic04.jpg" style="width:40%;height:40%" alt="" /></a>
+              </div>
               <br>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
             <% }else if (item.leapingbunny == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
@@ -91,9 +94,12 @@
               <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">LEAPING BUNNY CERTIFICATION</h3>
               <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
-              <a href="leapingbunny"><img src="images/pic02.jpg" width="20%" height="20%" alt="" /></a>
-              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <div class="searchbrand">
+              <a href="leapingbunny"><img src="images/pic02.jpg" style="width:40%;height:40%" alt="" /></a>
+              </div>
               <br>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
             <% } else if (item.nmcb == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
@@ -102,9 +108,12 @@
               <h2 class="profile-title">認證標章為：</h2>
               <h3 class="profile-description">兔兔不哭</h3>
               <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
-              <a href="nmcb"><img src="images/pic05.jpg" width="20%" height="20%" alt="" /></a>
-              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <div class="searchbrand">
+              <a href="nmcb"><img src="images/pic05.jpg" style="width:40%;height:40%" alt="" /></a>
+              </div>
               <br>
+              <span class="date">名單更新日期：<%= item.updatetime %></span>
+              <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
             <% } else { %>
               <h3 class="profile-description">無辨識結果，請提供圖片</h3>
@@ -112,9 +121,9 @@
               <br><br>
               <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
               <div class="searchbrand">
-              <a href="peta"><img src="images/pic04.jpg" width="20%" height="20%" alt="" /></a>
-              <a href="leapingbunny"><img src="images/pic02.jpg" width="20%" height="20%" alt="" /></a>
-              <a href="nmcb"><img src="images/pic05.jpg" width="20%" height="20%" alt="" /></a>
+              <a href="peta"><img src="images/pic04.jpg" alt="" /></a>
+              <a href="leapingbunny"><img src="images/pic02.jpg" alt="" /></a>
+              <a href="nmcb"><img src="images/pic05.jpg" alt="" /></a>
             </div>
             <% } %>
         </div>
