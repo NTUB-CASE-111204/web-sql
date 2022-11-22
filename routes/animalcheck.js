@@ -9,9 +9,7 @@ router.get('/', function (req, res, next) {
   var an_id = req.query.an_id;
   console.log(an_id);
   animal.query(an_id).then(data => {
-    if (data == null) {
-      res.render('error');  //導向錯誤頁面           
-    } else {
+    if (data != null && data != -1) {
       if (data.an_postdate != null) {
         data.an_postdate = data.an_postdate.getFullYear() + "-" + (data.an_postdate.getMonth() + 1) + "-" + data.an_postdate.getDate();
       }
@@ -21,7 +19,9 @@ router.get('/', function (req, res, next) {
       if (data.an_pic != null) {
         data.an_pic = "animalpic/" + data.an_pic;
       }
-      res.render('animalcheck', { item: data });  //將資料傳給顯示頁面
+      res.render('animalcheck', { item: data });  //將資料傳給顯示頁面         
+    } else {
+      res.render('empaddnotfound');  //導向找不到頁面
     }
   })
 });

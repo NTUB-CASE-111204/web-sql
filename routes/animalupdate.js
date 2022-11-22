@@ -61,7 +61,7 @@ router.post('/', upload.single('an_pic'), function (req, res, next) {
     if (d >= 0) {
       res.render('animalupdateno', { result: d });  //傳至成功頁面
     } else {
-      res.render('updateFail');     //導向錯誤頁面
+      res.render('empupdateFail');     //導向錯誤頁面
     }
   })
 });
