@@ -14,6 +14,9 @@ router.get('/', function (req, res, next) {
         if (data[i].an_postdate != null) {
           data[i].an_postdate = data[i].an_postdate.getFullYear() + "-" + (data[i].an_postdate.getMonth() + 1) + "-" + data[i].an_postdate.getDate();
         }
+        if (data[i].an_birth != null) {
+          data[i].an_birth = data[i].an_birth.getFullYear() + "-" + (data[i].an_birth.getMonth() + 1) + "-" + data[i].an_birth.getDate();
+        }
       }
       for (i = 0; i < data.length; i++) {
         if (data[i].an_pic != null) {

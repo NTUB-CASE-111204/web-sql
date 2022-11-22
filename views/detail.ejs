@@ -89,72 +89,18 @@ shrink-to-fit=no" />
 
           </select>
           <p>
-            有無動物飼養經驗? <select id="pets" onchange="selectpet()" name="a_experience" value=<%=item.a_experience %>> 
+            有無動物飼養經驗? <select id="pets" name="a_experience" value=<%=item.a_experience %>> 
               <option value="false">無</option>
               <option value="true">有</option>
             </select>
           <p></p>
-          <script>
-            function selectpets(){
-              const petvalue = document.getElementById('.pets').value;
-              document.querySelector('#pets [value="' + petvalue + '"]').selected = true;
-            }
-        </script>
-          <!---
+          
           </select><p>
       可面訪時間?  <select name="a_time" value= <%= item.a_time %>>   <option value="平日">平日</option>
           <option value="假日">假日</option>
           <option value="平日與假日皆可">平日與假日皆可</option></select>
-          <p></p>---->
+          <p></p>
 
-          <p>有無動物飼養經驗?</p>
-          <select class="pets" name="a_experience"></select>
-          <script>
-            var choose = [{
-              name: "無",
-              value: "false"
-            },
-            {
-              name: "有",
-              value: "true"
-            }, {
-              name: "test",
-              value: "test"
-            }
-            ];
-            var str = '';
-            var i;
-            for (i = 0; i < choose.length; i++) {
-              var option = document.createElement('option');
-              option.textContent = choose[i].name;
-              option.value = choose[i].value;
-              option.selected = 'selected';
-              document.querySelector('.pets').appendChild(option);
-            }
-            option.appendChild(str)
-          </script>
-
-          <p>可面訪時間?</p>
-          <select class="times" name="a_time" value=<%=item.a_time %>></select>
-          <script>
-            var days = [{
-              name: "平日"
-            },
-            {
-              name: "假日"
-            },
-            {
-              name: "平日與假日皆可"
-            }
-            ];
-            var freetime = '';
-            var i;
-            var select = document.querySelector('.times');
-            for (i = 0; i < days.length; i++) {
-              freetime += "<option>" + days[i].name + "</option>";
-            }
-            select.innerHTML = freetime;
-          </script>
 
           <p><input type="submit" value="送出登記資料"></p>
 
