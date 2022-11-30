@@ -94,44 +94,86 @@ var add = async function(newData){
 //----------------------------------
 var update = async function (newData) {
     var result;
-
-    if(newData.m_birth == '' && newData.m_phone != ''){
-        await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_phone=$4, m_pic=$5 WHERE m_email = $6', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_phone, newData.m_pic, newData.m_email])
-        .then((data) => {
-            result = data.rowCount;
-        }, (error) => {
-            result = -1;
-        });
-        console.log("1////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
-        return result;
-    }else if (newData.m_phone == '' && newData.m_birth != ''){
-        await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_pic=$5 WHERE m_email = $6', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_pic, newData.m_email])
-        .then((data) => {
-            result = data.rowCount;
-        }, (error) => {
-            result = -1;
-        });
-        console.log("2////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
-        return result;
-    }else if (newData.m_phone == '' && newData.m_birth == ''){
-        await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_pic=$4 WHERE m_email = $5', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_pic, newData.m_email])
-        .then((data) => {
-            result = data.rowCount;
-        }, (error) => {
-            result = -1;
-        });
-        console.log("3////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
-        return result;
+    if(newData.m_pic == 'undefined' || newData.m_pic == null){
+        if(newData.m_birth == '' && newData.m_phone != ''){
+            await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_phone=$4 WHERE m_email = $5', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_phone, newData.m_email])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+            console.log("1////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_birth + "//" + newData.m_phone);
+            return result;
+        }else if (newData.m_phone == '' && newData.m_birth != ''){
+            await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4 WHERE m_email = $5', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_email])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+            console.log("2////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_birth + "//" + newData.m_phone);
+            return result;
+        }else if (newData.m_phone == '' && newData.m_birth == ''){
+            await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3 WHERE m_email = $4', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_email])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+            console.log("3////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+            return result;
+        }else{
+            await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_phone=$5 WHERE m_email = $6', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_phone, newData.m_email])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+            console.log("4////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+            return result;
+        }
     }else{
-        await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_phone=$5, m_pic=$6 WHERE m_email = $7', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_phone, newData.m_pic, newData.m_email])
-        .then((data) => {
-            result = data.rowCount;
-        }, (error) => {
-            result = -1;
-        });
-        console.log("4////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
-        return result;
+        if(newData.m_pic == 'undefined' && newData.m_pic == null){
+            if(newData.m_birth == '' && newData.m_phone != ''){
+                await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_phone=$4, m_pic=$5 WHERE m_email = $6', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_phone, newData.m_pic, newData.m_email])
+                .then((data) => {
+                    result = data.rowCount;
+                }, (error) => {
+                    result = -1;
+                });
+                console.log("1////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+                return result;
+            }else if (newData.m_phone == '' && newData.m_birth != ''){
+                await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_pic=$5 WHERE m_email = $6', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_pic, newData.m_email])
+                .then((data) => {
+                    result = data.rowCount;
+                }, (error) => {
+                    result = -1;
+                });
+                console.log("2////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+                return result;
+            }else if (newData.m_phone == '' && newData.m_birth == ''){
+                await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_pic=$4 WHERE m_email = $5', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_pic, newData.m_email])
+                .then((data) => {
+                    result = data.rowCount;
+                }, (error) => {
+                    result = -1;
+                });
+                console.log("3////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+                return result;
+            }else{
+                await sql('UPDATE public.member SET m_password=$1, m_nickname=$2, m_sex=$3, m_birth=$4, m_phone=$5, m_pic=$6 WHERE m_email = $7', [newData.m_password, newData.m_nickname, newData.m_sex, newData.m_birth, newData.m_phone, newData.m_pic, newData.m_email])
+                .then((data) => {
+                    result = data.rowCount;
+                }, (error) => {
+                    result = -1;
+                });
+                console.log("4////" + newData.m_email + "//" + newData.m_password + "//" + newData.m_nickname + "//" + newData.m_sex + "//" + newData.m_pic + "//" + newData.m_birth + "//" + newData.m_phone);
+                return result;
+            }
+        }
     }
+    
 }
 
 //------------------------------------------

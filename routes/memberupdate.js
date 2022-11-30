@@ -34,7 +34,7 @@ router.post('/', upload.single('m_pic'), function (req, res, next) {
   var m_email = req.body.m_email;   //取得會員帳號
   var m_pic = req.body.m_pic;
   // 如果有選擇圖片
-  if (typeof req.file != 'undefined') {
+  if (typeof req.file != 'undefined' && typeof req.file != null) {
     // 傳入檔案不可超過maxSize
     if (req.file.size > maxSize) {
       res.render('fileSizeError');  //圖片過大
