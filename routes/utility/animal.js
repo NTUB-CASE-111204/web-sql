@@ -44,13 +44,22 @@ var add = async function (newData) {
 //----------------------------------
 var update = async function (newData) {
     var result;
+    if (newData.an_pic == 'undefined' || newData.an_pic == null) {
+        await sql('UPDATE public.animal SET an_name=$1, an_variety=$2, an_birth=$3, an_size=$4, an_depiction=$5, an_sex=$6 WHERE an_id = $7', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_sex, newData.an_id])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+    }else{
+        await sql('UPDATE public.animal SET an_name=$1, an_variety=$2, an_birth=$3, an_size=$4, an_depiction=$5, an_pic=$6, an_sex=$7 WHERE an_id = $8', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_pic, newData.an_sex, newData.an_id])
+            .then((data) => {
+                result = data.rowCount;
+            }, (error) => {
+                result = -1;
+            });
+    }
 
-    await sql('UPDATE public.animal SET an_name=$1, an_variety=$2, an_birth=$3, an_size=$4, an_depiction=$5, an_pic=$6, an_sex=$7 WHERE an_id = $8', [newData.an_name, newData.an_variety, newData.an_birth, newData.an_size, newData.an_depiction, newData.an_pic, newData.an_sex, newData.an_id])
-        .then((data) => {
-            result = data.rowCount;
-        }, (error) => {
-            result = -1;
-        });
     console.log("4////" + newData.an_name + "//" + newData.an_variety + "//" + newData.an_birth + "//" + newData.an_size + "//" + newData.an_depiction + "//" + newData.an_pic + "//" + newData.an_sex + "//" + newData.an_id);
     return result;
 

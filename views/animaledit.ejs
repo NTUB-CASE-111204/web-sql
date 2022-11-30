@@ -11,7 +11,7 @@
     <!-- Base Styling  -->
     <link rel="stylesheet" href="assets/main/css/fonts.css">
     <link rel="stylesheet" href="assets/main/css/style.css">
-    <link rel="stylesheet"  href="css/animalcheck.css">
+    <link rel="stylesheet" href="css/animalcheck.css">
 </head>
 
 <body>
@@ -172,44 +172,44 @@
         <!-- End section sidebar -->
 
 
-                        <!-- start section header -->
-                        <div class="header">
-                            <header class="top-head container-fluid">
-                                <div class="nav-control">
-                                    <div class="hamburger">
-                                        <span class="line"></span><span class="line"></span><span class="line"></span>
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                    <div class="left-header content-header__menu">
+                        <ul class="list-unstyled">
+                            <li class="nav-link btn">
+                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
+                            </li>
+                            <li class="nav-link btn">
+                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="my-account-wrapper">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="form-content">
+                                        <a href="logout">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">登出 </span>
+                                        </a>
                                     </div>
-                                    <div class="left-header content-header__menu">
-                                        <ul class="list-unstyled">
-                                            <li class="nav-link btn">
-                                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
-                                            </li>
-                                            <li class="nav-link btn">
-                                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="header-right">
-                                    <div class="my-account-wrapper">
-                                        <div class="account-wrapper">
-                                            <div class="account-control">
-                                                <a class="login header-profile" href="#" title="Sign in">
-                                                    <div class="form-content">
-                                                        <a href="logout">
-                                                            <i class="fas fa-sign-in-alt"></i>
-                                                            <span class="ml-2">登出 </span>
-                                                        </a>
-                                                    </div>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </header>
+
+                                </a>
+                            </div>
                         </div>
-                        <!-- End section header -->
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
 
         <!-- start section content -->
         <div class="content-body">
@@ -223,7 +223,7 @@
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="empindex">Home</a></li>
+                                <li class="breadcrumb-item"><a href="empindex">首頁</a></li>
                                 <li class="breadcrumb-item active"><a href="animalupdateno">更新動物</a></li>
                             </ol>
                         </div>
@@ -243,9 +243,10 @@
                                                         <div class="form-group row widget-3">
                                                             <div class="col-lg-10">
                                                                 <div class="animal-pic">
-                                                                        <img id="changeanpic" alt="img" src=<%=item.an_pic %>> 
+                                                                    <img id="changeanpic" alt="img" src=<%=item.an_pic
+                                                                        %>>
                                                                 </div>
-                                                                  <!---<div class="form-input" style="cursor:default;">
+                                                                <!---<div class="form-input" style="cursor:default;">
                                                                   <label class="labeltest" for="file-ip-1">
                                                                         <span> Drop image here or click to upload.
                                                                         </span>
@@ -255,7 +256,9 @@
                                                             </div>
                                                         </div>
                                                         <p>選擇動物照片</p>
-                                                        <input type="file" name="an_pic" onchange="readURL(this)" targetID="changeanpic" accept="image/gif, image/jpeg, image/png">
+                                                        <input type="file" name="an_pic" onchange="readURL(this)"
+                                                            targetID="changeanpic"
+                                                            accept="image/gif, image/jpeg, image/png">
                                                     </div>
                                                     <div class="col-xl-4">
                                                         <div class="form-group">
@@ -265,12 +268,13 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <span>動物品種:</span>
-                                                            <input type="text" name="an_variety"  class="form-control"
+                                                            <input type="text" name="an_variety" class="form-control"
                                                                 placeholder="動物品種" required value=<%=item.an_variety %>>
                                                         </div>
                                                         <div class="form-group">
                                                             <span>生日:</span>
-                                                            <input type="date" name="an_birth"  class="form-control" value=<%=item.an_birth %> >
+                                                            <input type="date" name="an_birth" class="form-control"
+                                                                value=<%=item.an_birth %> >
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4">
@@ -281,13 +285,42 @@
                                                                 placeholder="體重" required value=<%=item.an_size %>>
                                                         </div>
                                                         <div class="form-group">
-                                                            <span>性別:</span>
-                                                            <select name="an_sex" class="form-control form-select" required>
-                                                                <option value="性別" hidden></option>
-                                                                <option>母</option>
-                                                                <option>公</option>
-                                                            </select>
+                                                            <span>性別:<a id="ansex" style="color: #ffffff;"><%=item.an_sex %></span><br/>
+                                                            <select class="form-control form-select" name="an_sex"></select>
                                                         </div>
+
+                                                        <script>
+                                                            var choose = [{
+                                                                name: "母",
+                                                                value: "母"
+                                                            },
+                                                            {
+                                                                name: "公",
+                                                                value: "公"
+                                                            }];
+
+                                                            var ansex = document.getElementById('ansex');
+                                                            console.log(ansex.innerHTML);
+                                                            var str = '';
+                                                            var i;
+                                                            for (i = 0; i < choose.length; i++) {
+                                                                if (choose[i].value == ansex.innerHTML) {
+                                                                    var option = document.createElement('option');
+                                                                    option.textContent = choose[i].name;
+                                                                    option.value = choose[i].value;
+                                                                    option.selected = 'selected';
+                                                                    document.querySelector('.form-select').appendChild(option);
+                                                                } else {
+                                                                    var option = document.createElement('option');
+                                                                    option.textContent = choose[i].name;
+                                                                    option.value = choose[i].value;
+                                                                    document.querySelector('.form-select').appendChild(option);
+                                                                }
+
+                                                            }
+                                                            option.appendChild(str)
+                                                        </script>
+
                                                         <div class="form-group" hidden>
                                                             <span>編號:</span>
                                                             <input type="text" name="an_id" class="form-control"
@@ -312,17 +345,19 @@
                                                 <div class="row">
                                                     <div class="col-xl-4">
                                                         <div class="form-group">
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-8">
                                                         <div class="form-group">
                                                             <span>故事內容:</span>
                                                             <textarea class="form-control" name="an_depiction"
-                                                                placeholder="故事內容:" rows="4" required><%=item.an_depiction %></textarea>
+                                                                placeholder="故事內容:" rows="4"
+                                                                required><%=item.an_depiction %></textarea>
                                                         </div>
                                                         <div class="form-group text-right">
-                                                            <button type="submit" class="btn btn-primary float-end">更新</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary float-end">更新</button>
                                                         </div>
                                                     </div>
                                                 </div>

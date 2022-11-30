@@ -110,15 +110,44 @@
                         <table>
                             </select> </td>
                             <td>
-                                <p>性別:<br />
-                                    <select name="m_sex">
-                                        <option value="男">男</option>
-                                        <option value="女">女</option>
-                                    </select>
+                                <div id="msex" style="color: #ffffff;"><%=item.m_sex %></div><p>性別：<br/>
+                                    <select class="sex" name="m_sex"></select>
                                 </p>
                             </td>
 
                         </table>
+
+                        <script>
+                            var choose = [{
+                              name: "男",
+                              value: "男"
+                            },
+                            {
+                              name: "女",
+                              value: "女"
+                            }];
+                
+                            var msex = document.getElementById('msex');
+                            console.log(msex.innerHTML);
+                            var str = '';
+                            var i;
+                            for (i = 0; i < choose.length; i++) {
+                              if (choose[i].value == msex.innerHTML) {
+                                var option = document.createElement('option');
+                                option.textContent = choose[i].name;
+                                option.value = choose[i].value;
+                                option.selected = 'selected';
+                                document.querySelector('.sex').appendChild(option);
+                              }else{
+                                var option = document.createElement('option');
+                                option.textContent = choose[i].name;
+                                option.value = choose[i].value;
+                                document.querySelector('.sex').appendChild(option);
+                              }
+                
+                            }
+                            option.appendChild(str)
+                          </script>
 
                         <p><input type="submit" value="送出登記資料"></p>
                     </form>

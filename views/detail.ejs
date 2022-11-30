@@ -78,8 +78,7 @@ shrink-to-fit=no" />
           <p><input type="text" name="a_job" required value=<%=item.a_job %> ></p>
 
           <p>電話:</p>
-          <p><input type="text" name="a_phone" oninput="value=value.replace(/[^\d]/g,'')" required value=<%=item.a_phone
-              %> ></p>
+          <p><input type="text" name="a_phone" oninput="value=value.replace(/[^\d]/g,'')" required value=<%=item.a_phone%> ></p>
 
           <p>地址:</p>
           <p><input type="text" name="a_address" required value=<%=item.a_address %> ></p>
@@ -87,20 +86,76 @@ shrink-to-fit=no" />
           <p>備註事項: </p>
           <p><textarea rows="5" cols="20" type="text" name="a_remark"><%= item.a_remark %></textarea></p>
 
-          </select>
-          <p>
-            有無動物飼養經驗? <select id="pets" name="a_experience" value=<%=item.a_experience %>> 
-              <option value="false">無</option>
-              <option value="true">有</option>
-            </select>
-          <p></p>
-          
-          </select><p>
-      可面訪時間?  <select name="a_time" value= <%= item.a_time %>>   <option value="平日">平日</option>
-          <option value="假日">假日</option>
-          <option value="平日與假日皆可">平日與假日皆可</option></select>
-          <p></p>
+          <div id="exp" style="color: #ffffff;"><%=item.a_experience %></div><p>有無動物飼養經驗?
+          <select class="pets" name="a_experience"></select>
+          <script>
+            var choose = [{
+              name: "無",
+              value: "false"
+            },
+            {
+              name: "有",
+              value: "true"
+            }];
 
+            var exp = document.getElementById('exp');
+            console.log(exp.innerHTML);
+            var str = '';
+            var i;
+            for (i = 0; i < choose.length; i++) {
+              if (choose[i].value == exp.innerHTML) {
+                var option = document.createElement('option');
+                option.textContent = choose[i].name;
+                option.value = choose[i].value;
+                option.selected = 'selected';
+                document.querySelector('.pets').appendChild(option);
+              }else{
+                var option = document.createElement('option');
+                option.textContent = choose[i].name;
+                option.value = choose[i].value;
+                document.querySelector('.pets').appendChild(option);
+              }
+
+            }
+            option.appendChild(str)
+          </script>
+
+          <div id="mtime" style="color: #ffffff;"><%=item.a_time %></div><p>可面訪時間?
+            <select class="meet" name="a_time"></select>
+            <script>
+              var choose = [{
+                name: "平日",
+                value: "平日"
+              },
+              {
+                name: "假日",
+                value: "假日"
+              }, {
+                name: "平日與假日皆可",
+                value: "平日與假日皆可"
+              }];
+  
+              var mtime = document.getElementById('mtime');
+              console.log(mtime.innerHTML);
+              var str = '';
+              var i;
+              for (i = 0; i < choose.length; i++) {
+                if (choose[i].value == mtime.innerHTML) {
+                  var option = document.createElement('option');
+                  option.textContent = choose[i].name;
+                  option.value = choose[i].value;
+                  option.selected = 'selected';
+                  document.querySelector('.meet').appendChild(option);
+                }else{
+                  var option = document.createElement('option');
+                  option.textContent = choose[i].name;
+                  option.value = choose[i].value;
+                  document.querySelector('.meet').appendChild(option);
+                }
+  
+              }
+              option.appendChild(str)
+            </script>
 
           <p><input type="submit" value="送出登記資料"></p>
 

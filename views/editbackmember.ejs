@@ -38,7 +38,7 @@
                             <span class="nav-label">Dashboard</span>
                         </a>
                     </li>
-                    <li class="has-submenu active">
+                    <li class="has-submenu">
                         <a href="#" class="has-arrow mm-collapsed">
                             <i class="fas fa-user-md"></i>
                             <span class="nav-label">管理動物資料</span>
@@ -65,7 +65,7 @@
                             <span class="nav-label">領養人資訊</span>
                         </a>
                     </li>
-                    <li class="has-submenu">
+                    <li class="has-submenu active">
                         <a href="memberadmin">
                             <i class="fas fa-calendar-plus"></i>
                             <span class="nav-label">會員管理</span>
@@ -172,44 +172,44 @@
         <!-- End section sidebar -->
 
 
-                        <!-- start section header -->
-                        <div class="header">
-                            <header class="top-head container-fluid">
-                                <div class="nav-control">
-                                    <div class="hamburger">
-                                        <span class="line"></span><span class="line"></span><span class="line"></span>
+        <!-- start section header -->
+        <div class="header">
+            <header class="top-head container-fluid">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                    <div class="left-header content-header__menu">
+                        <ul class="list-unstyled">
+                            <li class="nav-link btn">
+                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
+                            </li>
+                            <li class="nav-link btn">
+                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="my-account-wrapper">
+                        <div class="account-wrapper">
+                            <div class="account-control">
+                                <a class="login header-profile" href="#" title="Sign in">
+                                    <div class="form-content">
+                                        <a href="logout">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span class="ml-2">登出 </span>
+                                        </a>
                                     </div>
-                                    <div class="left-header content-header__menu">
-                                        <ul class="list-unstyled">
-                                            <li class="nav-link btn">
-                                                <a href="#"><i class="far fa-calendar-check"></i> <span> 管理員後台</span></a>
-                                            </li>
-                                            <li class="nav-link btn">
-                                                <a href="#"><i class="far fa-file-alt"></i> <span> 系統運行中</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="header-right">
-                                    <div class="my-account-wrapper">
-                                        <div class="account-wrapper">
-                                            <div class="account-control">
-                                                <a class="login header-profile" href="#" title="Sign in">
-                                                    <div class="form-content">
-                                                        <a href="logout">
-                                                            <i class="fas fa-sign-in-alt"></i>
-                                                            <span class="ml-2">登出 </span>
-                                                        </a>
-                                                    </div>
-                                                    
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </header>
+
+                                </a>
+                            </div>
                         </div>
-                        <!-- End section header -->
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- End section header -->
 
         <!-- start section content -->
         <div class="content-body">
@@ -223,7 +223,7 @@
                         </div>
                         <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="empindex">Home</a></li>
+                                <li class="breadcrumb-item"><a href="empindex">首頁</a></li>
                                 <li class="breadcrumb-item active"><a href="addanimal">編輯會員</a></li>
                             </ol>
                         </div>
@@ -246,8 +246,11 @@
                                                                     <img id="changepic" src=<%=item.m_pic %> alt="會員頭貼">
                                                                 </div>
                                                                 <p style="margin-left:40px ;">選擇會員照片</p>
-                                                                <input type="file" name="m_pic" style="margin-left:40px ;" onchange="readURL(this)" targetID="changepic" accept="image/gif, image/jpeg, image/png">
-                                                              <!---  <div class="form-input">
+                                                                <input type="file" name="m_pic"
+                                                                    style="margin-left:40px ;" onchange="readURL(this)"
+                                                                    targetID="changepic"
+                                                                    accept="image/gif, image/jpeg, image/png">
+                                                                <!---  <div class="form-input">
                                                                     <div class="profile-image">
                                                                         <img id="changepic" src=<%=item.m_pic %> alt="會員頭貼">
                                                                     </div>
@@ -273,31 +276,61 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <span>信箱:</span>
-                                                            <input type="text" name="m_email"  class="form-control"
+                                                            <input type="text" name="m_email" class="form-control"
                                                                 placeholder="信箱" readonly value=<%=item.m_email %>>
                                                         </div>
                                                         <div class="form-group">
                                                             <span>密碼:</span>
-                                                            <input type="text" name="m_password"  class="form-control"
-                                                                placeholder="密碼" required  value=<%=item.m_password %> >
+                                                            <input type="text" name="m_password" class="form-control"
+                                                                placeholder="密碼" required value=<%=item.m_password %> >
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4">
                                                         <div class="form-group">
                                                             <span>電話:</span>
-                                                            <input type="text" name="m_phone"  class="form-control"
+                                                            <input type="text" name="m_phone" class="form-control"
                                                                 placeholder="電話" value=<%=item.m_phone %> >
                                                         </div>
                                                         <div class="form-group">
                                                             <span>生日:</span>
-                                                            <input type="text" name="m_birth"  class="form-control"
-                                                                placeholder="生日" value=<%=item.m_birth %> >
+                                                            <input type="date" name="m_birth" class="form-control" value=<%=item.m_birth %> >
                                                         </div>
                                                         <div class="form-group">
-                                                            <span>性別:</span>
-                                                            <input type="text" name="m_sex"  class="form-control"
-                                                                placeholder="性別" value=<%=item.m_sex %> >
+                                                            <span>性別:<a id="msex" style="color: #ffffff;"><%=item.m_sex %></span><br />
+                                                            <select class="form-control form-select" name="m_sex"></select>
                                                         </div>
+
+                                                        <script>
+                                                            var choose = [{
+                                                                name: "男",
+                                                                value: "男"
+                                                            },
+                                                            {
+                                                                name: "女",
+                                                                value: "女"
+                                                            }];
+
+                                                            var msex = document.getElementById('msex');
+                                                            console.log(msex.innerHTML);
+                                                            var str = '';
+                                                            var i;
+                                                            for (i = 0; i < choose.length; i++) {
+                                                                if (choose[i].value == msex.innerHTML) {
+                                                                    var option = document.createElement('option');
+                                                                    option.textContent = choose[i].name;
+                                                                    option.value = choose[i].value;
+                                                                    option.selected = 'selected';
+                                                                    document.querySelector('.form-select').appendChild(option);
+                                                                } else {
+                                                                    var option = document.createElement('option');
+                                                                    option.textContent = choose[i].name;
+                                                                    option.value = choose[i].value;
+                                                                    document.querySelector('.form-select').appendChild(option);
+                                                                }
+
+                                                            }
+                                                            option.appendChild(str)
+                                                        </script>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -317,12 +350,12 @@
                                                 <div class="row">
                                                     <div class="col-xl-4">
                                                         <div class="form-group">
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-8">
                                                         <div class="form-group text-right">
-                                                            <button type="submit" 
+                                                            <button type="submit"
                                                                 class="btn btn-primary float-end">確認編輯</button>
                                                         </div>
                                                     </div>
@@ -347,7 +380,7 @@
                             }
                         }
                     </script>
-                     <!--   <script>
+                    <!--   <script>
                         function showPreview(event){
                         if(event.target.files.length > 0){
                             var src = URL.createObjectURL(event.target.files[0]);
