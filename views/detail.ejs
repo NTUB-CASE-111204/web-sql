@@ -86,7 +86,7 @@ shrink-to-fit=no" />
           <p>備註事項: </p>
           <p><textarea rows="5" cols="20" type="text" name="a_remark"><%= item.a_remark %></textarea></p>
 
-          <div id="exp" style="color: #ffffff;"><%=item.a_experience %></div><p>有無動物飼養經驗?
+          <div id="exp" hidden><%=item.a_experience %></div><p>有無動物飼養經驗?
           <select class="pets" name="a_experience"></select>
           <script>
             var choose = [{
@@ -120,7 +120,7 @@ shrink-to-fit=no" />
             option.appendChild(str)
           </script>
 
-          <div id="mtime" style="color: #ffffff;"><%=item.a_time %></div><p>可面訪時間?
+          <div id="mtime" hidden><%=item.a_time %></div><p>可面訪時間?
             <select class="meet" name="a_time"></select>
             <script>
               var choose = [{
