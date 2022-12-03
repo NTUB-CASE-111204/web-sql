@@ -4,7 +4,6 @@
 import sys
 import time
 
-picName = ""
 # 定義接收到的不同環節碼，執行不同邏輯
 def foo(var):
     
@@ -21,9 +20,8 @@ def foo(var):
         time.sleep(1)
         print('300#'+'{"sign":"1", "msg":"匹配成功"}')
     else:
-        picName = var
         a = "true"
-        print(var+'#'+'{"sign":"'+a+'"}')
+        print(var+'#'+'{"sign":"'+a+'", "msg":"'+ans+'"}')
 
 
 # 引數為從命令列傳過來的引數 sys.argv ['py_test.py', arg1, arg2...]
@@ -53,13 +51,14 @@ nb_classes = len(class_names)
 IMAGE_SIZE = (64, 64)
 '讀模型'
 from keras.models import load_model
-model = load_model('10datas_model(200&changeTwoBrand)')
+modelpath = "./10datas_model(200&changeTwoBrand)"
+model = load_model(modelpath)
 
 from keras.preprocessing import image
 import matplotlib.pyplot as plt   
 import numpy as np
 import tensorflow as tf
-picPath = '../public/selectPic/' + picName
+picPath = '../public/selectPic/' + "1668844628973--20221020055257503914.jpg"
 IMAGE_PATH=picPath #輸入圖片
 img=tf.keras.preprocessing.image.load_img(IMAGE_PATH,target_size=(64,64))#跟建模時的input_shape需相同
 img=tf.keras.preprocessing.image.img_to_array(img)

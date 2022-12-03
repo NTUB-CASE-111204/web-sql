@@ -74,7 +74,7 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
     //該方法用於命令列執行python命令 類似於:  python py_test.py arg1
     //這樣在python中就可以接受傳遞過去的引數
     function execCmd() {
-        exec('python routes/helloworld.py '+ cmds[no++], function (error, stdout, stderr) {
+        exec('python routes/CNN-read.py '+ cmds[no++], function (error, stdout, stderr) {
             if(error){
                 console.error('error: ' + error);
                 return;
