@@ -35,19 +35,6 @@ var leapingbunny = async function(){
     return result;
 }
 
-var ccf = async function(){
-    var result={};
-    
-    await sql('SELECT * FROM public.brand WHERE ccf = TRUE ORDER BY b_name')
-        .then((data) => {            
-            result = data.rows;  
-        }, (error) => {
-            result = null;
-        });
-		
-    return result;
-}
-
 var peta = async function(){
     var result={};
     
@@ -109,4 +96,4 @@ var brandselect = async function(b_name){
 }
 
 //匯出
-module.exports = {list, leapingbunny, ccf, peta, nmcb, updatetime, brandselect};
+module.exports = {list, leapingbunny, peta, nmcb, updatetime, brandselect};

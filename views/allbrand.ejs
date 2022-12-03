@@ -61,32 +61,17 @@
 					<input type="radio" name="panelCtrl" id="tab2">
 					<input type="radio" name="panelCtrl" id="tab3">
 					<input type="radio" name="panelCtrl" id="tab4">
-					<input type="radio" name="panelCtrl" id="tab5">
-			
+
 					<div class="tabPanel">
 						<label for="tab1" class="tab tab1">ALL</label>
 						<label for="tab2" class="tab tab2">LEAPING BUNNY CERTIFICATION</label>
 						<label for="tab3" class="tab tab3">PETA</label>
-						<label for="tab4" class="tab tab4">NOT TESTED ON ANIMALS RABBIT</label>
-						<label for="tab5" class="tab tab5">兔兔不哭</label>
+						<label for="tab4" class="tab tab4">兔兔不哭</label>
 					</div>
-					
+
 					<div class="contentGroup">
 						<div class="content content1">
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						   <p>first</p>
-						</div>
-						<div class="content content2">
-						    <table>
+							<table>
 								<thead>
 									<tr>
 										<th width="27%">品牌名稱</th>
@@ -95,24 +80,90 @@
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<tr>
-											<td><%= items[i].b_name %></td>		
-											<td>○</td>								
-										</tr> 
-									<% } %> 
+											<td>
+												<%= items[i].b_name %>
+											</td>
+											<td>
+												<% if(items[i].leapingbunny==true) {%>
+													<img src="images/leapingbunny.png" alt="" style="width:10%; height:10%;"/>
+												<% } %>
+												<% if(items[i].peta==true) {%>
+													<img src="images/peta.png" alt="" style="width:10%; height:10%;"/>
+												<% } %>
+												<% if(items[i].nmcb==true) {%>
+													<img src="images/nmcb.png" alt="" style="width:10%; height:10%;"/>
+												<% } %>
+											</td>
+										</tr>
+									<% } %>
 								</tbody>
-							</table>     
+							</table>
+						</div>
+						<div class="content content2">
+							<table>
+								<thead>
+									<tr>
+										<th width="27%">品牌名稱</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for(var i=0; i<items.length; i++) {%>
+										<% if(items[i].leapingbunny==true) {%>
+											<tr>
+												<td>
+													<%= items[i].b_name %>
+												</td>
+												<td><img src="images/leapingbunny.png" alt="" style="width:10%; height:10%;"/></td>
+											</tr>
+										<% } %>
+									<% } %>
+								</tbody>
+							</table>
 						</div>
 						<div class="content content3">
-						    <p>third</p>
+							<table>
+								<thead>
+									<tr>
+										<th width="27%">品牌名稱</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for(var i=0; i<items.length; i++) {%>
+										<% if(items[i].peta==true) {%>
+											<tr>
+												<td>
+													<%= items[i].b_name %>
+												</td>
+												<td><img src="images/peta.png" alt="" style="width:10%; height:10%;"/></td>
+											</tr>
+										<% } %>
+									<% } %>
+								</tbody>
+							</table>
 						</div>
 						<div class="content content4">
-						    <p>four</p>
-						</div>
-						<div class="content content5">
-						   <p>five</p>
+							<table>
+								<thead>
+									<tr>
+										<th width="27%">品牌名稱</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% for(var i=0; i<items.length; i++) {%>
+										<% if(items[i].nmcb==true) {%>
+											<tr>
+												<td>
+													<%= items[i].b_name %>
+												</td>
+												<td><img src="images/nmcb.png" alt="" style="width:10%; height:10%;"/></td>
+											</tr>
+										<% } %>
+									<% } %>
+								</tbody>
+							</table>
 						</div>
 					</div>
-					
+
 				</div>
 			</section>
 		</div>

@@ -39,9 +39,7 @@ var recognitionAnsRouter = require('./routes/recognitionAns');
 var recognitionCheckRouter = require('./routes/recognitionCheck');
 var newsRouter = require('./routes/news');
 
-var brand_list = require('./routes/brand_list');
 var leapingbunny = require('./routes/leapingbunny');
-var ccf = require('./routes/ccf');
 var peta = require('./routes/peta');
 var nmcb = require('./routes/nmcb');
 var allbrand = require('./routes/allbrand');
@@ -125,9 +123,7 @@ app.use('/recognitionAns', recognitionAnsRouter);
 app.use('/recognitionCheck', recognitionCheckRouter);
 app.use('/news', newsRouter);
 
-app.use('/brand/list', brand_list);
 app.use('/leapingbunny', leapingbunny);
-app.use('/ccf', ccf);
 app.use('/peta', peta);
 app.use('/nmcb', nmcb);
 app.use('/allbrand', allbrand);
