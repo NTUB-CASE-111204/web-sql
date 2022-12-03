@@ -55,7 +55,7 @@
 		<!-- Main -->
 		<!-- HTML -->
 		<div id="main">
-			<section class="mainTab">
+			<section>
 				<div class="container">
 					<input type="radio" name="panelCtrl" id="tab1" checked>
 					<input type="radio" name="panelCtrl" id="tab2">
@@ -85,13 +85,13 @@
 											</td>
 											<td>
 												<% if(items[i].leapingbunny==true) {%>
-													<img src="images/leapingbunny.png" alt="" style="width:10%; height:10%;"/>
+													<img class="image fit" src="images/leapingbunny.png" alt="" style="width:55px; height:55px; margin-left: -250;"/>
 												<% } %>
 												<% if(items[i].peta==true) {%>
-													<img src="images/peta.png" alt="" style="width:10%; height:10%;"/>
+													<img class="image fit" src="images/peta.png" alt="" style="width:55px; height:55px; margin-left: 100px;"/>
 												<% } %>
 												<% if(items[i].nmcb==true) {%>
-													<img src="images/nmcb.png" alt="" style="width:10%; height:10%;"/>
+													<img class="image fit" src="images/nmcb.png" alt="" style="width:55px; height:55px; "/>
 												<% } %>
 											</td>
 										</tr>
@@ -113,7 +113,7 @@
 												<td>
 													<%= items[i].b_name %>
 												</td>
-												<td><img src="images/leapingbunny.png" alt="" style="width:10%; height:10%;"/></td>
+												<td><img class="image fit" src="images/leapingbunny.png" alt="" style="width:55px; height:55px;"/></td>
 											</tr>
 										<% } %>
 									<% } %>
@@ -134,7 +134,7 @@
 												<td>
 													<%= items[i].b_name %>
 												</td>
-												<td><img src="images/peta.png" alt="" style="width:10%; height:10%;"/></td>
+												<td><img class="image fit" src="images/peta.png" alt="" style="width:55px; height:55px;"/></td>
 											</tr>
 										<% } %>
 									<% } %>
@@ -155,7 +155,7 @@
 												<td>
 													<%= items[i].b_name %>
 												</td>
-												<td><img src="images/nmcb.png" alt="" style="width:10%; height:10%;"/></td>
+												<td><img class="image fit" src="images/nmcb.png" alt="" style="width:55px; height:55px; margin-left: 620px;"/></td>
 											</tr>
 										<% } %>
 									<% } %>
