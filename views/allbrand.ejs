@@ -74,24 +74,33 @@
 							<table>
 								<thead>
 									<tr>
-										<th width="27%">品牌名稱</th>
+										<th width="75%">品牌名稱</th>
+										<th width="10%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
 									</tr>
 								</thead>
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<tr>
-											<td>
+											<td width="75%" style="float: left; word-break: break-all;">
 												<%= items[i].b_name %>
 											</td>
-											<td>
+											<td width="10%"></td>
+											<td width="5%">
 												<% if(items[i].leapingbunny==true) {%>
-													<img class="image fit" src="images/leapingbunny.png" alt="" style="width:55px; height:55px; margin-left: -250;"/>
+													<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
 												<% } %>
+											</td>
+											<td width="5%">
 												<% if(items[i].peta==true) {%>
-													<img class="image fit" src="images/peta.png" alt="" style="width:55px; height:55px; margin-left: 100px;"/>
+													<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
 												<% } %>
+											</td>
+											<td width="5%">
 												<% if(items[i].nmcb==true) {%>
-													<img class="image fit" src="images/nmcb.png" alt="" style="width:55px; height:55px; "/>
+													<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
 												<% } %>
 											</td>
 										</tr>
@@ -103,17 +112,36 @@
 							<table>
 								<thead>
 									<tr>
-										<th width="27%">品牌名稱</th>
+										<th width="75%">品牌名稱</th>
+										<th width="10%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
 									</tr>
 								</thead>
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].leapingbunny==true) {%>
 											<tr>
-												<td>
+												<td width="75%" style="float: left; word-break: break-all;">
 													<%= items[i].b_name %>
 												</td>
-												<td><img class="image fit" src="images/leapingbunny.png" alt="" style="width:55px; height:55px;"/></td>
+												<td width="10%"></td>
+												<td width="5%">
+													<% if(items[i].leapingbunny==true) {%>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].peta==true) {%>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].nmcb==true) {%>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
 											</tr>
 										<% } %>
 									<% } %>
@@ -124,17 +152,36 @@
 							<table>
 								<thead>
 									<tr>
-										<th width="27%">品牌名稱</th>
+										<th width="75%">品牌名稱</th>
+										<th width="10%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
 									</tr>
 								</thead>
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].peta==true) {%>
 											<tr>
-												<td>
+												<td width="75%" style="float: left; word-break: break-all;">
 													<%= items[i].b_name %>
 												</td>
-												<td><img class="image fit" src="images/peta.png" alt="" style="width:55px; height:55px;"/></td>
+												<td width="10%"></td>
+												<td width="5%">
+													<% if(items[i].leapingbunny==true) {%>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].peta==true) {%>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].nmcb==true) {%>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
 											</tr>
 										<% } %>
 									<% } %>
@@ -145,17 +192,36 @@
 							<table>
 								<thead>
 									<tr>
-										<th width="27%">品牌名稱</th>
+										<th width="75%">品牌名稱</th>
+										<th width="10%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
+										<th width="5%"></th>
 									</tr>
 								</thead>
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].nmcb==true) {%>
 											<tr>
-												<td>
+												<td width="75%" style="float: left; word-break: break-all;">
 													<%= items[i].b_name %>
 												</td>
-												<td><img class="image fit" src="images/nmcb.png" alt="" style="width:55px; height:55px; margin-left: 620px;"/></td>
+												<td width="10%"></td>
+												<td width="5%">
+													<% if(items[i].leapingbunny==true) {%>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].peta==true) {%>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
+												<td width="5%">
+													<% if(items[i].nmcb==true) {%>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<% } %>
+												</td>
 											</tr>
 										<% } %>
 									<% } %>
