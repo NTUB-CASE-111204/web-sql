@@ -29,6 +29,8 @@
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			</ul>
+
+			
 		</div>
 
 		<!-- Header -->
@@ -55,6 +57,28 @@
 		<!-- Main -->
 		<!-- HTML -->
 		<div id="main">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<a href="allbrand" id="gotop">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<script type="text/javascript">
+				$(function() {
+					/* 按下GoTop按鈕時的事件 */
+					$('#gotop').click(function(){
+						$('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+						return false;
+					});
+					
+					/* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+					$(window).scroll(function() {
+						if ( $(this).scrollTop() > 400){
+							$('#gotop').fadeIn();
+						} else {
+							$('#gotop').fadeOut();
+						}
+					});
+				});
+			</script>   
 			<section>
 				<div class="container">
 					<input type="radio" name="panelCtrl" id="tab1" checked>

@@ -88,7 +88,21 @@ table {
     white-space: nowrap;*/
 }
 
-
+#gotop {
+    position: fixed;
+    border-radius: 50px;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px 16px;
+    font-size: 25px;
+    background: #e6a3c9;
+    color: #FAFCFD;
+    cursor: pointer;
+    z-index: 1000;
+}
+#gotop :hover{
+    background:#e6a3c9;
+}
 
 /* 頁籤2
 .planList{
