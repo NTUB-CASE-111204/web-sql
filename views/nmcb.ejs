@@ -49,21 +49,27 @@
  -->
 				<!-- Main -->
 					<div id="main">
-						<table>
+						<table class="order-table" >
 							<thead>
 								<tr>
-									<th width="20%" >品牌編號</th>
-									<th width="35%" >品牌名稱</th>
+									<div class="container-1" style="margin-bottom: 10px; text-align: center;" >
+										<span class="icon"><i class="fa fa-search"></i></span>
+										<input type="search" class="light-table-filter"  data-table="order-table" placeholder="Search..." >
+									</div>
+								</tr>
+								<tr >
+									<th width="20%" style="line-height:50px; text-align: center;">品牌編號</th>
+									<th width="35%" style="line-height:50px; text-align: center;">品牌名稱</th>
 									<!-- <th width="35%">營養分類</th>
 									<th width="15%">單位熱量</th>
 									<th width="15%">單位克數</th>                -->
 								</tr>
 							</thead>
-							<tbody>
+							<tbody >
 								<% for(var i=0; i<items.length; i++) {%>
 									<tr>
-										<td><%= items[i].b_id %></td>
-										<td><%= items[i].b_name %></td>
+										<td style="text-align: center;"><%= items[i].b_id %></td>
+										<td style="text-align: center;"><%= items[i].b_name %></td>
 										<!-- <td><%= items[i].nutno %></td>
 										<td><%= items[i].calories %></td>
 										<td><%= items[i].gram %></td>                         -->
