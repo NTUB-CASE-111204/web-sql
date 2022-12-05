@@ -3,27 +3,27 @@
     "name": "Bunny幫你",
     "icons": [
         {
-            "src": "images/abou-us.jpg",
+            "src": "images/64x64.jpg",
             "sizes": "64x64 32x32 24x24 16x16",
             "type": "image/jpg"
         },
         {
-            "src": "images/abou-us.jpg",
+            "src": "images/192x192.jpg",
             "type": "image/jpg",
             "sizes": "192x192"
         },
         {
-            "src": "images/abou-us.jpg",
+            "src": "images/256x256.jpg",
             "sizes": "256x256",
             "type": "image/jpg"
         },
         {
-            "src": "images/abou-us.jpg",
+            "src": "images/384x384.jpg",
             "sizes": "384x384",
             "type": "image/jpg"
         },
         {
-            "src": "images/abou-us.jpg",
+            "src": "images/512x512.jpg",
             "type": "image/jpg",
             "sizes": "512x512"
         }
