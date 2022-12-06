@@ -43,14 +43,14 @@ def foo(var):
         IMAGE_SIZE = (64, 64)
         '讀模型'
         from keras.models import load_model
-        modelpath = "C:/chashin/2技/專題網頁/web-sql/routes/10datas_model(fail5).h5"
+        modelpath = "C:/Users/Bircteam/web-sql/routes/10datas_model(fail5).h5"
         model = load_model(modelpath)
 
         from keras.preprocessing import image
         import matplotlib.pyplot as plt   
         import numpy as np
         import tensorflow as tf
-        picPath = 'C:/chashin/2技/專題網頁/web-sql/public/selectPic/' + var
+        picPath = 'C:/Users/Bircteam/web-sql/public/selectPic/' + var
         IMAGE_PATH=picPath #輸入圖片
         img=tf.keras.preprocessing.image.load_img(IMAGE_PATH,target_size=(64,64))#跟建模時的input_shape需相同
         img=tf.keras.preprocessing.image.img_to_array(img)
@@ -103,14 +103,14 @@ nb_classes = len(class_names)
 IMAGE_SIZE = (64, 64)
 '讀模型'
 from keras.models import load_model
-modelpath = "C:/chashin/2技/專題網頁/web-sql/routes/10datas_model(fail5).h5"
+modelpath = "C:/Users/Bircteam/web-sql/routes/10datas_model(fail5).h5"
 model = load_model(modelpath)
 
 from keras.preprocessing import image
 import matplotlib.pyplot as plt   
 import numpy as np
 import tensorflow as tf
-picPath = 'C:/chashin/2技/專題網頁/web-sql/public/selectPic/' + "1668844628973--20221020055257503914.jpg"
+picPath = 'C:/Users/Bircteam/web-sql/public/selectPic/' + "1668844628973--20221020055257503914.jpg"
 IMAGE_PATH=picPath #輸入圖片
 img=tf.keras.preprocessing.image.load_img(IMAGE_PATH,target_size=(64,64))#跟建模時的input_shape需相同
 img=tf.keras.preprocessing.image.img_to_array(img)

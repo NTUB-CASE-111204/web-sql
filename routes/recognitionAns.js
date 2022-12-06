@@ -3,6 +3,7 @@ var router = express.Router();
 
 //增加引用函式
 const brand = require('./utility/brandall');
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 //接收GET請求
 router.get('/', function(req, res, next) {
