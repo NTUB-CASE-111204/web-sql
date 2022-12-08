@@ -33,6 +33,7 @@ var upload = multer({
 //接收POST請求
 router.post('/', upload.single('pic_file'), function (req, res, next) {
   // 如果有選擇圖片
+  /*
   if (typeof req.file != 'undefined'){
     // 傳入檔案不可超過maxSize
     if(req.file.size > maxSize){
@@ -40,7 +41,7 @@ router.post('/', upload.single('pic_file'), function (req, res, next) {
         return;
     }                      
   } 
-
+*/
   var pic_file;
 
   // 如果有選擇圖片
