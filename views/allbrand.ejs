@@ -95,10 +95,16 @@
 
 					<div class="contentGroup">
 						<div class="content content1">
-							<table>
+							<table class="order-table">
 								<thead>
 									<tr>
-										<th width="75%">品牌名稱</th>
+										<th width="75%">
+											<div class="container-1" style="margin-bottom: 10px; " >
+												<span class="icon" style="margin-right: 10px;">品牌名稱</span>
+												<span class="icon">
+												<input type="search" class="light-table-filter"  data-table="order-table" placeholder="Search..." style="border-radius: 20px; margin-right: 10px;">
+											</div>
+										</th>
 										<th width="10%"></th>
 										<th width="5%"></th>
 										<th width="5%"></th>
@@ -108,35 +114,45 @@
 								<tbody>
 									<% for(var i=0; i<items.length; i++) {%>
 										<tr>
-											<td width="75%" style="float: left; word-break: break-all;">
+											<td width="75%" style="word-break: break-all;display: table-cell; vertical-align:middle ;">
 												<%= items[i].b_name %>
 											</td>
 											<td width="10%"></td>
 											<td width="5%">
 												<% if(items[i].leapingbunny==true) {%>
-													<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 												<% } %>
 											</td>
 											<td width="5%">
 												<% if(items[i].peta==true) {%>
-													<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 												<% } %>
 											</td>
 											<td width="5%">
 												<% if(items[i].nmcb==true) {%>
-													<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+													<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 												<% } %>
 											</td>
 										</tr>
 									<% } %>
 								</tbody>
 							</table>
+							<span class="date">參考資料:</span></br>
+							<span>LEAPING BUNNY CERTIFICATION: <a href="https://www.leapingbunny.org/shopping-guide">https://www.leapingbunny.org/shopping-guide</a></span></br>
+							<span>PETA: <a href="https://crueltyfree.peta.org/companies-dont-test/">https://crueltyfree.peta.org/companies-dont-test/</a></span></br>
+							<span>兔兔不哭: <a href="https://www.922.org.tw/response/">https://www.922.org.tw/response/</a></span>
 						</div>
 						<div class="content content2">
-							<table>
+							<table class="order-table">
 								<thead>
 									<tr>
-										<th width="75%">品牌名稱</th>
+										<th width="75%">
+											<div class="container-1" style="margin-bottom: 10px; " >
+												<span class="icon" style="margin-right: 10px;">品牌名稱</span>
+												<span class="icon">
+												<input type="search" class="light-table-filter"  data-table="order-table" placeholder="Search..." style="border-radius: 20px; margin-right: 10px;">
+											</div>
+										</th>
 										<th width="10%"></th>
 										<th width="5%"></th>
 										<th width="5%"></th>
@@ -147,23 +163,23 @@
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].leapingbunny==true) {%>
 											<tr>
-												<td width="75%" style="float: left; word-break: break-all;">
+												<td width="75%" style="word-break: break-all;display: table-cell; vertical-align:middle ;">
 													<%= items[i].b_name %>
 												</td>
 												<td width="10%"></td>
 												<td width="5%">
 													<% if(items[i].leapingbunny==true) {%>
-														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].peta==true) {%>
-														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].nmcb==true) {%>
-														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 											</tr>
@@ -171,12 +187,20 @@
 									<% } %>
 								</tbody>
 							</table>
+							<span class="date">參考資料:</span></br>
+							<span>LEAPING BUNNY CERTIFICATION: <a href="https://www.leapingbunny.org/shopping-guide">https://www.leapingbunny.org/shopping-guide</a></span></br>
 						</div>
 						<div class="content content3">
-							<table>
+							<table class="order-table">
 								<thead>
 									<tr>
-										<th width="75%">品牌名稱</th>
+										<th width="75%">
+											<div class="container-1" style="margin-bottom: 10px; " >
+												<span class="icon" style="margin-right: 10px;">品牌名稱</span>
+												<span class="icon">
+												<input type="search" class="light-table-filter"  data-table="order-table" placeholder="Search..." style="border-radius: 20px; margin-right: 10px;">
+											</div>
+										</th>
 										<th width="10%"></th>
 										<th width="5%"></th>
 										<th width="5%"></th>
@@ -187,23 +211,23 @@
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].peta==true) {%>
 											<tr>
-												<td width="75%" style="float: left; word-break: break-all;">
+												<td width="75%" style="word-break: break-all;display: table-cell; vertical-align:middle ;">
 													<%= items[i].b_name %>
 												</td>
 												<td width="10%"></td>
 												<td width="5%">
 													<% if(items[i].leapingbunny==true) {%>
-														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].peta==true) {%>
-														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].nmcb==true) {%>
-														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 											</tr>
@@ -211,12 +235,20 @@
 									<% } %>
 								</tbody>
 							</table>
+							<span class="date">參考資料:</span></br>
+							<span>PETA: <a href="https://crueltyfree.peta.org/companies-dont-test/">https://crueltyfree.peta.org/companies-dont-test/</a></span></br>
 						</div>
 						<div class="content content4">
-							<table>
+							<table class="order-table">
 								<thead>
 									<tr>
-										<th width="75%">品牌名稱</th>
+										<th width="75%">
+											<div class="container-1" style="margin-bottom: 10px; " >
+												<span class="icon" style="margin-right: 10px;">品牌名稱</span>
+												<span class="icon">
+												<input type="search" class="light-table-filter"  data-table="order-table" placeholder="Search..." style="border-radius: 20px; margin-right: 10px;">
+											</div>
+										</th>
 										<th width="10%"></th>
 										<th width="5%"></th>
 										<th width="5%"></th>
@@ -227,23 +259,23 @@
 									<% for(var i=0; i<items.length; i++) {%>
 										<% if(items[i].nmcb==true) {%>
 											<tr>
-												<td width="75%" style="float: left; word-break: break-all;">
+												<td width="75%" style="word-break: break-all;display: table-cell; vertical-align:middle ;">
 													<%= items[i].b_name %>
 												</td>
 												<td width="10%"></td>
 												<td width="5%">
 													<% if(items[i].leapingbunny==true) {%>
-														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/leapingbunny.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].peta==true) {%>
-														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/peta.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 												<td width="5%">
 													<% if(items[i].nmcb==true) {%>
-														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; float: center;"/>
+														<img class="image fit" src="images/nmcb.png" alt="" style="width:30px; height:30px; display:block; margin:auto;"/>
 													<% } %>
 												</td>
 											</tr>
@@ -251,6 +283,8 @@
 									<% } %>
 								</tbody>
 							</table>
+							<span class="date">參考資料:</span></br>
+							<span>兔兔不哭: <a href="https://www.922.org.tw/response/">https://www.922.org.tw/response/</a></span>
 						</div>
 					</div>
 
@@ -325,6 +359,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/ordertable.js"></script>
 
 </body>
 
