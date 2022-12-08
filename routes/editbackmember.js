@@ -21,8 +21,19 @@ router.get('/', function(req, res, next) {
             }
 
             if(data.m_birth != '' && data.m_birth != null){
-                data.m_birth = data.m_birth.getFullYear() + "-" + (data.m_birth.getMonth() + 1) + "-" + data.m_birth.getDate();
+                if((data.m_birth.getMonth() + 1) < 10){
+                    bmonth = '0' + (data.m_birth.getMonth() + 1);
+                }else{
+                    bmonth = (data.m_birth.getMonth() + 1);
+                }
+                if(data.m_birth.getDate() < 10){
+                    bdate = '0' + data.m_birth.getDate();
+                }else{
+                    bdate = data.m_birth.getDate();
+                }
+                data.m_birth = data.m_birth.getFullYear() + "-" + bmonth + "-" + bdate;
             }
+            
             if (data.m_pic == null || data.m_pic == '') {
                 data.m_pic = "icon-07.png";
             }

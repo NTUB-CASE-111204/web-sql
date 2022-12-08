@@ -22,9 +22,9 @@ router.get('/', function (req, res, next) {
             }
             for (i = 0; i < data.length; i++) {
                 if (data[i].a_experience == true) {
-                    data[i].a_experience = "是";
+                    data[i].a_experience = "有";
                 }else{
-                    data[i].a_experience = "否";
+                    data[i].a_experience = "無";
                 }
             }
             res.render('adopterdetail', { items: data });  //將資料傳給顯示頁面
