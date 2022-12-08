@@ -21,18 +21,18 @@ router.get('/', function (req, res, next) {
                 an_postdate: data.an_postdate,
                 an_sex: data.an_sex
             }
-            if(data.m_birth != '' && data.m_birth != null){
-                if((data.m_birth.getMonth() + 1) < 10){
-                    bmonth = '0' + (data.m_birth.getMonth() + 1);
+            if(data.an_birth != '' && data.an_birth != null){
+                if((data.an_birth.getMonth() + 1) < 10){
+                    bmonth = '0' + (data.an_birth.getMonth() + 1);
                 }else{
-                    bmonth = (data.m_birth.getMonth() + 1);
+                    bmonth = (data.an_birth.getMonth() + 1);
                 }
-                if(data.m_birth.getDate() < 10){
-                    bdate = '0' + data.m_birth.getDate();
+                if(data.an_birth.getDate() < 10){
+                    bdate = '0' + data.an_birth.getDate();
                 }else{
-                    bdate = data.m_birth.getDate();
+                    bdate = data.an_birth.getDate();
                 }
-                data.m_birth = data.m_birth.getFullYear() + "-" + bmonth + "-" + bdate;
+                data.an_birth = data.an_birth.getFullYear() + "-" + bmonth + "-" + bdate;
             }
             res.render('animaledit', { item: data });  //將資料傳給顯示頁面
         } else {
