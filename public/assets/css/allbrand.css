@@ -90,16 +90,16 @@ table {
 
 #gotop {
     position: fixed;
-    border-radius: 50px;
+    border-radius: 150px;
     border-style: solid;
-	border-color: #ffffff;
+	border-color: black;
 	border-width: 3px !important;
     right: 20px;
     bottom: 30px;
     padding: 10px 16px;
     font-size: 25px;
     background-color: transparent;
-    color: #eeeeee;
+    color: black;
     cursor: pointer;
     z-index: 1000;
 }
