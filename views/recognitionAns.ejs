@@ -73,6 +73,7 @@
     <div class="row g-0 text-light justify-content-center align-items-center">
       <div style="text-align:center">
         <div style="margin-bottom: 80px;">
+            <!--Peta Leapingbunny 兔兔不哭-->
             <% if ((item.peta == true )&&(item.leapingbunny == true)&&(item.nmcb == true)) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
@@ -89,11 +90,13 @@
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+            <!--Peta-->
             <%} else if (item.peta == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
               <br>
               <h2 class="profile-title">認證標章為：</h2>
+              <!--Peta Leapingbunny-->
               <% if (item.leapingbunny == true) { %>
                 <h3 class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM、LEAPING BUNNY CERTIFICATION</h3>
                 <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
@@ -101,6 +104,7 @@
                   <a href="peta"><img src="images/pic04.jpg" style="width:40%;height:40%" alt="" /></a>
                   <a href="leapingbunny"><img src="images/pic02.jpg" style="width:40%;height:40%" alt="" /></a>
                 </div>
+              <!--Peta 兔兔不哭-->
               <% } else if (item.nmcb == true) { %>
                 <h3 class="profile-description">BEAUTY WITHOUT BUNNIES PROGRAM、兔兔不哭</h3>
                 <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
@@ -119,11 +123,13 @@
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+            <!--Leapingbunny-->
             <% }else if (item.leapingbunny == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
               <br>
               <h2 class="profile-title">認證標章為：</h2>
+              <!--Leapingbunny 兔兔不哭-->
               <% if (item.nmcb == true) { %>
                 <h3 class="profile-description">LEAPING BUNNY CERTIFICATION、兔兔不哭</h3>
                 <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
@@ -142,6 +148,7 @@
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+            <!--兔兔不哭-->
             <% } else if (item.nmcb == true) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= item.b_name %></h3>
@@ -156,6 +163,7 @@
               <span class="date">名單更新日期：<%= item.updatetime %></span>
               <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+            <!--有辨識出品牌，但資料庫並無資料-->
             <% } else if (item == -1) { %>
               <h2 class="profile-title">辨識結果為：</h2>
               <h3 class="profile-title"><%= selectName %></h3>
@@ -170,9 +178,11 @@
               </div>
               <br><br>
               <a class="btn btn-outline-light" href="/" role="button">回主頁</a>
+            <!--無辨識出品牌、沒有上傳圖等等-->
             <% } else { %>
-              <h3 class="profile-description">無辨識結果，請提供圖片</h3>
+              <h3 class="profile-description">無辨識結果，請提供圖片，或是登入會員後進行回報</h3>
               <a class="btn btn-outline-light" href="/recognition" role="button">去上傳</a>
+              <a class="btn btn-outline-light" href="/memberpage" role="button">查看會員</a>
               <br><br>
               <p>（點擊標章圖片可以直接跳至該標章的所有品牌頁面）</p>
               <div class="searchbrand">
