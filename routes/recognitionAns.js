@@ -17,8 +17,8 @@ router.get('/', function(req, res, next) {
             res.render('notFound');  //導向找不到頁面
         }else{
             console.log(data);
+            res.render('recognitionAns', {item:data,selectName:req.session.b_name});  //將資料傳給顯示頁面
             req.session.b_name = null;
-            res.render('recognitionAns', {item:data});  //將資料傳給顯示頁面
         }  
     })
 });
