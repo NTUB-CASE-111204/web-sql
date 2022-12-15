@@ -35,7 +35,7 @@ def foo(var):
         from keras.layers import MaxPooling2D
         from keras.optimizers import SGD, Adam
         '定義子資料夾名稱&對應的數字'
-        class_names = ['LUSH','DEGUSTER 慢享','Kosmea','純粹森活','Aroma Bella','ARUBLU','Ethique','Ardell','LHAMI','DEEPURE淨森林']
+        class_names = ['LUSH','DEGUSTER 慢享','Kosmea','純粹森活','Aroma Bella','ARUBLU','Ethique','Ardell','LHAMI','DEEPURE淨森林','Burt’s Bees (Clorox)']
         class_names_label = {class_name:i for i, class_name in enumerate(class_names)}
 
         nb_classes = len(class_names)
