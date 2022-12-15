@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
 })
 
 // 產生multer的上傳物件
-var maxSize=1024*1024;  //設定最大可接受圖片大小(1M)
+var maxSize = 3 * 1024 * 1024;  //設定最大可接受圖片大小(1M)
 
 var upload = multer({
     storage:storage
