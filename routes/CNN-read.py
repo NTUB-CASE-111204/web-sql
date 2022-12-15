@@ -43,7 +43,7 @@ def foo(var):
         IMAGE_SIZE = (64, 64)
         '讀模型'
         from keras.models import load_model
-        modelpath = "C:/Users/Bircteam/web-sql/routes/10datas_model(fail5).h5"
+        modelpath = "C:/Users/Bircteam/web-sql/routes/10datas_model(11Brand&200).h5"
         model = load_model(modelpath)
 
         from keras.preprocessing import image
