@@ -69,12 +69,17 @@
       <div class="col-lg-6 text-center">
         <form action="/recognitionSelect" enctype="multipart/form-data" method="post" name="form">
           <input type="file" name="pic_file" accept="image/jpeg, image/png" required="required">
-          <input type="submit" value="確定">
+          <input type="submit" value="確定" onclick="return confirmW()">
         </form>
         <br>
           <a class="btn btn-outline-light" href="/" role="button" style="margin-bottom: 160px;">回主頁</a>
       </div>
     </div>
+    <script>
+      function confirmW() {
+        alert("請稍後，等等為您跳轉畫面");
+      }
+  </script>
     <!--<ul class="drop-down-menu">
       <li><a href="#">開始上傳</a> 
           <ul>
