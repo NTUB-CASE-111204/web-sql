@@ -2,281 +2,292 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>會員頁面</title>
-        <meta name="description" content="">
-        <!-- 
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>會員頁面</title>
+    <meta name="description" content="">
+    <!-- 
    
         -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/templatemo-style.css">
-        <link rel="manifest" href="manifest.json">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    
-        <div class="responsive-header visible-xs visible-sm">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="top-section">
-                            <div class="profile-image">
-                                <img src=<%= item.m_pic %> alt="陳筱君">
-                            </div>
-                            <div class="profile-content">
-                                <h3 class="profile-title"><%= item.m_nickname %></h3>
-                            </div>
+
+    <div class="responsive-header visible-xs visible-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-section">
+                        <div class="profile-image">
+                            <img src=<%=item.m_pic %> alt="陳筱君">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-title">
+                                <%= item.m_nickname %>
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-                <div class="main-navigation responsive-menu">
-                    <ul class="navigation">
-                       <!-- <li><a href="#top"><i class="fa fa-home"></i>會員資料</a></li>-->
-                        <li><a href="#about"><i class="fa fa-user"></i>會員資料</a></li>
-
-                        <li><a href="#projects"><i class="fa fa-newspaper-o"></i>我的收藏</a></li>
-                        <li><a href="#contact"><i class="fa fa-envelope"></i>回報問題</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="/"><i class="fa fa-home"></i>回主頁</a></li>
-                        <li><a href="logout"><i class="fa fa-sign-out"></i>登出</a></li>
-                    </ul>
-                </div>
             </div>
-        </div>
-
-<!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
-
-        <!-- SIDEBAR -->
-        <div class="sidebar-menu hidden-xs hidden-sm">
-            <div class="top-section">
-                <div class="profile-image">
-                    <img src=<%= item.m_pic %> alt="會員頭貼">
-                </div>
-                <h3 class="profile-title"><%= item.m_nickname %></h3>
-            </div> <!-- top-section -->
-            <div class="main-navigation">
+            <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+            <div class="main-navigation responsive-menu">
                 <ul class="navigation">
+                    <!-- <li><a href="#top"><i class="fa fa-home"></i>會員資料</a></li>-->
                     <li><a href="#about"><i class="fa fa-user"></i>會員資料</a></li>
-                    <li><a href="#projects"><i class="fa fa-bookmark"></i>我的收藏</a></li>
-                    <li><a href="#contact"><i class="fa fa-wrench"></i>問題回報</a></li>
+
+                    <li><a href="#projects"><i class="fa fa-newspaper-o"></i>我的收藏</a></li>
+                    <li><a href="#contact"><i class="fa fa-envelope"></i>回報問題</a></li>
                 </ul>
                 <ul>
-                    <li><a href="/"><i class="fa fa-home"></i>回首頁</a></li>
+                    <li><a href="/"><i class="fa fa-home"></i>回主頁</a></li>
                     <li><a href="logout"><i class="fa fa-sign-out"></i>登出</a></li>
                 </ul>
-            </div> 
-            
-           <div class="social-icons">
-                <ul>
-                    <li><a href="#"><i class=""></i></a></li>
-                    <li><a href="#"><i class=""></i></a></li>
-                    <li><a href="#"><i class=""></i></a></li>
-                    <li><a href="#"><i class=""></i></a></li>
-                    <li><a href="#"><i class=""></i></a></li>
-                    <li><a href="#"><i class=""></i></a></li>
-                </ul>
-            </div> <!-- .social-icons -->
-        </div> <!-- .sidebar-menu -->
-        
-
-        <div class="banner-bg" id="top">
-            <div class="banner-overlay"></div>
-            <div class="welcome-text">
-                <h2></h2>
-                <h5></h5>
             </div>
         </div>
+    </div>
 
-        <!-- MAIN CONTENT -->
-        <div class="main-content">
-            <div class="fluid-container">
+    <!--AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA-->
 
-                <div class="content-wrapper">
-                
-                    <!-- ABOUT -->
-                    <div class="page-section" id="about">
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm">
+        <div class="top-section">
+            <div class="profile-image">
+                <img src=<%=item.m_pic %> alt="會員頭貼">
+            </div>
+            <h3 class="profile-title">
+                <%= item.m_nickname %>
+            </h3>
+        </div> <!-- top-section -->
+        <div class="main-navigation">
+            <ul class="navigation">
+                <li><a href="#about"><i class="fa fa-user"></i>會員資料</a></li>
+                <li><a href="#projects"><i class="fa fa-bookmark"></i>我的收藏</a></li>
+                <li><a href="#contact"><i class="fa fa-wrench"></i>問題回報</a></li>
+            </ul>
+            <ul>
+                <li><a href="/"><i class="fa fa-home"></i>回首頁</a></li>
+                <li><a href="logout"><i class="fa fa-sign-out"></i>登出</a></li>
+            </ul>
+        </div>
+
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"><i class=""></i></a></li>
+                <li><a href="#"><i class=""></i></a></li>
+                <li><a href="#"><i class=""></i></a></li>
+                <li><a href="#"><i class=""></i></a></li>
+                <li><a href="#"><i class=""></i></a></li>
+                <li><a href="#"><i class=""></i></a></li>
+            </ul>
+        </div> <!-- .social-icons -->
+    </div> <!-- .sidebar-menu -->
+
+
+    <div class="banner-bg" id="top">
+        <div class="banner-overlay"></div>
+        <div class="welcome-text">
+            <h2></h2>
+            <h5></h5>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="fluid-container">
+
+            <div class="content-wrapper">
+
+
+
+                <!-- ABOUT -->
+                <div class="page-section" id="about">
                     <div class="row">
                         <div class="col-md-12">
-                            
-                             <!-- ABOUT -->
-                    <div class="page-section" id="about">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4 class="widget-title">會員資料</h4>
-                                <div class="about-image">
-                              
-                                
-                                <!--  <img src="img/8.jpg" alt="about me"> -->
-                         </div>
-                                <div class="col-xl-4">
-                                    <div class="form-group">
-                                        <h3>暱稱： <%= item.m_nickname %></h3>
-                                    </div>
-                                    <div class="form-group">
-                                        <h3>信箱： <%= item.m_email %></h3>
-                                    </div>
-                                    <div class="form-group">
-                                        <h3>電話： <%= item.m_phone %></h3>
-                                    </div>
-                                    <div class="form-group">
-                                        <h3>性別： <%= item.m_sex %></h3>
-                                    </div>
-                                    <div class="form-group">
-                                        <h3>生日： <%= item.m_birth %></h3>
-                                    </div>
-                                    <a href="membereditor">
-                                        <button>編輯會員</button>
-                                    </a> 
-                                    <a href="detail">
-                                        <button>登記成為實驗動物領養人</button>
-                                    </a> 
+                            <h4 class="widget-title">會員資料</h4>
+                            <div class="about-image">
 
-                              <!--  </div>
+
+                                <!--  <img src="img/8.jpg" alt="about me"> -->
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group">
+                                    <h3>暱稱： <%= item.m_nickname %>
+                                    </h3>
+                                </div>
+                                <div class="form-group">
+                                    <h3>信箱： <%= item.m_email %>
+                                    </h3>
+                                </div>
+                                <div class="form-group">
+                                    <h3>電話： <%= item.m_phone %>
+                                    </h3>
+                                </div>
+                                <div class="form-group">
+                                    <h3>性別： <%= item.m_sex %>
+                                    </h3>
+                                </div>
+                                <div class="form-group">
+                                    <h3>生日： <%= item.m_birth %>
+                                    </h3>
+                                </div>
+                                <a href="membereditor">
+                                    <button>編輯會員</button>
+                                </a>
+                                <a href="detail">
+                                    <button>登記成為實驗動物領養人</button>
+                                </a>
+
+                                <!--  </div>
                                 <p> <span class="blue">template</span><span class="green">mo</span>. You can use this template for any purpose. Please tell your friends about it. Thank you. Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_parent">Unsplash</a> for images used in this design. You can <strong>change menu icons</strong> by checking <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/" target="_parent">Font Awesome</a> (version 4). Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong></p>
                                 <hr> -->
                             </div>
                         </div> <!-- #about -->
-                        </div>
-                            <div class="about-image">
-                              
-                                   
-                                   <!--  <img src="img/8.jpg" alt="about me"> -->
-                            </div>
-                            <p> <a rel="nofollow" href="#" target="_parent"></a>  <strong></strong>  <a rel="nofollow" href="#" target="_parent"></a> 
-                          
-                        </div>
-                    </div> <!-- #about -->
                     </div>
-                    
-                    <!-- PROJECTS -->
-                    <div class="page-section" id="projects">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">已收藏文章</h4>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="row projects-holder">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/11.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">關於零殘忍</a></h5>
-                                        <p>「零殘忍（Cruelty-Free）」意指某事物（包括其原物料）從研發、製造直至銷售全程都「無涉動物實驗」，中文使用者常簡稱為「無動」。</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/22.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">領養代替購買</a></h5>
-                                        <p>減少不肖養殖場的獲利</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/33.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">選擇Cruelty-free產品</a></h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/44.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">可愛兔子圖片分享</a></h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/55.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">關於動物保育你該知道的事</a></h5>
-                                        <p>.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/66.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">復活節兔子巧克力製作</a></h5>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- .projects-holder -->
-                    </div>
-                    <hr>
+                    <div class="about-image">
 
-                    <!-- CONTACT -->
-                    <div class="page-section" id="contact">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="widget-title">問題回報</h4>
-                            <p>歡迎回報您遇到的問題與反饋</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <form action="/feedbackadd" method="post" class="contact-form">
-                            <fieldset class="col-md-4 col-sm-12">
-                                <input type="text" id="your-subject" name="f_description" placeholder="標題" required>
-                            </fieldset>
-                            <fieldset class="col-md-12 col-sm-12">
-                                <textarea id="message" cols="30" rows="6" name="f_content" placeholder="訊息" required></textarea>
-                            </fieldset>
-                            <fieldset class="col-md-12 col-sm-12">
-                                <input type="submit" class="button big default" value="回報問題">
-                            </fieldset>
-                        </form>
-                    </div> <!-- .contact-form -->
-                    </div>
-                    <hr>
 
-                    <div class="row" id="footer">
-                        <div class="col-md-12 text-center">
-                            <p class="copyright-text">Copyright &copy; 2022 Bunny幫你</p>
-                        </div>
+                        <!--  <img src="img/8.jpg" alt="about me"> -->
                     </div>
+                    <p> <a rel="nofollow" href="#" target="_parent"></a> <strong></strong> <a rel="nofollow" href="#"
+                            target="_parent"></a>
 
                 </div>
+            </div> <!-- #about -->
+        </div>
 
+        <!-- PROJECTS -->
+        <div class="page-section" id="projects">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="widget-title">已收藏文章</h4>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row projects-holder">
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/11.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">關於零殘忍</a></h5>
+                                <p>「零殘忍（Cruelty-Free）」意指某事物（包括其原物料）從研發、製造直至銷售全程都「無涉動物實驗」，中文使用者常簡稱為「無動」。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/22.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">領養代替購買</a></h5>
+                                <p>減少不肖養殖場的獲利</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/33.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">選擇Cruelty-free產品</a></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/44.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">可愛兔子圖片分享</a></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/55.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">關於動物保育你該知道的事</a></h5>
+                                <p>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="project-item">
+                        <img src="img/66.jpg" alt="">
+                        <div class="project-hover">
+                            <div class="inside">
+                                <h5><a href="#">復活節兔子巧克力製作</a></h5>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .projects-holder -->
+        </div>
+        <hr>
+
+        <!-- CONTACT -->
+        <div class="page-section" id="contact">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="widget-title">問題回報</h4>
+                    <p>歡迎回報您遇到的問題與反饋</p>
+                </div>
+            </div>
+            <div class="row">
+                <form action="/feedbackadd" method="post" class="contact-form">
+                    <fieldset class="col-md-4 col-sm-12">
+                        <input type="text" id="your-subject" name="f_description" placeholder="標題" required>
+                    </fieldset>
+                    <fieldset class="col-md-12 col-sm-12">
+                        <textarea id="message" cols="30" rows="6" name="f_content" placeholder="訊息" required></textarea>
+                    </fieldset>
+                    <fieldset class="col-md-12 col-sm-12">
+                        <input type="submit" class="button big default" value="回報問題">
+                    </fieldset>
+                </form>
+            </div> <!-- .contact-form -->
+        </div>
+        <hr>
+
+        <div class="row" id="footer">
+            <div class="col-md-12 text-center">
+                <p class="copyright-text">Copyright &copy; 2022 Bunny幫你</p>
             </div>
         </div>
 
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/min/plugins.min.js"></script>
-        <script src="js/min/main.min.js"></script>
+    </div>
 
-    </body>
+    </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/main.min.js"></script>
+
+</body>
+
 </html>
